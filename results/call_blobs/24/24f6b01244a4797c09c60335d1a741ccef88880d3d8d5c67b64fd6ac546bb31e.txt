@@ -1,0 +1,17 @@
+{
+  "buyer_claim_text": "I correct the initial complaint: the cracked-device photo was an unrelated upload and is withdrawn. My claim concerns missing advertised cables, not damage or authenticity. I received the genuine black T9, serial SNBF145A54DF, but neither advertised cable was supplied. The frozen checkout product page expressly answers 'Is a cable included?' with 'Yes, USB-C to USB-C and USB-C to A.' This is the checkout page identified by the offer's own page_sha256, not a later statement or an uncaptured preference. Step 1 expressly covers accessories. The extracted included_accessories: [] and 'product only' image conflict with that express promise; they do not establish that the promise disappeared before checkout. The merchant's packing record independently lists accessories: [], consistent with my account that only the drive arrived. The returns centre's generic 'all accessories present' does not identify either cable, list their connectors, or explain whether completeness was checked against the empty structured list instead of the actual checkout Q&A. Its findings of genuine serial, new condition and no damage are accepted. Carrier weight confirms the parcel, not its contents; there is no itemised cable weight evidence. Please resolve the specific frozen-offer discrepancy at Step 1: two expressly included accessories were absent. I seek AG3 and a EUR 129 merchant refund, not statutory withdrawal.",
+  "buyer_attachments": [
+    {
+      "type": "uploaded document",
+      "title": "Buyer statement: contents received and returned",
+      "text": "Order ord_001_3be0b76a. The parcel contained the black Samsung T9 1TB, serial SNBF145A54DF, and its packaging. No USB-C to USB-C cable and no USB-C to USB-A cable were in the box or parcel. I returned all contents received and retained no accessories. My original cracked-housing allegation and unrelated photograph are withdrawn. The dispute is the missing cables expressly promised in the checkout page's cable Q&A."
+    },
+    {
+      "type": "uploaded document",
+      "title": "Specific issue requiring reconciliation",
+      "text": "Frozen checkout Q&A: two cables included. Structured offer: included_accessories []. Merchant packing record: accessories []. Return inspection: 'all accessories present', without enumeration. The latter can describe completeness against an empty inventory while both advertised cables remain missing. Please assess which inventory the inspection actually establishes; genuine serial and undamaged housing do not resolve accessory conformity."
+    }
+  ],
+  "buyer_photos": [],
+  "rationale": "Replace the discredited damage allegation with an accessory non-conformity claim exploiting the frozen cable promise, empty packing inventory, and unitemised return inspection."
+}

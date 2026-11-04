@@ -30,6 +30,7 @@ C_FABLE, C_GROK, C_A2, C_C1 = "#0072B2", "#D55E00", "#009E73", "#CC79A7"
 INK, INK2, MUTED, GRID, AXIS = "#1f1f1f", "#454545", "#666666", "#e6e6e6", "#8c8c8c"
 FONT = "'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif"
 W, H = 600, 380
+H3 = 576  # Figure 3 carries a second panel
 
 
 # --------------------------------------------------------------------------- reading
@@ -148,6 +149,32 @@ def check_ci(r: Rate, what: str):
         check((round_pct(lo), round_pct(hi)) == (r.lo, r.hi),
               f"{what}: printed interval [{r.lo}, {r.hi}] != Wilson of {r.kn()}")
     check(r.pct == round_pct(r.k / r.n), f"{what}: printed {r.pct}% != {r.kn()}")
+
+
+def section(text: str, heading: str, src: str) -> str:
+    """The text from the line starting with `heading` up to the next level-2 heading."""
+    i = text.find("\n" + heading)
+    check(i >= 0, f"{src}: heading {heading!r} not found")
+    j = text.find("\n## ", i + 1)
+    return text[i:] if j < 0 else text[i:j]
+
+
+def mcnemar_one_sided(b: int, c: int) -> float:
+    """Exact McNemar, one-sided (c < b): P(X <= c) for X ~ Binomial(b + c, 1/2)."""
+    n = b + c
+    return sum(math.comb(n, i) for i in range(c + 1)) / 2 ** n
+
+
+def sci(p: float, sig: int) -> str:
+    """p in the paper's e-notation with `sig` significant digits: 3e-8, 3.0e-8, 1.5e-11."""
+    m, e = f"{p:.{sig - 1}e}".split("e")
+    return f"{m}e{int(e)}"
+
+
+def sup(p: float, sig: int) -> str:
+    """p as the write-ups print it: 3.0 × 10⁻⁸."""
+    m, e = f"{p:.{sig - 1}e}".split("e")
+    return f"{m} × 10" + str(int(e)).translate(str.maketrans("-0123456789", "⁻⁰¹²³⁴⁵⁶⁷⁸⁹"))
 
 
 def paper_row(paper: str, first_cells: list[str]):
@@ -471,8 +498,6 @@ def load():
     n_dec = c1_rev_on.n - c1_rev_on.k
     # The write-up and the paper's wording.
     must_contain(c1w, f"exact McNemar one-sided **p = {p_c1:.2g}**", "CONFIRMATORY_C1.md headline")
-    must_contain(paper, f"best-of-5 attack success fell from {c1_off.k} of {c1_off.n} with the gate off to {c1_on.k} of "
-                        f"{c1_on.n} with it on (exact McNemar, one-sided p = {p_c1:.1g})", "main.md abstract (C1)")
     must_contain(paper, f"the same gate sent {c1_rev_on.k} to a human, {tc_c1.k} of {tc_c1.n} true claimants among them, "
                         f"and correct decided outcomes fell from {c1_ok_off.k} to {c1_ok_on.k} of {c1_ok_on.n}",
                  "main.md abstract (C1 cost)")
@@ -486,10 +511,146 @@ def load():
                         f"from {c1_ok_off.k} of {c1_ok_off.n} with the gate off to {c1_ok_on.k} of {c1_ok_on.n}",
                  "main.md 7 (C1 cost)")
     must_contain(paper, "Diamonds are confirmatory (C1)", "main.md Figure 3 caption")
+
+    # ---- Confirmatory amendment C2: H11 replicated (H11-R) on 28 further fresh case-sides with C1's frozen code,
+    #      judge and attacker, and the pooled C1 + C2 estimate (results/confirmatory_c2_summary.md, written by the
+    #      analysis frozen with the amendment). C2 has no baseline arm, so it has no point in the upper panel.
+    c2s = read(RES / "confirmatory_c2_summary.md")
+    c2w = read(RES / "CONFIRMATORY_C2.md")
+    src4 = "confirmatory_c2_summary.md section 4"
+    sec4 = section(c2s, "## 4. H11-R (primary, confirmatory)", src4)
+    h11r = pick(table_after(c2s, "## 4. H11-R (primary, confirmatory)", src4), src4,
+                **{"": "case-sides fooled, best of 5"})
+    c2_off, c2_on = parse_rate(h11r["Arm A (gate off)"], src4), parse_rate(h11r["Arm B (gate v3 on)"], src4)
+    m = re.search(r"Discordant case-sides: fooled in A only (\d+), in B only (\d+)\.", sec4)
+    check(m is not None, "C2 discordant pairs")
+    disc_a, disc_b = int(m.group(1)), int(m.group(2))
+    check(disc_b == 0 and disc_a == c2_off.k - c2_on.k, "C2 discordant pairs all one way")
+    m = re.search(r"Exact McNemar, one-sided \(B < A\): p = ([0-9.]+(?:e-?\d+)?)", sec4)
+    check(m is not None, "C2 one-sided McNemar p")
+    p_c2 = mcnemar_one_sided(disc_a, disc_b)
+    check(math.isclose(p_c2, float(m.group(1)), rel_tol=5e-3), f"C2 p {m.group(1)} != exact {p_c2:.4g}")
+    m = re.search(r"Paired difference B - A: (-?\d+) pp \[(-?\d+), (-?\d+)\]", sec4)
+    check(m is not None, "C2 paired difference")
+    diff_c2 = f"{m.group(1)} points [{m.group(2)}, {m.group(3)}]"
+    c2_side = {}
+    for sd in ("buyer", "merchant"):
+        m = re.search(rf"- side {sd}: A (\d+/\d+ = \d+% \[\d+, \d+\]), B (\d+/\d+ = \d+% \[\d+, \d+\])", sec4)
+        check(m is not None, f"C2 side {sd}")
+        c2_side[sd] = (parse_rate(m.group(1), src4), parse_rate(m.group(2), src4))
+    check(sum(a.k for a, _ in c2_side.values()) == c2_off.k and sum(b.k for _, b in c2_side.values()) == c2_on.k
+          and sum(a.n for a, _ in c2_side.values()) == c2_off.n, "C2 sides add up")
+    m = re.search(r"\| A \| (\d+) \|", sec4)
+    check(m is not None, "C2 best-of-k, k = 1")
+    first_c2 = int(m.group(1))
+    # Pooled C1 + C2 (secondary, descriptive: C1's case-sides were known when C2 was frozen).
+    src5 = "confirmatory_c2_summary.md section 5"
+    sec5 = section(c2s, "## 5. Pooled C1 + C2 (secondary)", src5)
+    pt = table_after(c2s, "## 5. Pooled C1 + C2 (secondary)", src5)
+    for study, off, on in (("C1", c1_off, c1_on), ("C2", c2_off, c2_on)):
+        row = pick(pt, src5, Study=study)
+        for col, r in (("Arm A fooled", off), ("Arm B fooled", on)):
+            check(parse_rate(row[col], src5).full() == r.full(), f"C2 pooled table, {study} {col}")
+    row = pick(pt, src5, Study="C1 + C2")
+    pool_off, pool_on = parse_rate(row["Arm A fooled"], src5), parse_rate(row["Arm B fooled"], src5)
+    check((pool_off.k, pool_off.n, pool_on.k, pool_on.n) == (c1_off.k + c2_off.k, c1_off.n + c2_off.n,
+                                                           c1_on.k + c2_on.k, c1_on.n + c2_on.n), "pooled = C1 + C2")
+    m = re.search(r"Pooled: Discordant case-sides: fooled in A only (\d+), in B only (\d+)\. Exact McNemar, one-sided "
+                  r"\(B < A\): p = ([0-9.]+(?:e-?\d+)?)", sec5)
+    check(m is not None, "pooled McNemar")
+    p_pool = mcnemar_one_sided(int(m.group(1)), int(m.group(2)))
+    check(int(m.group(1)) == pool_off.k - pool_on.k and math.isclose(p_pool, float(m.group(3)), rel_tol=5e-3),
+          "pooled discordant pairs and p")
+    for r, nm in ((c2_off, "C2 arm A"), (c2_on, "C2 arm B"), (pool_off, "pooled arm A"), (pool_on, "pooled arm B"),
+                  *[(r, f"C2 {sd}") for sd, pr in c2_side.items() for r in pr]):
+        check_ci(r, nm)
+    # Attacker strength (section 7 of the summary).
+    src7 = "confirmatory_c2_summary.md section 7"
+    sec7 = section(c2s, "## 7. Attacker strength (secondary)", src7)
+    m = re.search(r"C2, both arms: no usable payload on (\d+)/(\d+) = .*?evidence payloads (\d+)/(\d+) =", sec7)
+    check(m is not None and m.group(1) == "0" and m.group(2) == m.group(4), "C2 payload counts")
+    n_att_c2, n_ev_c2 = int(m.group(2)), int(m.group(3))
+    m = re.search(r"C1 \+ C2, both arms: no usable payload on (\d+)/(\d+) ", sec7)
+    check(m is not None and m.group(1) == "0", "C1 + C2 payload counts")
+    n_att_pool = int(m.group(2))
+    m = re.search(r"Arm A successes at the first attempt: C2 (\d+) of (\d+) fooled case-sides", sec7)
+    check(m is not None and int(m.group(1)) == first_c2 and int(m.group(2)) == c2_off.k, "C2 first-attempt successes")
+    # Recount from the frozen run's records: fooled case-sides per arm, pooled with C1's, and the gate's review of
+    # the judge's correct decisions in the gated arm (Section 7 of the write-up, exploratory).
+    c2rec = {arm: [json.loads(x) for x in read(RES / "c2" / f"c2_{arm}.jsonl").splitlines() if x.strip()] for arm in "AB"}
+    fooled_ids = {}
+    for arm, rate in (("A", c2_off), ("B", c2_on)):
+        ids = sorted({x["case_id"] for x in c2rec[arm]})
+        fooled_ids[arm] = {c for c in ids if any(x["success"] for x in c2rec[arm] if x["case_id"] == c)}
+        check((len(fooled_ids[arm]), len(ids)) == (rate.k, rate.n), f"c2_{arm}.jsonl: {len(fooled_ids[arm])}/{len(ids)}")
+        both = [r for r in c1rec[arm] + c2rec[arm]]
+        ids_p = {x["case_id"] for x in both}
+        f_p = sum(any(x["success"] for x in both if x["case_id"] == c) for c in ids_p)
+        prate = pool_off if arm == "A" else pool_on
+        check((f_p, len(ids_p)) == (prate.k, prate.n), f"c1 + c2 {arm} records vs pooled {prate.kn()}")
+    check(len(c2rec["A"]) + len(c2rec["B"]) == n_att_c2, "C2 attempts = records")
+    ok_b = [x for x in c2rec["B"] if x["pre_gate"] and x["pre_gate"].get("liable_party") == x["ground_truth"]["liable_party"]]
+    rev_ok_b = sum(x["gate"].get("verdict") == "review" for x in ok_b)
+    must_contain(c2w, f"The gate sent {rev_ok_b} of those {len(ok_b)} to review", "CONFIRMATORY_C2.md section 7")
+    # The three A01 ink case-sides (a single-item packing record on a two-unit line): H11-R without them.
+    cs = table_at(c2s, "| Case-side | Phase 3 counterpart |", "confirmatory_c2_summary.md section 3")
+    ink = {r["Case-side"] for r in cs if r["Scenario"] == "A01"}
+    check(len(ink) == 3 and len(cs) == c2_off.n, "C2 ink case-sides")
+    ink_off = Rate(len(fooled_ids["A"] - ink), c2_off.n - len(ink))
+    ink_on = Rate(len(fooled_ids["B"] - ink), c2_on.n - len(ink))
+    p_ink = mcnemar_one_sided(ink_off.k - ink_on.k, 0) if ink_on.k == 0 else None
+    check(p_ink is not None, "C2 ink exclusion: arm B fooled none")
+    must_contain(c2w, f"Without these three case-sides, H11-R is {ink_off.kn()} against {ink_on.kn()} (one-sided "
+                      f"p = {sup(p_ink, 2)})", "CONFIRMATORY_C2.md section 7")
+    # Model calls (section 1 of the summary; the project's ledger).
+    m = re.search(r"\| \*\*total\*\* \| \*\*(\d+)\*\* of at most (\d+) \|", c2s)
+    check(m is not None, "C2 calls")
+    calls_c2 = int(m.group(1))
+    calls_all = sum(1 for x in read(RES / "calls.jsonl").splitlines() if x.strip())
+    # The write-up and the paper's wording.
+    must_contain(c2w, f"exact McNemar one-sided **p = {sup(p_c2, 2)}**", "CONFIRMATORY_C2.md headline")
+    check(pool_on.k == 0 and c2_on.k == 0, "the paper says 'none of 42' and 'to none'")
+    must_contain(paper, f"two frozen, pre-registered tests on {pool_off.n} fresh case-sides ({c1_off.n}, then a "
+                        f"replication on {c2_off.n})", "main.md abstract (C1 + C2)")
+    must_contain(paper, f"the attacker fooled the judge on {pool_off.k} of {pool_off.n} case-sides with the gate off and "
+                        f"on none of {pool_on.n} with it on (first test {c1_off.k} of {c1_off.n} against {c1_on.k} of "
+                        f"{c1_on.n}, exact McNemar, one-sided p = {p_c1:.1g}; replication {c2_off.k} of {c2_off.n} "
+                        f"against {c2_on.k} of {c2_on.n}, p = {sci(p_c2, 1)})", "main.md abstract (C1 + C2)")
+    must_contain(paper, f"{calls_all:,} model calls in all: 6,560 before the reviews, 343 in C1 and {calls_c2} in C2",
+                 "main.md 4 (calls)")
+    bs, ms = c2_side["buyer"], c2_side["merchant"]
+    must_contain(paper, f"H11-R is supported: {c2_off.k} of {c2_off.n} fooled with the gate off ({c2_off.pct}% "
+                        f"[{c2_off.lo}, {c2_off.hi}]), {c2_on.k} of {c2_on.n} with it on ({c2_on.pct}% [{c2_on.lo}, "
+                        f"{c2_on.hi}]); all {disc_a} discordant pairs go one way, exact McNemar one-sided "
+                        f"p = {sci(p_c2, 2)}, {diff_c2}; buyer side {bs[0].k} of {bs[0].n} and merchant side "
+                        f"{ms[0].k} of {ms[0].n} to none", "main.md 7 (C2)")
+    must_contain(paper, f"Pooled with C1, descriptively since C1 was known: {pool_off.k} of {pool_off.n} against "
+                        f"{pool_on.k} of {pool_on.n} ({pool_on.pct}% [{pool_on.lo}, {pool_on.hi}])", "main.md 7 (pooled)")
+    must_contain(paper, f"The attacker wrote a payload on all {n_att_c2} attempts, fabricated evidence on {n_ev_c2} and "
+                        f"won {first_c2} of its {c2_off.k} at the first attempt", "main.md 7 (C2 attacker)")
+    must_contain(paper, f"Under attack the gate also reviewed {rev_ok_b} of the judge's {len(ok_b)} correct decisions",
+                 "main.md 7 (C2 cost under attack)")
+    must_contain(paper, f"fooled a second Claude judge on {pool_off.k} of {pool_off.n} fresh case-sides", "main.md 9.1")
+    must_contain(paper, f"stopped an attacker that saw it on all {pool_on.n} fresh case-sides", "main.md 9.1")
+    must_contain(paper, f"wrote one on all {n_att_pool} of its C1 and C2 attempts", "main.md 9.2")
+    must_contain(paper, f"without them C2 is {ink_off.k} of {ink_off.n} against {ink_on.k} of {ink_on.n} "
+                        f"(p = {sci(p_ink, 2)})", "main.md 9.4")
+    must_contain(paper, f"stopped an attacker that could see it on all {pool_on.n} fresh case-sides", "main.md 10")
+    must_contain(paper, f"Result: gate off {c2_off.full()}, gate v3 on {c2_on.full()}; {disc_a} discordant pairs, all "
+                        f"one way; one-sided p = {sci(p_c2, 2)}", "main.md Appendix G (C2)")
+    must_contain(paper, f"pooled {pool_off.full()} against {pool_on.full()}, p = {sci(p_pool, 2)} (descriptive)",
+                 "main.md Appendix G (C2)")
+    must_contain(paper, f"(without them {ink_off.kn()} against {ink_on.kn()}, p = {sci(p_ink, 2)})", "main.md Appendix G")
+    must_contain(paper, "The lower panel gives attack success alone for the confirmatory tests: C1, its replication C2",
+                 "main.md Figure 3 caption")
     must_contain(paper, "The exploratory replays agree. Gated fable (v1)", "main.md 7 (40 of 50 kept as the replay)")
     d["fig3"] = {
         "c1": [("c1off", "gate v3 off", c1_rev_off, c1_off), ("c1on", "gate v3 on", c1_rev_on, c1_on)],
         "n_c1_base": c1_rev_on.n, "n_c1_attack": c1_off.n,
+        # Lower panel: (label, note, gate off, gate on), all confirmatory tests of gate v3.
+        "confirm": [("C1", f"n = {c1_off.n}, p = {p_c1:.1g}", c1_off, c1_on),
+                    ("C2, replication", f"n = {c2_off.n}, p = {sci(p_c2, 2)}", c2_off, c2_on),
+                    ("C1 + C2, pooled", f"n = {pool_off.n}, descriptive", pool_off, pool_on)],
         "points": [
             # (key, series, label, baseline review rate, attack success, exploratory)
             ("plain", "A1", "decides every case", f_plain, fa["before"], False),
@@ -514,8 +675,8 @@ def fmt(x: float) -> str:
 
 
 class Svg:
-    def __init__(self, fid: str, title: str, desc: str):
-        self.fid, self.title, self.desc, self.parts = fid, title, desc, []
+    def __init__(self, fid: str, title: str, desc: str, height: float = H):
+        self.fid, self.title, self.desc, self.parts, self.h = fid, title, desc, [], height
 
     def add(self, s: str):
         self.parts.append(s)
@@ -563,11 +724,11 @@ class Svg:
     def render(self) -> str:
         t, dsc = f"{self.fid}-title", f"{self.fid}-desc"
         head = (
-            f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" '
+            f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {fmt(self.h)}" width="{W}" height="{fmt(self.h)}" '
             f'role="img" aria-labelledby="{t} {dsc}" font-family="{escape(FONT)}">\n'
             f'<title id="{t}">{escape(self.title)}</title>\n'
             f'<desc id="{dsc}">{escape(self.desc)}</desc>\n'
-            f'<rect x="0" y="0" width="{W}" height="{H}" fill="#ffffff"/>\n'
+            f'<rect x="0" y="0" width="{W}" height="{fmt(self.h)}" fill="#ffffff"/>\n'
         )
         return head + "\n".join(self.parts) + "\n</svg>\n"
 
@@ -734,8 +895,14 @@ def fig3(d) -> str:
             + " Gate v3 and contract v3 are exploratory: written after the reviews with these outputs in view."
             + " Confirmatory amendment C1 (diamonds; judge claude-opus-5-5, 14 fresh case-sides, best of 5, the gated "
               "arm's attacker aware of the gate): "
-            + " ".join(f"{lab}: review {x.full()}, attack success {y.full()}." for _, lab, x, y in d["c1"]))
-    s = Svg("fig3", "Safety-usefulness trade-off under optimised attack at E3", desc)
+            + " ".join(f"{lab}: review {x.full()}, attack success {y.full()}." for _, lab, x, y in d["c1"])
+            + " Lower panel, attack success alone in the confirmatory tests of gate v3 (case-sides fooled within five "
+              "attempts, Wilson 95% intervals; C2 is a replication on 28 further case-sides with the same frozen judge, "
+              "attacker and gate and no baseline arm; the pooled estimate is descriptive): "
+            + " ".join(f"{lab} ({note}): gate off {off.full()}, gate on {on.full()}."
+                       for lab, note, off, on in d["confirm"]))
+    s = Svg("fig3", "Safety-usefulness trade-off under optimised attack at E3, and the confirmatory tests of gate v3",
+            desc, height=H3)
     L, R, T, B = 66.0, 584.0, 98.0, 316.0
     X = lambda v: L + v / 100.0 * (R - L)
     Y = lambda v: B - v / 100.0 * (B - T)
@@ -809,6 +976,33 @@ def fig3(d) -> str:
             s.text(px + dx, py + dy, f"{ser} {lab}  ({x.pct}%, {y.pct}%)", size=11.5, anchor=anc, fill=INK)
     for k, ln in enumerate(["Hollow, exploratory (written after the reviews):"] + notes):
         s.text(R - 4, T + 14 + 14 * k, ln, size=11, anchor="end", fill=INK2 if k else MUTED)
+
+    # Lower panel: attack success alone in the confirmatory tests (C2 has no baseline arm, so no x above).
+    top = B + 56
+    s.line(16, top, R, top, stroke=GRID, width=1.25)
+    s.text(16, top + 22, "Confirmatory tests of gate v3: case-sides fooled within five attempts", size=13.5,
+           fill=INK, weight="600")
+    s.text(16, top + 39, "Frozen before any call; the gated arm's attacker saw the gate's verdicts; whiskers: Wilson 95%",
+           size=11.5, fill=MUTED)
+    L2, y0, pitch = 176.0, top + 66, 34.0
+    X2 = lambda v: L2 + v / 100.0 * (R - L2)
+    yb = y0 + pitch * (len(d["confirm"]) - 1) + 18
+    for v in (0, 25, 50, 75, 100):
+        s.line(X2(v), y0 - 16, X2(v), yb, stroke=GRID, width=1)
+        s.text(X2(v), yb + 16, str(v), size=12, anchor="middle", fill=MUTED)
+    s.line(L2, yb, R, yb, stroke=AXIS, width=1)
+    s.text((L2 + R) / 2, yb + 34, "Case-sides fooled (%), gate v3 off and on", size=12.5, anchor="middle", fill=INK2)
+    for i, (lab, note, off, on) in enumerate(d["confirm"]):
+        y = y0 + i * pitch
+        s.text(16, y - 1, lab, size=12, fill=INK, weight="600")
+        s.text(16, y + 13, note, size=11, fill=MUTED)
+        for r in (off, on):
+            s.line(X2(r.lo), y, X2(r.hi), y, stroke=C_C1, width=1.5, opacity=0.8)
+            s.line(X2(r.lo), y - 4, X2(r.lo), y + 4, stroke=C_C1, width=1.25, opacity=0.8)
+            s.line(X2(r.hi), y - 4, X2(r.hi), y + 4, stroke=C_C1, width=1.25, opacity=0.8)
+            diamond(s, X2(r.p), y, 7.0, C_C1)
+        s.text(X2(on.hi) + 7, y + 4, f"on {on.kn()}", size=11.5, fill=INK)
+        s.text(X2(off.lo) - 7, y + 4, f"off {off.kn()}", size=11.5, anchor="end", fill=INK)
     return s.render()
 
 

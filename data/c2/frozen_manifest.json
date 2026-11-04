@@ -1,0 +1,9 @@
+{
+ "amendment": "C2",
+ "c1_manifest_sha256": "7595c4dd4eb91e387300cfaac43df10d22131c936cb687fa4c8be842b122952f",
+ "files": {
+  "acs/analyze_c2.py": "f5ccfcb7de2f8feac68d63f5104386bda9a382bdbf2ff088355bed72233e9a8b",
+  "acs/confirmatory_c2.py": "641ac995e2efca344281c6bc31c91e30320a63ea83d55af80db2caa782bf6b45",
+  "data/disputes/c2_cases.json": "b77eb4965e82388f47cf54f786ebb8a43418a5c2568d6c8b4561b35ed9833eeb"
+ }
+}

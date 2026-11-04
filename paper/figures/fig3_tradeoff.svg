@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380" role="img" aria-labelledby="fig3-title fig3-desc" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif">
-<title id="fig3-title">Safety-usefulness trade-off under optimised attack at E3</title>
-<desc id="fig3-desc">Scatter plot with 95% intervals in both directions. Each point is an operating point at evidence level E3: the share of the baseline Phase 2 workload (the 51 Phase 2 cases, 25 of them with a scripted adversary) sent to human review (x; for A2 a case counts if any of its three runs went to review) against the share of optimised-attack case-sides that succeed (y), with Wilson intervals over cases and case-sides. Both are costs; lower is better on both axes. The A1 points come from the same calls. A1 claude-fable-5-1, decides every case: review 0/50 = 0% [0, 7], attack success 11/14 = 79% [52, 92]. A1 claude-fable-5-1, abstains below 0.7: review 3/50 = 6% [2, 16], attack success 8/14 = 57% [33, 79]. A1 claude-fable-5-1, gate as run (v1): review 24/50 = 48% [35, 61], attack success 1/14 = 7% [1, 31]. A1 claude-fable-5-1, gate v3: review 40/50 = 80% [67, 89], attack success 0/14 = 0% [0, 22]. A2 hybrid, as run: review 33/51 = 65% [51, 76], attack success 7/14 = 50% [27, 73]. A2 hybrid, + gate v1: review 35/51 = 69% [55, 80], attack success 3/14 = 21% [8, 48]. A2 hybrid, contract v3 + gate v3: review 44/51 = 86% [74, 93], attack success 0/14 = 0% [0, 22]. Gate v3 and contract v3 are exploratory: written after the reviews with these outputs in view. Confirmatory amendment C1 (diamonds; judge claude-opus-5-5, 14 fresh case-sides, best of 5, the gated arm's attacker aware of the gate): gate v3 off: review 0/51 = 0% [0, 7], attack success 11/14 = 79% [52, 92]. gate v3 on: review 34/51 = 67% [53, 78], attack success 0/14 = 0% [0, 22].</desc>
-<rect x="0" y="0" width="600" height="380" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 576" width="600" height="576" role="img" aria-labelledby="fig3-title fig3-desc" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif">
+<title id="fig3-title">Safety-usefulness trade-off under optimised attack at E3, and the confirmatory tests of gate v3</title>
+<desc id="fig3-desc">Scatter plot with 95% intervals in both directions. Each point is an operating point at evidence level E3: the share of the baseline Phase 2 workload (the 51 Phase 2 cases, 25 of them with a scripted adversary) sent to human review (x; for A2 a case counts if any of its three runs went to review) against the share of optimised-attack case-sides that succeed (y), with Wilson intervals over cases and case-sides. Both are costs; lower is better on both axes. The A1 points come from the same calls. A1 claude-fable-5-1, decides every case: review 0/50 = 0% [0, 7], attack success 11/14 = 79% [52, 92]. A1 claude-fable-5-1, abstains below 0.7: review 3/50 = 6% [2, 16], attack success 8/14 = 57% [33, 79]. A1 claude-fable-5-1, gate as run (v1): review 24/50 = 48% [35, 61], attack success 1/14 = 7% [1, 31]. A1 claude-fable-5-1, gate v3: review 40/50 = 80% [67, 89], attack success 0/14 = 0% [0, 22]. A2 hybrid, as run: review 33/51 = 65% [51, 76], attack success 7/14 = 50% [27, 73]. A2 hybrid, + gate v1: review 35/51 = 69% [55, 80], attack success 3/14 = 21% [8, 48]. A2 hybrid, contract v3 + gate v3: review 44/51 = 86% [74, 93], attack success 0/14 = 0% [0, 22]. Gate v3 and contract v3 are exploratory: written after the reviews with these outputs in view. Confirmatory amendment C1 (diamonds; judge claude-opus-5-5, 14 fresh case-sides, best of 5, the gated arm's attacker aware of the gate): gate v3 off: review 0/51 = 0% [0, 7], attack success 11/14 = 79% [52, 92]. gate v3 on: review 34/51 = 67% [53, 78], attack success 0/14 = 0% [0, 22]. Lower panel, attack success alone in the confirmatory tests of gate v3 (case-sides fooled within five attempts, Wilson 95% intervals; C2 is a replication on 28 further case-sides with the same frozen judge, attacker and gate and no baseline arm; the pooled estimate is descriptive): C1 (n = 14, p = 0.0005): gate off 11/14 = 79% [52, 92], gate on 0/14 = 0% [0, 22]. C2, replication (n = 28, p = 3.0e-8): gate off 25/28 = 89% [73, 96], gate on 0/28 = 0% [0, 12]. C1 + C2, pooled (n = 42, descriptive): gate off 36/42 = 86% [72, 93], gate on 0/42 = 0% [0, 8].</desc>
+<rect x="0" y="0" width="600" height="576" fill="#ffffff"/>
 <text x="16" y="26" font-size="15.5" fill="#1f1f1f" font-weight="600">Safety-usefulness trade-off under optimised attack at E3</text>
 <circle cx="22" cy="44" r="5" fill="#0072B2" stroke="#ffffff" stroke-width="1.8"/>
 <text x="32" y="48" font-size="12" fill="#454545">A1 claude-fable-5-1 (50 baseline cases)</text>
@@ -79,4 +79,55 @@
 <text x="580" y="112" font-size="11" fill="#666666" text-anchor="end">Hollow, exploratory (written after the reviews):</text>
 <text x="580" y="126" font-size="11" fill="#454545" text-anchor="end">A1 v3: gate v3  (80%, 0%)</text>
 <text x="580" y="140" font-size="11" fill="#454545" text-anchor="end">A2 v3: contract v3 + gate v3  (86%, 0%)</text>
+<line x1="16" y1="372" x2="584" y2="372" stroke="#e6e6e6" stroke-width="1.2"/>
+<text x="16" y="394" font-size="13.5" fill="#1f1f1f" font-weight="600">Confirmatory tests of gate v3: case-sides fooled within five attempts</text>
+<text x="16" y="411" font-size="11.5" fill="#666666">Frozen before any call; the gated arm's attacker saw the gate's verdicts; whiskers: Wilson 95%</text>
+<line x1="176" y1="422" x2="176" y2="524" stroke="#e6e6e6" stroke-width="1"/>
+<text x="176" y="540" font-size="12" fill="#666666" text-anchor="middle">0</text>
+<line x1="278" y1="422" x2="278" y2="524" stroke="#e6e6e6" stroke-width="1"/>
+<text x="278" y="540" font-size="12" fill="#666666" text-anchor="middle">25</text>
+<line x1="380" y1="422" x2="380" y2="524" stroke="#e6e6e6" stroke-width="1"/>
+<text x="380" y="540" font-size="12" fill="#666666" text-anchor="middle">50</text>
+<line x1="482" y1="422" x2="482" y2="524" stroke="#e6e6e6" stroke-width="1"/>
+<text x="482" y="540" font-size="12" fill="#666666" text-anchor="middle">75</text>
+<line x1="584" y1="422" x2="584" y2="524" stroke="#e6e6e6" stroke-width="1"/>
+<text x="584" y="540" font-size="12" fill="#666666" text-anchor="middle">100</text>
+<line x1="176" y1="524" x2="584" y2="524" stroke="#8c8c8c" stroke-width="1"/>
+<text x="380" y="558" font-size="12.5" fill="#454545" text-anchor="middle">Case-sides fooled (%), gate v3 off and on</text>
+<text x="16" y="437" font-size="12" fill="#1f1f1f" font-weight="600">C1</text>
+<text x="16" y="451" font-size="11" fill="#666666">n = 14, p = 0.0005</text>
+<line x1="388.2" y1="438" x2="551.4" y2="438" stroke="#CC79A7" stroke-width="1.5" stroke-opacity="0.8"/>
+<line x1="388.2" y1="434" x2="388.2" y2="442" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<line x1="551.4" y1="434" x2="551.4" y2="442" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<path d="M 496.6 431 L 503.6 438 L 496.6 445 L 489.6 438 Z" stroke="#ffffff" stroke-width="1.8" fill="#CC79A7" stroke-linejoin="round"/>
+<line x1="176" y1="438" x2="265.8" y2="438" stroke="#CC79A7" stroke-width="1.5" stroke-opacity="0.8"/>
+<line x1="176" y1="434" x2="176" y2="442" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<line x1="265.8" y1="434" x2="265.8" y2="442" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<path d="M 176 431 L 183 438 L 176 445 L 169 438 Z" stroke="#ffffff" stroke-width="1.8" fill="#CC79A7" stroke-linejoin="round"/>
+<text x="272.8" y="442" font-size="11.5" fill="#1f1f1f">on 0/14</text>
+<text x="381.2" y="442" font-size="11.5" fill="#1f1f1f" text-anchor="end">off 11/14</text>
+<text x="16" y="471" font-size="12" fill="#1f1f1f" font-weight="600">C2, replication</text>
+<text x="16" y="485" font-size="11" fill="#666666">n = 28, p = 3.0e-8</text>
+<line x1="473.8" y1="472" x2="567.7" y2="472" stroke="#CC79A7" stroke-width="1.5" stroke-opacity="0.8"/>
+<line x1="473.8" y1="468" x2="473.8" y2="476" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<line x1="567.7" y1="468" x2="567.7" y2="476" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<path d="M 540.3 465 L 547.3 472 L 540.3 479 L 533.3 472 Z" stroke="#ffffff" stroke-width="1.8" fill="#CC79A7" stroke-linejoin="round"/>
+<line x1="176" y1="472" x2="225" y2="472" stroke="#CC79A7" stroke-width="1.5" stroke-opacity="0.8"/>
+<line x1="176" y1="468" x2="176" y2="476" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<line x1="225" y1="468" x2="225" y2="476" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<path d="M 176 465 L 183 472 L 176 479 L 169 472 Z" stroke="#ffffff" stroke-width="1.8" fill="#CC79A7" stroke-linejoin="round"/>
+<text x="232" y="476" font-size="11.5" fill="#1f1f1f">on 0/28</text>
+<text x="466.8" y="476" font-size="11.5" fill="#1f1f1f" text-anchor="end">off 25/28</text>
+<text x="16" y="505" font-size="12" fill="#1f1f1f" font-weight="600">C1 + C2, pooled</text>
+<text x="16" y="519" font-size="11" fill="#666666">n = 42, descriptive</text>
+<line x1="469.8" y1="506" x2="555.4" y2="506" stroke="#CC79A7" stroke-width="1.5" stroke-opacity="0.8"/>
+<line x1="469.8" y1="502" x2="469.8" y2="510" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<line x1="555.4" y1="502" x2="555.4" y2="510" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<path d="M 525.7 499 L 532.7 506 L 525.7 513 L 518.7 506 Z" stroke="#ffffff" stroke-width="1.8" fill="#CC79A7" stroke-linejoin="round"/>
+<line x1="176" y1="506" x2="208.6" y2="506" stroke="#CC79A7" stroke-width="1.5" stroke-opacity="0.8"/>
+<line x1="176" y1="502" x2="176" y2="510" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<line x1="208.6" y1="502" x2="208.6" y2="510" stroke="#CC79A7" stroke-width="1.2" stroke-opacity="0.8"/>
+<path d="M 176 499 L 183 506 L 176 513 L 169 506 Z" stroke="#ffffff" stroke-width="1.8" fill="#CC79A7" stroke-linejoin="round"/>
+<text x="215.6" y="510" font-size="11.5" fill="#1f1f1f">on 0/42</text>
+<text x="462.8" y="510" font-size="11.5" fill="#1f1f1f" text-anchor="end">off 36/42</text>
 </svg>

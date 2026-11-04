@@ -1,0 +1,377 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "a2a_instant",
+  "amount": 1549.0,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "TechHub",
+  "statement_descriptor": "TECHHUB*ONLINE",
+  "items": [
+   {
+    "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+    "qty": 1,
+    "unit_price": 1549.0,
+    "category": "laptops",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-11-15",
+ "buyer_claim": {
+  "text": "My original wording was imprecise: the promised EU-plug power adapter is missing, but an adapter with a fixed UK three-pin plug was supplied instead. This is an accessory mismatch, not a claim that the parcel contained no adapter. The laptop is genuine, black and bears serial SN1E6412BE30; I accept its identity, condition and timely delivery. The frozen offer expressly includes 'USB-C power adapter (EU plug)' and describes an EU-version retail box. The supplied adapter cannot connect directly to our Latvian EU sockets, and no EU plug or converter was enclosed. The attached photographs and inspection note document that specific mismatch. An adapter being present explains why the parcel weight remains consistent with 2.1 kg; neither the carrier's weight nor its delivery signature identifies the plug type. The manufacturer registry establishes the laptop's identity, not which adapter accompanied it. The merchant's packing checklist repeats the promised accessory but supplies no photograph or accessory identifier establishing the plug actually packed. Please weigh these records at step 1: the delivered accessory does not match the frozen offer. AG3 expressly covers accessories and provides a merchant-funded refund. I request EUR 1549 and will make the complete received package available for return.",
+  "disputed_amount": 1549.0,
+  "attachments": [
+   {
+    "type": "uploaded document",
+    "title": "Opening witness statement — 7 November 2026",
+    "text": "I was present when the buyer opened the TechHub parcel on 7 November. The laptop label read SN1E6412BE30. An adapter was in the accessory recess, but it had three rectangular UK pins. We checked the packaging for an EU plug or converter and found neither. The buyer initially described this as the EU adapter being missing. The photographs were taken during that inspection. — A. Ozola, office colleague"
+   },
+   {
+    "type": "uploaded document",
+    "title": "Bench inspection note — 10 November 2026",
+    "text": "Presented: MacBook Air, serial SN1E6412BE30, retail packaging and supplied USB-C adapter. Laptop appears new and undamaged. Adapter has a fixed BS 1363-style UK three-pin mains plug; no interchangeable EU plug head or converter was presented. It cannot connect directly to a standard Latvian Type F socket. This inspection establishes the presented accessory's configuration; it does not independently establish what the merchant packed. — M. Kalnins, electronics technician"
+   }
+  ]
+ },
+ "merchant_reply": {
+  "text": "We delivered exactly the item offered, as described in our listing. Our packing record confirms it. No refund is due.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Buy an Apple MacBook Air 15-inch (M5) for the office for Example SIA (VAT ID LV40003012345): give the VAT ID at checkout, require a VAT invoice, and only buy from a shop that issues VAT invoices. Allowance policy: laptops need my approval before you pay. Max EUR 1,600.",
+  "merchant_allowlist": null,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "max_lines": 1,
+  "max_units": 1,
+  "max_total": 1600.0,
+  "categories": [
+   "laptops"
+  ],
+  "allowance": {
+   "rules": [
+    {
+     "match": {
+      "category": "laptops"
+     },
+     "autonomy": "approval_required"
+    }
+   ],
+   "default": "approval_required",
+   "business": {
+    "company": "Example SIA",
+    "vat_id": "LV40003012345",
+    "invoice_required": true
+   }
+  },
+  "signature": "df7f618cdf6d38c7c3bd205fee9430537b2d208491fd3cdee3aa905e160e5002",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "Apple MacBook Air 15-inch M5"
+   },
+   "reason": "Start by finding listings for the requested laptop.",
+   "status": "8 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-megamart"
+   },
+   "reason": "Check whether the cheaper 15-inch M5 seller (MegaMart) issues VAT invoices before proceeding.",
+   "status": "opened merchant profile m-megamart"
+  },
+  {
+   "seq": 3,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-techhub"
+   },
+   "reason": "MegaMart doesn't issue VAT invoices, so check whether TechHub does before selecting its 15-inch M5 listing.",
+   "status": "opened merchant profile m-techhub"
+  },
+  {
+   "seq": 4,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-mba15-th"
+   },
+   "reason": "Confirm the TechHub 15-inch M5 listing details and price before adding to cart and seeking approval.",
+   "status": "opened product page p-mba15-th"
+  },
+  {
+   "seq": 5,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-mba15-th",
+    "qty": 1
+   },
+   "reason": "TechHub issues VAT invoices and the 15-inch M5 is in stock at EUR 1,549 (under budget), so add it to the cart before seeking the user's approval to pay.",
+   "status": "Added 1 x Apple MacBook Air 15-inch (M5, 16GB, 512GB) to cart. Cart now: 1 x Apple MacBook Air 15-inch (M5, 16GB, 512GB) @ EUR 1549.00 (total EUR 1549.00)"
+  },
+  {
+   "seq": 6,
+   "tool": "ask_user",
+   "args": {
+    "question": "I found an Apple MacBook Air 15-inch (M5, 16GB, 512GB), new, at TechHub for EUR 1,549 (within your EUR 1,600 max). TechHub issues VAT invoices for businesses; the cheaper MegaMart listing (EUR 1,529) only gives consumer receipts, so I excluded it. It's in my cart. Per your laptop approval policy: may I proceed to pay EUR 1,549 with VAT ID LV40003012345 and a VAT invoice for Example SIA?"
+   },
+   "reason": "The allowance policy requires the user's approval before paying for a laptop.",
+   "status": "user replied: Approved."
+  },
+  {
+   "seq": 7,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F",
+    "vat_id": "LV40003012345",
+    "invoice_required": true
+   },
+   "reason": "User approved the purchase, so pay for the cart with the company VAT ID and request a VAT invoice.",
+   "status": "payment approved, order ord_001_534cf02f, EUR 1549.00"
+  },
+  {
+   "seq": 8,
+   "tool": "finish",
+   "args": {
+    "summary": "Purchased 1 x Apple MacBook Air 15-inch (M5, 16GB, 512GB), new, from TechHub for EUR 1,549 (order ord_001_534cf02f, status approved). Checkout used VAT ID LV40003012345 for Example SIA with a VAT invoice requested; TechHub confirms it issues VAT invoices for businesses. Ships from Germany in 2-3 days with 30-day free returns. MegaMart's cheaper listing was skipped because it only issues consumer receipts."
+   },
+   "reason": "The approved purchase completed successfully with the VAT details, so the task is done.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [
+  {
+   "question": "I found an Apple MacBook Air 15-inch (M5, 16GB, 512GB), new, at TechHub for EUR 1,549 (within your EUR 1,600 max). TechHub issues VAT invoices for businesses; the cheaper MegaMart listing (EUR 1,529) only gives consumer receipts, so I excluded it. It's in my cart. Per your laptop approval policy: may I proceed to pay EUR 1,549 with VAT ID LV40003012345 and a VAT invoice for Example SIA?",
+   "answer": "Approved."
+  }
+ ],
+ "agent_summary_to_buyer": "Purchased 1 x Apple MacBook Air 15-inch (M5, 16GB, 512GB), new, from TechHub for EUR 1,549 (order ord_001_534cf02f, status approved). Checkout used VAT ID LV40003012345 for Example SIA with a VAT invoice requested; TechHub confirms it issues VAT invoices for businesses. Ships from Germany in 2-3 days with 30-day free returns. MegaMart's cheaper listing was skipped because it only issues consumer receipts.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-mba15-th",
+   "merchant_id": "m-techhub",
+   "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+   "category": "laptops",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "Apple",
+    "model": "apple-mba15-m5",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {},
+    "included_accessories": [
+     "USB-C power adapter (EU plug)"
+    ],
+    "quantity": 1
+   },
+   "description": "15-inch MacBook Air with M5 chip.",
+   "image_descriptors": [
+    "Photo 1: black Apple MacBook Air 15-inch (M5, 16GB, 512GB), front view, new and undamaged",
+    "Photo 2: box contents: USB-C power adapter (EU plug)",
+    "Photo 3: retail box with Apple branding, EU version"
+   ],
+   "unit_price_charged": 1549.0,
+   "delivery_terms": "Germany (2-3 days)",
+   "return_terms": "30-day free returns",
+   "page_sha256": "294d90a8b0d3d245c3f4ebfa05a2b07a1ff09b1aa1fd61c7d75161dde42a41bf",
+   "sha256": "186ec9d8a1917d3478a375afbc84b67562dc2244b36a9d9f0e06d25726aeca03"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-mba15-th": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 2.1,
+     "scanned_weight_kg": 2.1
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+       "serial": "SN1E6412BE30",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": [
+        "USB-C power adapter (EU plug)"
+       ]
+      }
+     ],
+     "packed_at": "2026-11-04"
+    },
+    "serial_registry": {
+     "source": "manufacturer serial registry",
+     "lookup": "SN1E6412BE30",
+     "result": "genuine Apple apple-mba15-m5, Black, first sold new 2026-11-04 (this order)"
+    },
+    "buyer_photos": [
+     {
+      "source": "buyer upload",
+      "description": "Opened retail box with laptop serial label SN1E6412BE30 legible. USB-C adapter sits in the accessory recess with three rectangular UK mains pins visible. Cable and remaining packaging are alongside.",
+      "metadata": {
+       "taken_at": "2026-11-07T19:30:00Z",
+       "device": "iPhone 15"
+      }
+     },
+     {
+      "source": "buyer upload",
+      "description": "Close view of the adapter's fixed UK three-pin plug and USB-C outlet. Laptop label SN1E6412BE30 is visible beside it. The mains plug has no removable EU plug head.",
+      "metadata": {
+       "taken_at": "2026-11-07T19:31:00Z",
+       "device": "iPhone 15"
+      }
+     },
+     {
+      "source": "buyer upload",
+      "description": "All box inserts and accessories laid out beside laptop SN1E6412BE30: USB-C cable and UK-plug adapter. Empty accessory recess and unfolded packaging visible; no EU plug head or converter shown.",
+      "metadata": {
+       "taken_at": "2026-11-07T19:33:00Z",
+       "device": "iPhone 15"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-megamart",
+   "page": {
+    "merchant_id": "m-megamart",
+    "name": "MegaMart",
+    "legal_name": "MegaMart Europe SA",
+    "verified_business": true,
+    "rating": 4.3,
+    "review_count": 25000,
+    "on_platform_since": "2013-02-25",
+    "account_age_days": 5000,
+    "returns_policy": "14-day returns",
+    "ships_from": "Belgium (2-5 days)",
+    "card_statement_descriptor": "MEGAMART",
+    "about": "General retailer with a wide electronics and office range.",
+    "recent_reviews": [
+     "Usually the cheapest.",
+     "Delivery took 5 days but fine."
+    ],
+    "invoices": "Consumer receipts only (no VAT invoices)"
+   },
+   "sha256": "821d210c2f29d6d9cac0b46f6056ac71de7e3ce82067040e1305632b48042f3c"
+  },
+  {
+   "after_action": 3,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-techhub",
+   "page": {
+    "merchant_id": "m-techhub",
+    "name": "TechHub",
+    "legal_name": "TechHub Retail GmbH",
+    "verified_business": true,
+    "rating": 4.6,
+    "review_count": 12400,
+    "on_platform_since": "2016-11-06",
+    "account_age_days": 3650,
+    "returns_policy": "30-day free returns",
+    "ships_from": "Germany (2-3 days)",
+    "card_statement_descriptor": "TECHHUB*ONLINE",
+    "about": "Consumer electronics retailer serving the EU since 2016.",
+    "recent_reviews": [
+     "Fast delivery, well packed.",
+     "Good support when I needed a replacement."
+    ],
+    "invoices": "VAT invoices for businesses available"
+   },
+   "sha256": "6aba58ec8492549dde4ab649cb5e97058d774c46ab97ea6dff422adb7365d2f2"
+  },
+  {
+   "after_action": 4,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-mba15-th",
+   "page": {
+    "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+    "brand": "Apple",
+    "category": "laptops",
+    "price": 1549.0,
+    "stock": 9,
+    "description": "15-inch MacBook Air with M5 chip.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-mba15-th",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-techhub",
+     "name": "TechHub",
+     "rating": 4.6
+    },
+    "shipping": "Germany (2-3 days)"
+   },
+   "sha256": "294d90a8b0d3d245c3f4ebfa05a2b07a1ff09b1aa1fd61c7d75161dde42a41bf"
+  },
+  {
+   "after_action": 7,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-mba15-th",
+   "page": {
+    "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+    "brand": "Apple",
+    "category": "laptops",
+    "price": 1549.0,
+    "stock": 9,
+    "description": "15-inch MacBook Air with M5 chip.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-mba15-th",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-techhub",
+     "name": "TechHub",
+     "rating": 4.6
+    },
+    "shipping": "Germany (2-3 days)"
+   },
+   "sha256": "294d90a8b0d3d245c3f4ebfa05a2b07a1ff09b1aa1fd61c7d75161dde42a41bf"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-mba15-th",
+   "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+   "merchant_id": "m-techhub",
+   "merchant_name": "TechHub",
+   "category": "laptops",
+   "qty": 1,
+   "unit_price": 1549.0,
+   "line_total": 1549.0,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 16,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

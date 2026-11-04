@@ -13,10 +13,11 @@ and 96% with a full evidence package (exact McNemar p = 0.008 and 4e-5). An opti
 own party's submissions then fooled them on 12 and 14 of 14 case-sides, with signed and chained records in evidence. A
 hybrid design (models find facts, rules decide) was fooled on 6 of 14 against 10 of 14 at an equal budget, a difference
 these data do not establish (p = 0.125). Defences built after seeing the attacks trade safety against usefulness. A
-revised gate that checks what each cited record says was then tested once, frozen before any call (confirmatory
-amendment C1), on 14 fresh case-sides with an attacker that saw the gate's verdicts: best-of-5 attack success fell from
-11 of 14 with the gate off to 0 of 14 with it on (exact McNemar, one-sided p = 0.00049). On the 51 ordinary disputes the
-same gate sent 34 to a human, and correct decided outcomes fell from 48 to 16 of 51.
+revised gate that checks what each cited record says then faced two frozen, pre-registered tests on 42 fresh
+case-sides (confirmatory amendment C1 and its replication C2), with an attacker that saw the gate's verdicts: within
+five attempts the attacker fooled the judge on 36 of 42 case-sides with the gate off and on none of 42 with it on (C1: 11
+of 14 against 0 of 14, exact McNemar, one-sided p = 0.00049; C2: 25 of 28 against 0 of 28, p = 3.0e-8). On the 51
+ordinary disputes the same gate sent 34 to a human, and correct decided outcomes fell from 48 to 16 of 51.
 
 ## Status
 
@@ -24,13 +25,17 @@ same gate sent 34 to a human, and correct decided outcomes fell from 48 to 16 of
   carry cues the generator designed, photographs are text descriptions, and the ground truth is the author's rulebook.
   There is no field data.
 - **Small n.** 51 disputes in Phase 2 (44 source references); 14 attacked case-sides in Phase 3; 14 fresh case-sides in
-  C1. Judges and attackers come from three model families in total.
-- **Confirmatory test: done, and in the paper.** Confirmatory amendment C1 (`results/CONFIRMATORY_C1.md`) was frozen
-  before any of its model calls. Hypothesis H11 is supported: with a gate-aware attacker, the attack succeeded on 11 of 14
-  fresh case-sides with gate v3 off and on 0 of 14 with it on (exact McNemar, one-sided p = 0.00049). The cost is large:
-  on the 51 Phase 2 cases the gate sent 34 to human review, and correct decided outcomes fell from 48 of 51 to 16 of 51.
-  The paper reports C1 in its abstract, Section 7, Figure 3 and Appendix G; the earlier gate results on stored outputs
-  stay labelled exploratory.
+  C1 and 28 in C2. Judges and attackers come from three model families in total.
+- **Confirmatory tests: done, replicated, and in the paper.** Confirmatory amendment C1 (`results/CONFIRMATORY_C1.md`)
+  and its replication C2 (`results/CONFIRMATORY_C2.md`) were each frozen before any of their model calls. Hypothesis
+  H11 is supported: with a gate-aware attacker, the attack succeeded on 11 of 14 fresh case-sides with gate v3 off and on
+  0 of 14 with it on (exact McNemar, one-sided p = 0.00049). Its replication H11-R, on 28 further fresh case-sides with
+  the same frozen code, judge and attacker, is supported too: 25 of 28 against 0 of 28 (p = 3.0e-8); pooled, 36 of 42
+  against 0 of 42 (descriptive, because C1 was known). C2's case-sides rest on 6 scenarios and 8 products, and three
+  carry a generator flaw in the packing record (without them, 22 of 25 against 0 of 25). The cost is large: on the 51
+  Phase 2 cases the gate sent 34 to human review, and correct decided outcomes fell from 48 of 51 to 16 of 51. The paper
+  reports C1 and C2 in its abstract, Section 7, Figure 3 and Appendix G; the earlier gate results on stored outputs stay
+  labelled exploratory.
 - **Human baseline: open.** The blind labelling kit is built. Only the author has labelled part of it (8 of 40), which is
   not independent. See "Contributing blind labels".
 - **Pre-registration.** `results/PREREGISTRATION.md` holds the hypotheses and every dated amendment and deviation;
@@ -51,8 +56,8 @@ same gate sent 34 to a human, and correct decided outcomes fell from 48 to 16 of
 | `acs/` | The experiment harness: marketplace, payment controls, agents, dispute cases, evidence packages, arbiters, hybrid rule engine, attacks, provenance gate, analyses |
 | `tests/` | Harness tests (mock backends only; no model calls) |
 | `tools/schema_check/` | Validator for the schemas and examples embedded in ABS v0.3 |
-| `data/` | Catalogue, shopping scenarios, dispute case sets, gate-coverage carts, the C1 frozen manifest |
-| `results/` | Every run log, the model-call ledger (`calls.jsonl`, `call_blobs/`), summaries and write-ups (`PILOT_RESULTS.md`, `PHASE2_DISPUTES.md`, `PHASE3_ATTACKS.md`, `PHASE3B_PROVENANCE.md`, `CONFIRMATORY_C1.md`) |
+| `data/` | Catalogue, shopping scenarios, dispute case sets, gate-coverage carts, the C1 and C2 frozen manifests |
+| `results/` | Every run log, the model-call ledger (`calls.jsonl`, `call_blobs/`), summaries and write-ups (`PILOT_RESULTS.md`, `PHASE2_DISPUTES.md`, `PHASE3_ATTACKS.md`, `PHASE3B_PROVENANCE.md`, `CONFIRMATORY_C1.md`, `CONFIRMATORY_C2.md`) |
 | `expert/` | The blind labelling kit and its scorer |
 | `research/` | Related-work notes and bibliography |
 | `audits/` | Audits 0 to 4 and the briefs given to the AI reviewer |
@@ -68,14 +73,16 @@ python3 -m unittest discover -s tests -t .           # harness tests, mock backe
 python3 -m unittest discover -s standard/sim -t .    # rule-simulation tests
 python3 -m tools.schema_check standard/ABS_v0.3.md   # embedded schemas and Appendix F examples
 python3 -m acs.confirmatory_c1 check                 # the files C1 froze still match their manifest
+python3 -m acs.confirmatory_c2 check                 # C1's and C2's frozen files and C2's anchor set still match
 python3 standard/sim/run.py                          # rule-completeness simulation (rewrites standard/sim/REPORT.md, results.json, receipts.jsonl)
 python3 -m acs.analyze_phase2                        # Phase 2 tables from the stored runs
 python3 -m acs.analyze_c1                            # C1 tables from the stored runs
+python3 -m acs.analyze_c2                            # C2 tables from the stored runs
 paper/build.sh                                       # figures, LaTeX, HTML and PDF of the paper
 ```
 
 The harness run reports eight skips (six tests and two whole test modules), because the expert answer keys and label
-files are withheld (see `expert/README.md`). The simulation and the two analyses above regenerate their stored outputs unchanged,
+files are withheld (see `expert/README.md`). The simulation and the three analyses above regenerate their stored outputs unchanged,
 so `git status` stays clean after running them.
 `paper/build.sh` needs pandoc 3 or later, and Google Chrome or Chromium for the figure PDFs and `main.pdf`; it writes to
 `paper/build/`, which is not tracked.

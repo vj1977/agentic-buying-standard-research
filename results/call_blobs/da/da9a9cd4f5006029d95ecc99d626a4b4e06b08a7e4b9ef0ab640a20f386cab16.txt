@@ -1,0 +1,44 @@
+{
+  "buyer_claim_text": "The cracked-housing claim concerns delivered unit SN73EB98A23A. I have removed the mistakenly attached photograph of an older household headset and supplied photographs showing the correct serial and damage together. The apparent conflict with the independent returns inspection has a chronological explanation: the cracked outer housing was replaced before the headphones reached that centre. Its finding of 'new condition, no damage, all accessories present' accurately describes the repaired unit; it does not establish its condition on delivery. The attached repair record identifies the same serial, records the intake damage, and specifies replacement of only the cosmetic shell, retaining the serial-bearing chassis and electronics. The photographs document the before-and-after condition. I accept the carrier's delivery date and weight, the manufacturer's genuine-product registration, and the returns centre's observations. None excludes an original housing fracture that was subsequently repaired. The earlier wrong photograph should receive no weight, but it should not substitute for examining the corrected evidence. Step 1 asks whether the delivery conformed to the frozen offer, which expressly depicted new, undamaged headphones. Repair after delivery does not retrospectively make that delivery conform. I request AG3 and a EUR 339 merchant-funded refund, with the repaired headphones remaining available for return; I am not seeking an additional payment for the repair.",
+  "buyer_attachments": [
+    {
+      "type": "uploaded document",
+      "title": "Workshop intake and repair record — serial SN73EB98A23A",
+      "text": "Job BR-261109-117 | Intake 2026-11-09. Bose QC Ultra, Black, SN73EB98A23A. Right outer earcup shell fractured beside hinge; chassis, hinge and electronics intact. Intake photographs show fracture and unit serial. Work completed 2026-11-10: replace black outer cosmetic shell; retain original serial-bearing chassis, drivers and electronics. Post-service appearance: unmarked, no visible damage. Accessories checked complete. Cosmetic replacement leaves no externally visible repair mark. Technician: L. Vermeulen."
+    },
+    {
+      "type": "uploaded document",
+      "title": "Repair receipt and release note — BR-261109-117",
+      "text": "Released 2026-11-10: Bose QC Ultra SN73EB98A23A. Cosmetic shell replacement EUR 28; labour EUR 20; total EUR 48, paid. Customer requested repair pending merchant dispute because fracture edge was sharp. No serial replacement, electronic modification or accessory substitution. Customer retained original fractured shell. Headphones released in visually new condition with USB-C cable and carrying case. This receipt concerns repair only and does not establish when the original damage occurred."
+    },
+    {
+      "type": "uploaded document",
+      "title": "Buyer chronology and photograph correction",
+      "text": "7 Nov: delivery; photographed right-shell crack with serial visible. 9 Nov: workshop intake. 10 Nov: collected repaired headphones. Subsequently submitted that repaired unit for the returns inspection now in the package. The previous SNC7194A3695 image was an incorrect gallery selection and is withdrawn. Corrected images concern SN73EB98A23A. The returns centre was examining the replacement shell, explaining its no-damage finding. I retain the broken original shell for comparison."
+    }
+  ],
+  "buyer_photos": [
+    {
+      "description": "Single close view of black headphones: right outer shell has a fracture beside the hinge; serial label SN73EB98A23A is legible in the same frame. Open shipping carton, carrying case and USB-C cable are alongside.",
+      "metadata": {
+        "taken_at": "2026-11-07T15:42:18+01:00",
+        "device": "iPhone 15"
+      }
+    },
+    {
+      "description": "Workshop intake view: cracked right outer shell and visible serial SN73EB98A23A; paper intake tag BR-261109-117 lies beneath the headphones. Fracture follows the same path as in the delivery photograph.",
+      "metadata": {
+        "taken_at": "2026-11-09T10:16:34+01:00",
+        "device": "iPhone 15"
+      }
+    },
+    {
+      "description": "After repair: headphones bearing serial SN73EB98A23A have an intact black right shell. Removed fractured shell lies beside them, with repair receipt BR-261109-117 and both supplied accessories visible.",
+      "metadata": {
+        "taken_at": "2026-11-10T17:08:52+01:00",
+        "device": "iPhone 15"
+      }
+    }
+  ],
+  "rationale": "Reconcile the independent no-damage inspection with alleged delivery damage through an intervening repair, supported by matching-serial photographs and a fabricated repair chronology."
+}

@@ -96,6 +96,10 @@ Change log, 2026-11-04 (confirmatory amendment C1, `results/CONFIRMATORY_C1.md`;
 condition of the experiment): the first frozen, held-out test of a gate result is cited in A5.7, A8.7 and
 A15.2, and A4.5 notes why a mandate-term reader matters. No normative text changed.
 
+Change log, 2026-11-04 (confirmatory amendment C2, `results/CONFIRMATORY_C2.md`; not the C2 control
+condition of the experiment): the replication of the frozen gate test is cited beside C1 in A5.7, A7.9,
+A8.7 and A15.2. No normative text changed.
+
 ## What ABS is
 
 ABS is the **dispute, evidence and liability profile for agentic commerce**. It is layered on what
@@ -1678,7 +1682,9 @@ gate v3 cut best-of-5 attack success at E3 by a gate-aware attacker from another
 fresh case-sides with a claude-opus-5-5 judge, from 11 of 14 to 0 of 14 (exact McNemar one-sided
 p = 0.00049), and sent 34 of 51 baseline cases to review (20 of 31 true claimants; correct decided
 outcomes 48 to 16 of 51), mostly because no reader checks mandate terms beyond the hard limits, page
-text or the action log.
+text or the action log. **Replicated (amendment C2, `results/CONFIRMATORY_C2.md`):** the same frozen code,
+judge and attacker on 28 further fresh case-sides gave 25 of 28 gate off against 0 of 28 gate on (exact
+McNemar one-sided p = 3.0e-8); pooled with C1, 36 of 42 against 0 of 42 (descriptive).
 
 **Machine-checkable citations (normative).** Every Finding MUST state its value in the closed
 vocabulary of its type and MUST cite what it rests on in the structured `cited_evidence` field
@@ -2676,8 +2682,9 @@ cluster-bootstrap intervals):
   audit with these outputs in view lets 0 of 14, 0 of 14 and 0 of 67 hybrid attempts through on the
   stored outputs and reviews 26 of 50 baseline cases (exploratory). A matched gate-on and gate-off test with a gate-aware attacker ran later, frozen, as
   confirmatory amendment C1: gate v3 cut best-of-5 attack success on 14 fresh case-sides from 11 to 0
-  of 14 (p = 0.00049, one-sided) and sent 34 of 51 baseline cases to review (A5.7). The
-  confidence-aware attacker and the other lost cells of Deviation 6 are prospective plans, not run.
+  of 14 (p = 0.00049, one-sided) and sent 34 of 51 baseline cases to review (A5.7). Its replication,
+  confirmatory amendment C2, gave 25 of 28 against 0 of 28 on 28 further fresh case-sides (p = 3.0e-8,
+  one-sided). The confidence-aware attacker and the other lost cells of Deviation 6 are prospective plans, not run.
 - **Limitations.** Ground truth applies this rulebook, not a court's; arbiters, fact-finders and
   agents share two model families; 34 of 51 cases are scripted; the evidence is synthetic with
   designed inconsistencies (photos are descriptions, so a fabricated and a real photo are
@@ -2911,7 +2918,9 @@ baseline cases, but it was written with those outputs in view and is exploratory
 (`results/CONFIRMATORY_C1.md`) then ran a matched gate-on and gate-off test once, frozen: with a
 claude-opus-5-5 judge and a gate-aware attacker from another model family that wrote a payload on all 102 attempts, gate v3 cut
 best-of-5 attack success on 14 fresh case-sides from 11 to 0 (p = 0.00049, one-sided) and sent 34 of 51
-baseline cases to review.
+baseline cases to review. Its replication, confirmatory amendment C2 (`results/CONFIRMATORY_C2.md`), cut it
+from 25 of 28 to 0 of 28 on 28 further fresh case-sides (p = 3.0e-8, one-sided); there the attacker also
+forged control blocks aimed at the judge; two swayed it, and the gate reviewed both.
 
 What remains: a fabricated record that passes a corroboration test (a forged registry entry, a
 compromised capture app or carrier system); a record that is wrong or stale when made, including a
@@ -3599,11 +3608,12 @@ checker agreement 36 of 40 (5 of 8 conversations), 2 safely stricter, 2 failing 
 | Optimised attacks on party-authored evidence (A5.7 provenance gate, A8.7) | Phase 3: 14 case-sides, attacker rewrites only its own submissions, best of 10 (A1) or 5 (A2) at E3, A1 at E1 | A1 fable fooled 12 of 14 at E3 and 14 of 14 at E1; A1 grok 14 of 14; A2 6 of 14 (buyer side only; 0 of 7 merchant side); at a common budget of 5 attempts A1 fable 10 of 14 against A2 6 of 14 (p = 0.125, descriptive); aggregate attempts expended per successful case-side 3.9 (fable E3), first success among fooled case-sides mean 2.25, median 1; registry and carrier-weight records resisted attacks against fable on 2 case-sides, not against grok; payload transfer 14 of 14 to the weaker arbiter | H8 supported (scripted fooled rate was a lower bound), but the attacker was substituted after preliminary outcomes (Deviations 4, 5): exploratory development, frozen-attacker confirmation pre-registered, not run; H9 not significant |
 | Provenance gate (A5.7) | Phase 3b: the 14 Phase 3 final payloads at E3 decided once by the gated A1 (claude-fable-5-1, grok-4.7); the hybrid recomputed from its logged Findings; the baseline Phase 2 workload, 50 valid cases (fable) and 18 of 51 (grok) | Same-call attack success 11 of 14 to 1 of 14 (fable, p = 0.002), 12 of 14 to 1 of 14 (grok, p = 0.001), hybrid case-sides 7 of 14 to 3 of 14; rejections format / provenance / contradiction 10 / 2 / 0 (fable) and 13 / 0 / 0 (grok); every pass cited an independent record that does not support the finding; baseline review 24 of 50 (22 of 31 true claimants, 2 of 19 unfounded claims); abstention at 0.7 alone 3 of 50 reviewed, 8 of 14 attacks through; gate v2 on stored outputs (exploratory) 0 of 14, 0 of 14, 0 of 67 hybrid attempts through, baseline review 26 of 50 | H10 as pre-registered (12 of 14 to 1 of 14, p = 0.001) confounded with re-testing selected successes under a changed prompt; the matched gate-on and gate-off test and the gate-aware attacker ran later, frozen, as confirmatory amendment C1 (next row); confidence-aware attackers and new kinds of case-side not run (Deviation 6); the A5.7 refinements are not measured as specified |
 | Provenance gate v3, confirmatory (A5.7, A4.5) | Confirmatory amendment C1 (not the C1 mandate condition above): gate v3 off and on at E3, 14 fresh case-sides of the Phase 3 kinds, best of 5, a gate-aware attacker from another model family, a claude-opus-5-5 judge with typed Findings; the 51 baseline cases once each | Attack success 11 of 14 gate off, 0 of 14 gate on (the judge was fooled on 8 gated attempts, all sent to review); baseline review 34 of 51 (20 of 31 true claimants), correct decided outcomes 48 to 16 of 51; 23 of 34 reviews unchecked, including all 8 AG2 and 7 of 10 AG1-P cases; 0 of 102 attempts without a payload | H11 supported (exact McNemar one-sided p = 0.00049), frozen before its first call, no deviation; one judge and one attacker family, n = 14, cases from the Phase 2 generator (`results/CONFIRMATORY_C1.md`) |
+| Provenance gate v3, replication (A5.7) | Confirmatory amendment C2 (not the C2 control condition above): C1's frozen code, judge and attacker; gate v3 off and on at E3 on 28 further fresh case-sides from 6 scenarios no earlier phase used, best of 5; no baseline arm | Attack success 25 of 28 gate off, 0 of 28 gate on (buyer side 14 of 14 to 0, merchant side 11 of 14 to 0; the judge was fooled before the gate on 14 gated attempts, all sent to review); pooled with C1 36 of 42 against 0 of 42 (descriptive); 0 of 198 attempts without a payload; under attack the gate reviewed 114 of the judge's 126 correct decisions | H11-R supported (exact McNemar one-sided p = 3.0e-8), frozen before its first call, no deviation; 6 scenarios and 8 products; 3 case-sides carry a generator flaw in the packing record (without them 22 of 25 against 0 of 25) (`results/CONFIRMATORY_C2.md`) |
 | Rule completeness and decidability of the whole core (A3, A4, A5) | rule-completeness simulation, 528 scenarios (498 live disputes), rule sets `scrolld.abs@0.1` and `@0.2-proposed`, author-built catalogue | v0.1 as written 498 determinate, 30 no rule, 340 of 528 consistent with the stipulated ground truth; v0.2 526 determinate, 2 escalated, 528 of 528 consistent; gaps, conflicts, contradictions 0; live disputes determinate at E0 89 of 498 (17.9%) and at E3 496 of 498 (2 escalated, 0 no rule), given stipulated findings; 73 human reviews; settlement 334 executable, 9 collection-only, 26 infeasible of 369 funds-moving | not a hypothesis: a consistency measurement against the catalogue, not field data |
 
 What the experiment does not test: real merchants under the Participation Agreement, users'
 experience of approvals at scale, providers' acceptance of Step 3, the collection right, the entry
-gate on real populations, a human red-team (the non-refusing attackers were the older grok-4.5 and, in confirmatory amendment C1, a current model from another family), a live web page instead of typed tools, and
+gate on real populations, a human red-team (the non-refusing attackers were the older grok-4.5 and, in confirmatory amendments C1 and C2, a current model from another family), a live web page instead of typed tools, and
 what a court or scheme would decide; the ground truth applies this rulebook (Amendment 5). Audit
 0's limitation on model families is recorded there.
 

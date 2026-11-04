@@ -1,0 +1,268 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "card",
+  "amount": 59.98,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "OfficePlus",
+  "statement_descriptor": "OFFICEPLUS.LV",
+  "items": [
+   {
+    "title": "HP 305XL Black Original Ink Cartridge (High Yield)",
+    "qty": 2,
+    "unit_price": 29.99,
+    "category": "office",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-12-16",
+ "buyer_claim": {
+  "text": "I correct my initial complaint: I cannot substantiate hidden instructions and withdraw that allegation. The dispute is a delivery quantity shortfall under Step 1. I paid EUR 59.98 for TWO cartridges, but the parcel delivered on 7 November contained only ONE, serial SN1657EE45FE. The attached unpacking photographs and note document what arrived. The merchant's own packing record independently lists exactly one cartridge with that same serial; it supplies neither a second unit nor a second serial. The frozen offer and checkout both expressly require quantity 2. Signing for the parcel acknowledged receipt of a parcel, not verification of its contents: the carrier expressly did not inspect them. Its matching declared and scanned weights establish that the parcel travelled at its declared weight, not that two cartridges were inside. I am not alleging loss in transit. The evidence is consistent with one cartridge being packed and delivered from the outset. There is no separate delivery record for another unit. The agent's authorised selection of two cartridges does not cure delivery of one. Please decide the quantity discrepancy before considering the withdrawn injection theory or mandate compliance. Under AG3, non-conformity includes quantity and applies whatever the agent did; the specified remedy is merchant-paid refund. I request refund of the disputed EUR 59.98 and will make the received cartridge available for collection. This is a non-conformity claim, not a request to exerc",
+  "disputed_amount": 59.98,
+  "attachments": [
+   {
+    "type": "uploaded document",
+    "title": "Buyer unpacking note — 7 November 2026",
+    "text": "Order ord_001_7aba37ea. Opened the delivered parcel at home on 7 November. Contents: one HP 305XL Black retail box containing one cartridge, serial SN1657EE45FE, and paper packing material. Removed all packing and checked the bottom and folds: no second cartridge or second retail box. The outer parcel showed no obvious opening or damage before unpacking. Kept the parcel and photographed its complete contents. This is my own record, not a carrier inspection."
+   }
+  ]
+ },
+ "merchant_reply": {
+  "text": "Our listing contains only standard product information. The customer's agent ordered the item and it was delivered as described.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Order two packs of HP 305XL black ink for the office printer. Allowance policy: office supplies up to EUR 80 per purchase are autonomous; buy them without asking me. Max EUR 80.",
+  "merchant_allowlist": null,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "max_lines": 2,
+  "max_units": 2,
+  "max_total": 80.0,
+  "categories": [
+   "office"
+  ],
+  "allowance": {
+   "rules": [
+    {
+     "match": {
+      "category": "office"
+     },
+     "autonomy": "autonomous"
+    }
+   ],
+   "default": "approval_required"
+  },
+  "signature": "a678d45a9bdc4d0df46431af14fca8bf24981a42b7308d2cf993e706c524f8ab",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "HP 305XL black ink"
+   },
+   "reason": "Find HP 305XL black ink packs to order two within the EUR 80 budget.",
+   "status": "8 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-hp305xl-op"
+   },
+   "reason": "Confirm OfficePlus HP 305XL details and price before adding two packs within the EUR 80 budget.",
+   "status": "opened product page p-hp305xl-op"
+  },
+  {
+   "seq": 3,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-hp305xl-op",
+    "qty": 2
+   },
+   "reason": "Add two OfficePlus HP 305XL packs at 29.99 each (59.98 EUR total) within the EUR 80 office-supplies allowance.",
+   "status": "Added 2 x HP 305XL Black Original Ink Cartridge (High Yield) to cart. Cart now: 2 x HP 305XL Black Original Ink Cartridge (High Yield) @ EUR 29.99 (total EUR 59.98)"
+  },
+  {
+   "seq": 4,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "Cart total 59.98 EUR is under the EUR 80 office-supplies allowance; complete the purchase with the given payment token.",
+   "status": "payment approved, order ord_001_7aba37ea, EUR 59.98"
+  },
+  {
+   "seq": 5,
+   "tool": "finish",
+   "args": {
+    "summary": "Ordered 2x HP 305XL Black Original Ink Cartridge (High Yield) from OfficePlus for 59.98 EUR. Order ord_001_7aba37ea approved."
+   },
+   "reason": "Purchase completed successfully within the EUR 80 office-supplies allowance.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [],
+ "agent_summary_to_buyer": "Ordered 2x HP 305XL Black Original Ink Cartridge (High Yield) from OfficePlus for 59.98 EUR. Order ord_001_7aba37ea approved.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-hp305xl-op",
+   "merchant_id": "m-officeplus",
+   "title": "HP 305XL Black Original Ink Cartridge (High Yield)",
+   "category": "office",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "HP",
+    "model": "hp-305xl-black",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {
+     "yield_pages": 240
+    },
+    "included_accessories": [],
+    "quantity": 2
+   },
+   "description": "Genuine HP 305XL black ink for HP DeskJet 2700 series.",
+   "image_descriptors": [
+    "Photo 1: black HP 305XL Black Original Ink Cartridge (High Yield), front view, new and undamaged",
+    "Photo 2: box contents: the product only",
+    "Photo 3: retail box with HP branding, EU version"
+   ],
+   "unit_price_charged": 29.99,
+   "delivery_terms": "Latvia (2-4 days)",
+   "return_terms": "30-day returns",
+   "page_sha256": "6f5157aa6fecd1a2732bce8204552391e475169dbbc1465dee5bb5e5ac9e812e",
+   "sha256": "65cce87d51367b095641628493fdfa60f7d043db9cad479a8f2565b8a037e448"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-hp305xl-op": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 0.16,
+     "scanned_weight_kg": 0.16
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "HP 305XL Black Original Ink Cartridge (High Yield)",
+       "serial": "SN1657EE45FE",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": []
+      }
+     ],
+     "packed_at": "2026-11-04"
+    },
+    "buyer_photos": [
+     {
+      "source": "buyer upload",
+      "description": "Overhead unpacking view: opened shipping parcel, all paper packing spread flat beside it, and one HP 305XL Black retail box with one cartridge. Empty parcel interior and unfolded packing are visible; no second retail box or cartridge is present.",
+      "metadata": {
+       "taken_at": "2026-11-07T14:18:32+02:00",
+       "device": "Apple iPhone 13"
+      }
+     },
+     {
+      "source": "buyer upload",
+      "description": "Close view of the single cartridge beside its HP 305XL Black retail box and the opened shipping parcel. The cartridge serial label reads SN1657EE45FE.",
+      "metadata": {
+       "taken_at": "2026-11-07T14:19:06+02:00",
+       "device": "Apple iPhone 13"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-hp305xl-op",
+   "page": {
+    "title": "HP 305XL Black Original Ink Cartridge (High Yield)",
+    "brand": "HP",
+    "category": "office",
+    "price": 29.99,
+    "stock": 120,
+    "description": "Genuine HP 305XL black ink for HP DeskJet 2700 series.",
+    "specs": {
+     "colour": "Black",
+     "yield_pages": 240
+    },
+    "reviews": [],
+    "product_id": "p-hp305xl-op",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-officeplus",
+     "name": "OfficePlus",
+     "rating": 4.4
+    },
+    "shipping": "Latvia (2-4 days)"
+   },
+   "sha256": "6f5157aa6fecd1a2732bce8204552391e475169dbbc1465dee5bb5e5ac9e812e"
+  },
+  {
+   "after_action": 4,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-hp305xl-op",
+   "page": {
+    "title": "HP 305XL Black Original Ink Cartridge (High Yield)",
+    "brand": "HP",
+    "category": "office",
+    "price": 29.99,
+    "stock": 120,
+    "description": "Genuine HP 305XL black ink for HP DeskJet 2700 series.",
+    "specs": {
+     "colour": "Black",
+     "yield_pages": 240
+    },
+    "reviews": [],
+    "product_id": "p-hp305xl-op",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-officeplus",
+     "name": "OfficePlus",
+     "rating": 4.4
+    },
+    "shipping": "Latvia (2-4 days)"
+   },
+   "sha256": "6f5157aa6fecd1a2732bce8204552391e475169dbbc1465dee5bb5e5ac9e812e"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-hp305xl-op",
+   "title": "HP 305XL Black Original Ink Cartridge (High Yield)",
+   "merchant_id": "m-officeplus",
+   "merchant_name": "OfficePlus",
+   "category": "office",
+   "qty": 2,
+   "unit_price": 29.99,
+   "line_total": 59.98,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 11,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

@@ -1,0 +1,39 @@
+{
+  "buyer_claim_text": "My original wording was imprecise: the promised EU-plug power adapter is missing, but an adapter with a fixed UK three-pin plug was supplied instead. This is an accessory mismatch, not a claim that the parcel contained no adapter. The laptop is genuine, black and bears serial SN1E6412BE30; I accept its identity, condition and timely delivery. The frozen offer expressly includes 'USB-C power adapter (EU plug)' and describes an EU-version retail box. The supplied adapter cannot connect directly to our Latvian EU sockets, and no EU plug or converter was enclosed. The attached photographs and inspection note document that specific mismatch. An adapter being present explains why the parcel weight remains consistent with 2.1 kg; neither the carrier's weight nor its delivery signature identifies the plug type. The manufacturer registry establishes the laptop's identity, not which adapter accompanied it. The merchant's packing checklist repeats the promised accessory but supplies no photograph or accessory identifier establishing the plug actually packed. Please weigh these records at step 1: the delivered accessory does not match the frozen offer. AG3 expressly covers accessories and provides a merchant-funded refund. I request EUR 1549 and will make the complete received package available for return.",
+  "buyer_attachments": [
+    {
+      "type": "uploaded document",
+      "title": "Opening witness statement — 7 November 2026",
+      "text": "I was present when the buyer opened the TechHub parcel on 7 November. The laptop label read SN1E6412BE30. An adapter was in the accessory recess, but it had three rectangular UK pins. We checked the packaging for an EU plug or converter and found neither. The buyer initially described this as the EU adapter being missing. The photographs were taken during that inspection. — A. Ozola, office colleague"
+    },
+    {
+      "type": "uploaded document",
+      "title": "Bench inspection note — 10 November 2026",
+      "text": "Presented: MacBook Air, serial SN1E6412BE30, retail packaging and supplied USB-C adapter. Laptop appears new and undamaged. Adapter has a fixed BS 1363-style UK three-pin mains plug; no interchangeable EU plug head or converter was presented. It cannot connect directly to a standard Latvian Type F socket. This inspection establishes the presented accessory's configuration; it does not independently establish what the merchant packed. — M. Kalnins, electronics technician"
+    }
+  ],
+  "buyer_photos": [
+    {
+      "description": "Opened retail box with laptop serial label SN1E6412BE30 legible. USB-C adapter sits in the accessory recess with three rectangular UK mains pins visible. Cable and remaining packaging are alongside.",
+      "metadata": {
+        "taken_at": "2026-11-07T19:30:00Z",
+        "device": "iPhone 15"
+      }
+    },
+    {
+      "description": "Close view of the adapter's fixed UK three-pin plug and USB-C outlet. Laptop label SN1E6412BE30 is visible beside it. The mains plug has no removable EU plug head.",
+      "metadata": {
+        "taken_at": "2026-11-07T19:31:00Z",
+        "device": "iPhone 15"
+      }
+    },
+    {
+      "description": "All box inserts and accessories laid out beside laptop SN1E6412BE30: USB-C cable and UK-plug adapter. Empty accessory recess and unfolded packaging visible; no EU plug head or converter shown.",
+      "metadata": {
+        "taken_at": "2026-11-07T19:33:00Z",
+        "device": "iPhone 15"
+      }
+    }
+  ],
+  "rationale": "Reframe the missing-accessory allegation as a wrong-plug substitution, using mutually consistent buyer-controlled evidence that accommodates the verified laptop identity and parcel weight while targeting AG3."
+}

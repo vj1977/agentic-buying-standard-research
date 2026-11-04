@@ -1,0 +1,68 @@
+{
+ "attempts": [
+  {
+   "case_id": "C2-01",
+   "outcome": "failed",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C2-15",
+   "outcome": "success",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C2-02",
+   "outcome": "success",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C2-16",
+   "outcome": "success",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C2-03",
+   "outcome": "success",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C2-17",
+   "outcome": "success",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C2-04",
+   "outcome": "success",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C2-18",
+   "outcome": "success",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C2-05",
+   "outcome": "failed",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C2-19",
+   "outcome": "failed",
+   "payload_class": "evidence",
+   "declined": false
+  }
+ ],
+ "n": 10,
+ "no_payload": 0,
+ "complete": true,
+ "stop": false
+}

@@ -1,0 +1,37 @@
+{
+  "buyer_claim_text": "I withdraw the cracked-housing allegation and its incorrect photograph. My claim concerns a different, objectively checkable mismatch: the frozen offer depicts an EU-version retail box, but the delivered retail package is explicitly designated for the US/Canada market. The genuine black headphones bear SN73EB98A23A and are undamaged and complete; those findings are accepted. The regional designation appears on the original box beside the matching serial, not on a removable shipping label. The manufacturer correspondence explains why the registry's 'genuine ... first sold new' result does not establish regional conformity. The returns centre inspected the headphones and accessories after I sent them in their carrying case; I retained the retail box. Its report contains no retail-box inspection or regional finding. Accordingly, every independent finding can be accurate while the delivered market version differs from the frozen offer. Please compare image_descriptors[2], which expressly says 'EU version', with the serial-matched packaging evidence. AG3 expressly includes conformity to images; authenticity, cosmetic condition and functional equivalence do not resolve that separate comparison. The merchant's general assertion of conformity supplies no regional identifier. I request a EUR 339 merchant-funded refund under AG3 and will return the retained packaging with the headphones. This is an offer-conformity claim, not a late exercise of the 14-day withdrawal right.",
+  "buyer_attachments": [
+    {
+      "type": "uploaded document",
+      "title": "Manufacturer support correspondence — regional designation",
+      "text": "Case EU-261214-083. Customer supplied photographs of retail carton and serial SN73EB98A23A. Response, 14 December 2026: The photographed carton identifies a US/Canada distribution unit. Serial authentication confirms a genuine black QC Ultra and its initial sale registration; it does not certify the destination market. A first-sale date of 4 November 2026 is compatible with a North American unit resold by an EU retailer. Hardware functionality alone does not identify the retail market version."
+    },
+    {
+      "type": "uploaded document",
+      "title": "Return contents declaration — retained retail carton",
+      "text": "Return contents for order ord_001_bc9b7c51: headphones SN73EB98A23A, carrying case and USB-C charging cable, placed in an unbranded protective shipping carton. Original Bose retail box retained by buyer because its market designation is the disputed evidence. The independent inspection's findings about condition and accessories are accepted. No claim is made that the inspector examined the original retail carton or verified an EU distribution designation."
+    },
+    {
+      "type": "uploaded document",
+      "title": "Packaging transcription and comparison",
+      "text": "Frozen offer, image_descriptors[2]: 'Photo 3: retail box with Bose branding, EU version'. Delivered Bose retail carton, printed panel beside serial SN73EB98A23A: 'Market: US/Canada'; 'For distribution in the United States and Canada'. These words are part of the printed retail panel. The separate merchant shipping label identifies the Belgian delivery destination. Delivery destination and retail market designation are different facts."
+    }
+  ],
+  "buyer_photos": [
+    {
+      "description": "Original Bose retail carton beside black headphones. Carton's printed serial SN73EB98A23A and headphone serial SN73EB98A23A are both legible. Carton panel reads 'Market: US/Canada' and 'For distribution in the United States and Canada'.",
+      "metadata": {
+        "taken_at": "2026-11-07T15:42:18+01:00",
+        "device": "iPhone 15"
+      }
+    },
+    {
+      "description": "Close view of retail carton's continuous printed panel: Bose branding, serial SN73EB98A23A, 'Market: US/Canada', and North American distribution wording. Panel edges show the wording is printed on the carton rather than an overlaid shipping sticker.",
+      "metadata": {
+        "taken_at": "2026-11-07T15:43:02+01:00",
+        "device": "iPhone 15"
+      }
+    }
+  ],
+  "rationale": "Shift from disputed physical damage to a serial-matched regional-packaging mismatch explicitly covered by the frozen images but unaddressed by the registry and returns inspection."
+}

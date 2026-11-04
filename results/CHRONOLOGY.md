@@ -55,6 +55,7 @@ existed.
 | 25 | Audit 3 re-check fixes and replays: contract v3 (N01, N02), gate v3 (N03, F05), capture checker v2 (N04), F12 and F13 remainders, case-level intervals (N06), schema checker (F15) | Commits after the re-check (c99d63e), 2026-11-04: b9a1bdf, 7f5d0dd, a775310, 0aef881, 7e8d3d6, cd88708, 6186686; hardened after an independent adversarial check: 83b166b, 5622fd7 | no new calls | Every result above, the Audit 1 re-analyses and the re-check's counterexamples | Earlier code versions kept; Audit 1 numbers reproduce; run-level intervals withdrawn with the old values quoted | Exploratory (new code on stored outputs); N06 a correction of the inference unit |
 | 26 | Follow-up experiments 1-5 ("Post-audit amendment (Audit 1)", Section 3) | Listed 2026-11-04 | not run | Every result above | - | Prospective experiment plans, not yet frozen preregistrations: the gate, contract, prompts, case set and attacker are not frozen (Audit 3, N07) |
 | 27 | Confirmatory amendment C1: H11 (gate v3 on vs off, gate-aware attacker, 14 fresh case-sides), baseline cost, re-decisions | Confirmatory amendment C1, 10b5013, 11-04 17:02:46Z; code, case set, analysis and manifest f41a161, 17:02:27Z | c1_probe 11-04 17:03:01Z; c1_A 17:03:48Z | Every result above. No C1 case, judge decision or attack existed; the 14 case-sides come from Phase 1 episodes of scenarios that source no Phase 2 case | None: no deviation; 2 attacker calls missing (Codex capacity errors) and re-run under the rules | Prospective (H11 confirmatory; the rest secondary). Plan 1 of row 26, with a substituted judge (claude-opus-5-5) and attacker (Codex gpt-6-astra) |
+| 28 | Confirmatory amendment C2: H11-R (replication of H11 on 28 fresh case-sides), pooled C1 + C2, attacker strength, re-decisions | Confirmatory amendment C2, 735f491, 11-04 20:46:27Z; code, case set, analysis and manifest e27d599, 20:43:59Z | c2_probe 11-04 20:46:41Z; c2_A 20:47:25Z | Every result above, including C1's outcomes (so the pooled C1 + C2 analysis is secondary). No C2 case, judge decision or attack existed; the 28 case-sides come from Phase 1 episodes of 6 scenarios that source no Phase 2, capture or C1 case | None: no deviation; no missing cell, no invalid judge output; 566 of at most 600 calls | Prospective (H11-R confirmatory; the rest secondary). Row 27 repeated with the same frozen code, judge and attacker |
 
 Rows 22-24 belong to the Phase 3 write-ups, which another lane maintains; they are listed here so
 that the chronology is complete.
@@ -113,10 +114,15 @@ From `results/calls.jsonl`: first and last call per `run_id` (UTC), calls logged
 | c1_BL | 11-04 17:10:14Z | 11-04 17:15:26Z | 51 | 51 | 6,679 |
 | c1_B | 11-04 17:10:34Z | 11-04 17:40:05Z | 140 | 140 | 6,819 |
 | c1_R | 11-04 17:40:20Z | 11-04 17:46:16Z | 84 | 84 | 6,903 |
+| c2_probe | 11-04 20:46:41Z | 11-04 20:46:44Z | 2 | 2 | 6,905 |
+| c2_A | 11-04 20:47:25Z | 11-04 21:04:27Z | 116 | 116 | 7,021 |
+| c2_B | 11-04 20:50:11Z | 11-04 21:27:01Z | 280 | 280 | 7,301 |
+| c2_R | 11-04 21:27:15Z | 11-04 21:39:27Z | 168 | 168 | 7,469 |
 
 No call was made between 06:05:20Z (credits exhausted) and the C1 probe at 17:03:01Z; everything in that
 window, including all Audit 1 and Audit 3 corrections, is deterministic re-analysis of stored records. The C1 calls
-(17:03:01Z-17:46:16Z, 343) are the only calls after it; they ran at commit 10b5013 under the C1 amendment.
+(17:03:01Z-17:46:16Z, 343) and the C2 calls (20:46:41Z-21:39:27Z, 566) are the only calls after it; they ran at
+commits 10b5013 and 735f491 under the C1 and C2 amendments. No call was made between 17:46:16Z and 20:46:41Z.
 
 ## 3. What this changes in the write-ups
 

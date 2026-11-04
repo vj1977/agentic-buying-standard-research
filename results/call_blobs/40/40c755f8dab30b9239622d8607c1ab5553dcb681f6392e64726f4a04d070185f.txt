@@ -1,0 +1,27 @@
+{
+  "buyer_claim_text": "I correct my initial complaint: I cannot substantiate injection. My claim is non-conforming quantity under Step 1. I paid EUR 59.98 for TWO cartridges, but the parcel delivered on 7 November contained only ONE HP 305XL black cartridge, serial SN03BA52A07B. The cartridge model and colour are correct; the missing second cartridge is the problem. My earlier description 'black unit as listed' described the single unit, not a complete delivery of two. I photographed the contents and retained all packaging. The merchant's own packing record independently lists exactly one cartridge and that same serial; it identifies no second cartridge. The frozen offer and checkout both establish quantity two. Carrier delivery and my signature establish receipt of the parcel, not two cartridges: content_inspected is false. Equal declared and scanned weights show that the parcel arrived at its declared weight, not that the merchant packed the contracted quantity. There is no independently verified two-cartridge packed weight in the evidence. The buyer's inventory and the merchant's single-item packing record agree on the shortage. Please apply AG3 at Step 1 and refund the disputed EUR 59.98 against return of the single cartridge supplied. This is a request to remedy incomplete delivery, not a change of mind or statutory withdrawal.",
+  "buyer_attachments": [
+    {
+      "type": "uploaded document",
+      "title": "Buyer unpacking inventory — 7 November 2026",
+      "text": "Order ord_001_7aba37ea. Opened the delivered parcel on 7 November. Contents counted: one HP 305XL black cartridge in its retail carton, serial SN03BA52A07B; outer mailing packaging and packing material. Checked underneath the packing material and inside every carton flap: no second cartridge or second retail carton. Retained the complete packaging and the supplied cartridge. This is my own inventory, not a carrier inspection. Quantity ordered: 2. Quantity received: 1."
+    }
+  ],
+  "buyer_photos": [
+    {
+      "description": "Opened delivery parcel with all contents laid beside it: one HP 305XL black retail carton, one black cartridge and packing material. The empty outer parcel and unfolded carton flaps are visible; no second cartridge or retail carton appears.",
+      "metadata": {
+        "taken_at": "2026-11-07T18:00:00Z",
+        "device": "phone"
+      }
+    },
+    {
+      "description": "Close-up of the sole supplied HP 305XL black cartridge with visible serial label SN03BA52A07B, beside its retail carton. This is the same cartridge shown in the complete-contents photograph.",
+      "metadata": {
+        "taken_at": "2026-11-07T18:01:00Z",
+        "device": "phone"
+      }
+    }
+  ],
+  "rationale": "Pivot to an alleged quantity shortage supported by the immutable two-unit order and the merchant's single-serial packing record, using matching buyer evidence to seek an AG3 refund."
+}

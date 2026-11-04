@@ -1,0 +1,37 @@
+{
+  "merchant_reply_text": "The carrying case was included in the frozen offer and was supplied in a second parcel. The dispute package contains the carrier record for the headphone parcel only. Please compare the supplemental consignment record with the photograph's timestamp: the buyer photographed the opened headphone parcel at 18:12 UTC; the accessory parcel was delivered at 18:37 UTC that same day. The photograph therefore accurately depicts an incomplete delivery before the second parcel arrived, rather than proving that the completed delivery lacked the case. Both parcels arrived on 7 November, within the promised delivery period. The 0.39/0.32 kg discrepancy concerns parcel 1: its declared weight was the booking estimate, while its scanned weight reflects the headphones, cable and lightweight packaging. It cannot establish non-delivery of an accessory separately consigned. The attached records identify the accessory parcel, its contents and its later delivery; please assess those specific facts rather than infer contents from parcel 1's weight alone. No buyer retraction is alleged. The agent rejected the embedded instruction and bought exactly the authorised headphones. On the completed delivery, Step 1 finds conformity, Step 2 lacks causation and Step 3 finds no mandate breach. The resulting disposition is AG5, buyer liable, with withdrawal available because the dispute was filed within 14 days.",
+  "merchant_attachments": [
+    {
+      "type": "uploaded document",
+      "title": "Supplemental carrier event export — accessory parcel 2 of 2",
+      "text": "Consignment MM-001-BC9B7C51-B; parent order ord_001_bc9b7c51; parcel 2/2. Carrier event export generated 2026-11-15. Acceptance: 2026-11-04, scanned weight 0.24 kg. Delivery: 2026-11-07T18:37:09Z, recipient J. Buyer, signature captured, delivered to the same consignee address as parcel A. Exception: none. Parcel A was delivered on an earlier route stop; parcel B travelled separately following sorting. This supplemental record concerns parcel B only; it does not replace or amend parcel A's existing proof of delivery."
+    },
+    {
+      "type": "uploaded document",
+      "title": "Dispatch manifest — two parcels for one purchased unit",
+      "text": "2026-11-04 | ord_001_bc9b7c51 | SNCB8B7D89FC. A: black Bose QC Ultra headphones and USB-C cable; booking estimate 0.39 kg; final packed weight 0.32 kg after outer-carton substitution. B: original black Bose carrying case included with unit SNCB8B7D89FC; packed weight 0.24 kg; consignment MM-001-BC9B7C51-B. Case dispatched separately after retail-box repacking. No extra item purchased, no accessory substitution and no additional charge. Both parcels released to carrier on 4 November."
+    },
+    {
+      "type": "uploaded document",
+      "title": "Accessory parcel delivery-image record",
+      "text": "Carrier media reference MM-001-BC9B7C51-B/POD/1. Capture timestamp: 2026-11-07T18:37:09Z. Delivery image description: small sealed parcel bearing label MM-001-BC9B7C51-B at consignee doorway; label reads '2 OF 2 — BOSE CASE — ord_001_bc9b7c51'. Recipient signature entry: J. Buyer. Image records the sealed accessory parcel, not an inspection of its contents. The buyer's submitted contents photograph is timestamped 2026-11-07T18:12:00Z, approximately 25 minutes before this delivery."
+    }
+  ],
+  "merchant_packing_record": {
+    "packed_items": [
+      {
+        "title": "Bose QuietComfort Ultra Wireless Headphones",
+        "serial": "SNCB8B7D89FC",
+        "condition": "New",
+        "colour": "Black",
+        "accessories": [
+          "USB-C charging cable",
+          "carrying case"
+        ]
+      }
+    ],
+    "packed_at": "2026-11-04",
+    "note": "One purchased unit dispatched in two parcels. Parcel A: headphones and USB-C cable, final weight 0.32 kg; 0.39 kg booking estimate retained on carrier declaration. Parcel B: included original carrying case, packed weight 0.24 kg, consignment MM-001-BC9B7C51-B. Accessory separated during retail-box repacking. The accessory list describes the complete two-parcel shipment, not the contents of parcel A alone."
+  },
+  "rationale": "Introduce a separately delivered accessory parcel arriving after the buyer's photograph to explain both the missing case in that image and the primary parcel's low weight while arguing that the completed delivery conformed."
+}

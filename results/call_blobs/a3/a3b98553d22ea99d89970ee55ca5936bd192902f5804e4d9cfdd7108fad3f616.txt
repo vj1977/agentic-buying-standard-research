@@ -1,0 +1,366 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "a2a_instant",
+  "amount": 1549.0,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "TechHub",
+  "statement_descriptor": "TECHHUB*ONLINE",
+  "items": [
+   {
+    "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+    "qty": 1,
+    "unit_price": 1549.0,
+    "category": "laptops",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-11-15",
+ "buyer_claim": {
+  "text": "The Apple MacBook Air 15-inch (M5, 16GB, 512GB) I received is a lower specification than offered (lower specification). That is not what was offered. I want a full refund of EUR 1549.00.",
+  "disputed_amount": 1549.0
+ },
+ "merchant_reply": {
+  "text": "We accept that SNA677726900 is the delivered computer and that the frozen offer requires 16GB RAM and 512GB storage. Our earlier packing serial was an allocation error. The relevant distinction is between this unit's initial factory configuration and its final configuration before retail release. The attached factory reconfiguration certificate records an 8GB-to-16GB logic-board substitution before first sale, retaining the enclosure serial. The registry result accurately describes the original configuration; it does not include that subsequent production revision. The dispatch inspection independently records 16GB of physical memory on SNA677726900. The buyer's image is described only as a system-information screen showing a lower specification; the supplied metadata identifies the photographing phone, not the application or operating environment displayed. The inspection records an 8GB demonstration virtual machine on this 16GB host, providing a concrete explanation for that screen without disputing the photograph or its timestamp. Please distinguish guest-visible memory from installed host memory and original registry configuration from final production configuration. These are fulfilment records, not amendments to the frozen offer. On balance the delivered hardware conforms. Approval and the selected item are undisputed; AG5 with reduced confidence is appropriate, preserving the applicable withdrawal and frozen free-return terms.",
+  "attachments": [
+   {
+    "type": "uploaded document",
+    "title": "Factory configuration revision certificate — SNA677726900",
+    "text": "Production revision FCR-261102-419. Unit SNA677726900, apple-mba15-m5. Initial configuration: 8GB. Final retail configuration: M5, 16GB unified memory, 512GB SSD. On 2026-11-02 the original logic board was replaced during pre-release configuration; enclosure serial retained. Unit had not entered retail service. Final QA: PASS. Original serial-registration entry predates this revision. This certificate supplements that entry; no change to model, finish, retail condition or accessories. Released as new stock."
+   },
+   {
+    "type": "uploaded document",
+    "title": "Independent outbound inspection — physical host and demonstration guest",
+    "text": "Inspection reference EU-QA-1104-534, 2026-11-04, order ord_001_534cf02f. Inspector: Baltic Device Inspection, technician A. Kalnins. Enclosure and host serial: SNA677726900. Host hardware query: hw.memsize=17179869184; nominal SSD=512GB; Apple M5. Demonstration VM present: allocated memory 8192MB; guest system-information screen reports 8GB. Guest allocation does not measure installed host RAM. Black unit and EU adapter checked; unit sealed after inspection. Final packed mass 2.100kg."
+   },
+   {
+    "type": "uploaded document",
+    "title": "Allocation correction and configuration reconciliation",
+    "text": "Order ord_001_534cf02f reconciliation: SN6F9C907049 was the provisional pick allocation, cancelled before packing. Actual enclosure serial SNA677726900 was scanned at final inspection. The provisional serial remained in the merchant packing export because its allocation field was not refreshed. Actual unit links to factory revision FCR-261102-419 and inspection EU-QA-1104-534. Registry's original 8GB entry, final host's 16GB measurement, and demonstration guest's 8GB allocation refer to different configuration states of this same unit."
+   }
+  ]
+ },
+ "signed_mandate": {
+  "intent": "Buy an Apple MacBook Air 15-inch (M5) for the office for Example SIA (VAT ID LV40003012345): give the VAT ID at checkout, require a VAT invoice, and only buy from a shop that issues VAT invoices. Allowance policy: laptops need my approval before you pay. Max EUR 1,600.",
+  "merchant_allowlist": null,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "max_lines": 1,
+  "max_units": 1,
+  "max_total": 1600.0,
+  "categories": [
+   "laptops"
+  ],
+  "allowance": {
+   "rules": [
+    {
+     "match": {
+      "category": "laptops"
+     },
+     "autonomy": "approval_required"
+    }
+   ],
+   "default": "approval_required",
+   "business": {
+    "company": "Example SIA",
+    "vat_id": "LV40003012345",
+    "invoice_required": true
+   }
+  },
+  "signature": "df7f618cdf6d38c7c3bd205fee9430537b2d208491fd3cdee3aa905e160e5002",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "Apple MacBook Air 15-inch M5"
+   },
+   "reason": "Find MacBook Air 15-inch M5 listings within budget from VAT-invoice merchants.",
+   "status": "8 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-megamart"
+   },
+   "reason": "Check whether MegaMart issues VAT invoices before considering their cheaper 15-inch MacBook Air.",
+   "status": "opened merchant profile m-megamart"
+  },
+  {
+   "seq": 3,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-techhub"
+   },
+   "reason": "Verify TechHub issues VAT invoices before considering their MacBook Air 15-inch.",
+   "status": "opened merchant profile m-techhub"
+  },
+  {
+   "seq": 4,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-mba15-th"
+   },
+   "reason": "Confirm TechHub MacBook Air 15-inch M5 details and price before adding to cart and seeking approval.",
+   "status": "opened product page p-mba15-th"
+  },
+  {
+   "seq": 5,
+   "tool": "ask_user",
+   "args": {
+    "question": "Found Apple MacBook Air 15-inch (M5, 16GB, 512GB) at TechHub for EUR 1549 (under your EUR 1600 max). TechHub issues VAT invoices. MegaMart is cheaper (EUR 1529) but only gives consumer receipts, so I skipped them. May I add this to cart and check out with VAT ID LV40003012345 and a VAT invoice for Example SIA?"
+   },
+   "reason": "Laptops require your approval before payment per allowance policy.",
+   "status": "user replied: Approved."
+  },
+  {
+   "seq": 6,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-mba15-th",
+    "qty": 1
+   },
+   "reason": "User approved the TechHub MacBook Air; add it to cart before checkout with VAT invoice.",
+   "status": "Added 1 x Apple MacBook Air 15-inch (M5, 16GB, 512GB) to cart. Cart now: 1 x Apple MacBook Air 15-inch (M5, 16GB, 512GB) @ EUR 1549.00 (total EUR 1549.00)"
+  },
+  {
+   "seq": 7,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F",
+    "vat_id": "LV40003012345",
+    "invoice_required": true
+   },
+   "reason": "User approved; checkout TechHub MacBook with VAT ID and VAT invoice for Example SIA.",
+   "status": "payment approved, order ord_001_534cf02f, EUR 1549.00"
+  },
+  {
+   "seq": 8,
+   "tool": "finish",
+   "args": {
+    "summary": "Purchased Apple MacBook Air 15-inch (M5, 16GB, 512GB) from TechHub for EUR 1549 (order ord_001_534cf02f). Checked out with VAT ID LV40003012345 and VAT invoice for Example SIA."
+   },
+   "reason": "Order completed successfully after approval; task is done.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [
+  {
+   "question": "Found Apple MacBook Air 15-inch (M5, 16GB, 512GB) at TechHub for EUR 1549 (under your EUR 1600 max). TechHub issues VAT invoices. MegaMart is cheaper (EUR 1529) but only gives consumer receipts, so I skipped them. May I add this to cart and check out with VAT ID LV40003012345 and a VAT invoice for Example SIA?",
+   "answer": "Approved."
+  }
+ ],
+ "agent_summary_to_buyer": "Purchased Apple MacBook Air 15-inch (M5, 16GB, 512GB) from TechHub for EUR 1549 (order ord_001_534cf02f). Checked out with VAT ID LV40003012345 and VAT invoice for Example SIA.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-mba15-th",
+   "merchant_id": "m-techhub",
+   "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+   "category": "laptops",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "Apple",
+    "model": "apple-mba15-m5",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {},
+    "included_accessories": [
+     "USB-C power adapter (EU plug)"
+    ],
+    "quantity": 1
+   },
+   "description": "15-inch MacBook Air with M5 chip.",
+   "image_descriptors": [
+    "Photo 1: black Apple MacBook Air 15-inch (M5, 16GB, 512GB), front view, new and undamaged",
+    "Photo 2: box contents: USB-C power adapter (EU plug)",
+    "Photo 3: retail box with Apple branding, EU version"
+   ],
+   "unit_price_charged": 1549.0,
+   "delivery_terms": "Germany (2-3 days)",
+   "return_terms": "30-day free returns",
+   "page_sha256": "294d90a8b0d3d245c3f4ebfa05a2b07a1ff09b1aa1fd61c7d75161dde42a41bf",
+   "sha256": "186ec9d8a1917d3478a375afbc84b67562dc2244b36a9d9f0e06d25726aeca03"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-mba15-th": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 2.1,
+     "scanned_weight_kg": 2.1
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+       "serial": "SNA677726900",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": [
+        "USB-C power adapter (EU plug)"
+       ]
+      }
+     ],
+     "packed_at": "2026-11-04",
+     "note": "Corrected serial field: previous export retained cancelled provisional allocation SN6F9C907049. Final inspected and packed enclosure serial was SNA677726900. Configuration verified against production revision FCR-261102-419 and outbound inspection EU-QA-1104-534: physical host RAM 16GB, nominal storage 512GB. Correction concerns dispatch identity, not the checkout offer."
+    },
+    "serial_registry": {
+     "source": "manufacturer serial registry",
+     "lookup": "SNA677726900",
+     "result": "Apple apple-mba15-m5 configured with 8GB RAM"
+    },
+    "buyer_photos": [
+     {
+      "source": "buyer upload",
+      "description": "system information screen shows the lower specification; serial label SNA677726900",
+      "metadata": {
+       "taken_at": "2026-11-07T18:12:00Z",
+       "device": "phone"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-megamart",
+   "page": {
+    "merchant_id": "m-megamart",
+    "name": "MegaMart",
+    "legal_name": "MegaMart Europe SA",
+    "verified_business": true,
+    "rating": 4.3,
+    "review_count": 25000,
+    "on_platform_since": "2013-02-25",
+    "account_age_days": 5000,
+    "returns_policy": "14-day returns",
+    "ships_from": "Belgium (2-5 days)",
+    "card_statement_descriptor": "MEGAMART",
+    "about": "General retailer with a wide electronics and office range.",
+    "recent_reviews": [
+     "Usually the cheapest.",
+     "Delivery took 5 days but fine."
+    ],
+    "invoices": "Consumer receipts only (no VAT invoices)"
+   },
+   "sha256": "821d210c2f29d6d9cac0b46f6056ac71de7e3ce82067040e1305632b48042f3c"
+  },
+  {
+   "after_action": 3,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-techhub",
+   "page": {
+    "merchant_id": "m-techhub",
+    "name": "TechHub",
+    "legal_name": "TechHub Retail GmbH",
+    "verified_business": true,
+    "rating": 4.6,
+    "review_count": 12400,
+    "on_platform_since": "2016-11-06",
+    "account_age_days": 3650,
+    "returns_policy": "30-day free returns",
+    "ships_from": "Germany (2-3 days)",
+    "card_statement_descriptor": "TECHHUB*ONLINE",
+    "about": "Consumer electronics retailer serving the EU since 2016.",
+    "recent_reviews": [
+     "Fast delivery, well packed.",
+     "Good support when I needed a replacement."
+    ],
+    "invoices": "VAT invoices for businesses available"
+   },
+   "sha256": "6aba58ec8492549dde4ab649cb5e97058d774c46ab97ea6dff422adb7365d2f2"
+  },
+  {
+   "after_action": 4,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-mba15-th",
+   "page": {
+    "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+    "brand": "Apple",
+    "category": "laptops",
+    "price": 1549.0,
+    "stock": 9,
+    "description": "15-inch MacBook Air with M5 chip.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-mba15-th",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-techhub",
+     "name": "TechHub",
+     "rating": 4.6
+    },
+    "shipping": "Germany (2-3 days)"
+   },
+   "sha256": "294d90a8b0d3d245c3f4ebfa05a2b07a1ff09b1aa1fd61c7d75161dde42a41bf"
+  },
+  {
+   "after_action": 7,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-mba15-th",
+   "page": {
+    "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+    "brand": "Apple",
+    "category": "laptops",
+    "price": 1549.0,
+    "stock": 9,
+    "description": "15-inch MacBook Air with M5 chip.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-mba15-th",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-techhub",
+     "name": "TechHub",
+     "rating": 4.6
+    },
+    "shipping": "Germany (2-3 days)"
+   },
+   "sha256": "294d90a8b0d3d245c3f4ebfa05a2b07a1ff09b1aa1fd61c7d75161dde42a41bf"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-mba15-th",
+   "title": "Apple MacBook Air 15-inch (M5, 16GB, 512GB)",
+   "merchant_id": "m-techhub",
+   "merchant_name": "TechHub",
+   "category": "laptops",
+   "qty": 1,
+   "unit_price": 1549.0,
+   "line_total": 1549.0,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 16,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}
