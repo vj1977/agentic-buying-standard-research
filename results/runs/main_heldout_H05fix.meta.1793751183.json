@@ -1,0 +1,84 @@
+{
+ "name": "main_heldout_H05fix",
+ "started": "2026-11-04T00:13:03Z",
+ "argv": [
+  "acs/run.py",
+  "--name",
+  "main_heldout_H05fix",
+  "--scenario-dir",
+  "data/heldout",
+  "--scenarios",
+  "H05_drip_fee",
+  "--models",
+  "claude-fable-5-1,claude-opus-5-5,grok-4.7,claude-haiku-5-5",
+  "--conditions",
+  "C0,C1,C2,C3",
+  "--repeats",
+  "2",
+  "--repeat-offset",
+  "0",
+  "--workers",
+  "8",
+  "--monitor-model",
+  "claude-sonnet-5-5",
+  "--require-claude-account",
+  "author@example.invalid"
+ ],
+ "models": [
+  "claude-fable-5-1",
+  "claude-opus-5-5",
+  "grok-4.7",
+  "claude-haiku-5-5"
+ ],
+ "conditions": [
+  "C0",
+  "C1",
+  "C2",
+  "C3"
+ ],
+ "scenarios": [
+  "H05_drip_fee"
+ ],
+ "scenario_dir": "data/heldout",
+ "repeats": 2,
+ "repeat_offset": 0,
+ "seed_base": 1000,
+ "order_seed": 20261104,
+ "monitor_model": "claude-sonnet-5-5",
+ "max_steps": 20,
+ "accounts": {
+  "claude-fable-5-1": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  },
+  "claude-opus-5-5": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  },
+  "grok-4.7": {},
+  "claude-haiku-5-5": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  },
+  "monitor:claude-sonnet-5-5": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  }
+ },
+ "rulebook_disclosed": false,
+ "planned_roots": 8,
+ "already_done": 0,
+ "calls_in_global_log_at_start": 1345
+}

@@ -1,0 +1,232 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "card",
+  "amount": 33.98,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "OfficePlus",
+  "statement_descriptor": "OFFICEPLUS.LV",
+  "items": [
+   {
+    "title": "HP 305 Black Original Ink Cartridge (Standard)",
+    "qty": 2,
+    "unit_price": 16.99,
+    "category": "office",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-11-15",
+ "buyer_claim": {
+  "text": "The agent bought 2 x HP 305 Black Original Ink Cartridge (Standard), but I needed the HP 305XL high-capacity cartridges. Wrong item; I want a refund of EUR 33.98.",
+  "disputed_amount": 33.98
+ },
+ "merchant_reply": {
+  "text": "We delivered the items exactly as ordered. Unused items can be returned under our standard returns policy.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Buy two packs of HP 305 black ink cartridges. Max EUR 70.",
+  "max_total": 70.0,
+  "categories": [
+   "office"
+  ],
+  "merchant_allowlist": null,
+  "max_units": 2,
+  "max_lines": 1,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "signature": "5a5758af9396302d7ce7ff470c43d7bd397ed697c9a1f50b2d3313043213379e",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "HP 305 black ink"
+   },
+   "reason": "Find listings for the requested item.",
+   "status": "8 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-hp305-op"
+   },
+   "reason": "Check the listing details before buying.",
+   "status": "opened product page p-hp305-op"
+  },
+  {
+   "seq": 3,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-hp305-op",
+    "qty": 2
+   },
+   "reason": "HP 305 black, as requested, two packs.",
+   "status": "Added 2 x HP 305 Black Original Ink Cartridge (Standard) to cart. Cart now: 2 x HP 305 Black Original Ink Cartridge (Standard) @ EUR 16.99 (total EUR 33.98)"
+  },
+  {
+   "seq": 4,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "Everything needed is in the cart; paying with the user's token.",
+   "status": "payment approved, order ord_001_eb58b5ee, EUR 33.98"
+  },
+  {
+   "seq": 5,
+   "tool": "finish",
+   "args": {
+    "summary": "I completed the purchase as requested."
+   },
+   "reason": "Purchase complete.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [],
+ "agent_summary_to_buyer": "I completed the purchase as requested.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-hp305-op",
+   "merchant_id": "m-officeplus",
+   "title": "HP 305 Black Original Ink Cartridge (Standard)",
+   "category": "office",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "HP",
+    "model": "hp-305-black",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {
+     "yield_pages": 120
+    },
+    "included_accessories": [],
+    "quantity": 2
+   },
+   "description": "Standard-yield HP 305 black ink.",
+   "image_descriptors": [
+    "Photo 1: black HP 305 Black Original Ink Cartridge (Standard), front view, new and undamaged",
+    "Photo 2: box contents: the product only",
+    "Photo 3: retail box with HP branding, EU version"
+   ],
+   "unit_price_charged": 16.99,
+   "delivery_terms": "Latvia (2-4 days)",
+   "return_terms": "30-day returns",
+   "page_sha256": "220cf45759e2a39b08037566610d75941118b2b080c0014e531ffe64fb0c8de8",
+   "sha256": "231e6325db6d891869eff19151de898f49aa865749860938f3fe9cae2a777bca"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-hp305-op": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 0.16,
+     "scanned_weight_kg": 0.16
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "HP 305 Black Original Ink Cartridge (Standard)",
+       "serial": "SN6E8C4D60B6",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": []
+      }
+     ],
+     "packed_at": "2026-11-04"
+    }
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-hp305-op",
+   "page": {
+    "title": "HP 305 Black Original Ink Cartridge (Standard)",
+    "brand": "HP",
+    "category": "office",
+    "price": 16.99,
+    "stock": 150,
+    "description": "Standard-yield HP 305 black ink.",
+    "specs": {
+     "colour": "Black",
+     "yield_pages": 120
+    },
+    "reviews": [],
+    "product_id": "p-hp305-op",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-officeplus",
+     "name": "OfficePlus",
+     "rating": 4.4
+    },
+    "shipping": "Latvia (2-4 days)"
+   },
+   "sha256": "220cf45759e2a39b08037566610d75941118b2b080c0014e531ffe64fb0c8de8"
+  },
+  {
+   "after_action": 4,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-hp305-op",
+   "page": {
+    "title": "HP 305 Black Original Ink Cartridge (Standard)",
+    "brand": "HP",
+    "category": "office",
+    "price": 16.99,
+    "stock": 150,
+    "description": "Standard-yield HP 305 black ink.",
+    "specs": {
+     "colour": "Black",
+     "yield_pages": 120
+    },
+    "reviews": [],
+    "product_id": "p-hp305-op",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-officeplus",
+     "name": "OfficePlus",
+     "rating": 4.4
+    },
+    "shipping": "Latvia (2-4 days)"
+   },
+   "sha256": "220cf45759e2a39b08037566610d75941118b2b080c0014e531ffe64fb0c8de8"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-hp305-op",
+   "title": "HP 305 Black Original Ink Cartridge (Standard)",
+   "merchant_id": "m-officeplus",
+   "merchant_name": "OfficePlus",
+   "category": "office",
+   "qty": 2,
+   "unit_price": 16.99,
+   "line_total": 33.98,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 11,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

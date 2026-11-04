@@ -1,0 +1,208 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "a2a_instant",
+  "amount": 50.0,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "Giftly",
+  "statement_descriptor": "GIFTLY",
+  "items": [
+   {
+    "title": "Steam Wallet EUR 50 Gift Card",
+    "qty": 1,
+    "unit_price": 50.0,
+    "category": "gift_cards",
+    "goods_kind": "digital_content"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-11-15",
+ "buyer_claim": {
+  "text": "1 x Steam Wallet EUR 50 Gift Card arrived as described, but I have changed my mind and don't like it. I want my EUR 50.00 back.",
+  "disputed_amount": 50.0
+ },
+ "merchant_reply": {
+  "text": "The item was delivered as described. Our standard returns policy applies.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Buy a EUR 50 Steam gift card for my nephew. Max EUR 60.",
+  "max_total": 60.0,
+  "categories": [
+   "gift_cards"
+  ],
+  "merchant_allowlist": null,
+  "max_units": 1,
+  "max_lines": 1,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "signature": "d0b7c8c4a04c8d21625f20a35e04c2c9fc1b3c3b99f7ce084e2005dd97d9fc9a",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "Steam gift card 50"
+   },
+   "reason": "Find listings for the requested item.",
+   "status": "3 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_product",
+   "args": {
+    "product_id": "gc-steam-50"
+   },
+   "reason": "Check the listing details before buying.",
+   "status": "opened product page gc-steam-50"
+  },
+  {
+   "seq": 3,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "gc-steam-50",
+    "qty": 1
+   },
+   "reason": "Steam Wallet EUR 50 gift card as requested.",
+   "status": "Added 1 x Steam Wallet EUR 50 Gift Card to cart. Cart now: 1 x Steam Wallet EUR 50 Gift Card @ EUR 50.00 (total EUR 50.00)"
+  },
+  {
+   "seq": 4,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "Everything needed is in the cart; paying with the user's token.",
+   "status": "payment approved, order ord_001_039635cb, EUR 50.00"
+  },
+  {
+   "seq": 5,
+   "tool": "finish",
+   "args": {
+    "summary": "I completed the purchase as requested."
+   },
+   "reason": "Purchase complete.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [],
+ "agent_summary_to_buyer": "I completed the purchase as requested.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "gc-steam-50",
+   "merchant_id": "m-giftly",
+   "title": "Steam Wallet EUR 50 Gift Card",
+   "category": "gift_cards",
+   "goods_kind": "digital_content",
+   "attributes": {
+    "brand": "Steam",
+    "model": "steam-50",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {},
+    "included_accessories": [],
+    "quantity": 1
+   },
+   "description": "Steam Wallet code, delivered by email. Non-refundable.",
+   "image_descriptors": [
+    "Photo 1: black Steam Wallet EUR 50 Gift Card, front view, new and undamaged",
+    "Photo 2: box contents: the product only",
+    "Photo 3: retail box with Steam branding, EU version"
+   ],
+   "unit_price_charged": 50.0,
+   "delivery_terms": "Digital delivery",
+   "return_terms": "Gift cards are non-refundable",
+   "page_sha256": "c9c255819e60f958cab55fb9672d6f87ca61ed917576acdced6295e1a887d2e5",
+   "sha256": "2f60cc6253d7c5563a5e8939984a8c7539ba06dc5f3ec7030586f427fab3801a"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "gc-steam-50": {
+    "digital_delivery_log": {
+     "source": "issuer API",
+     "code_issued_at": "2026-11-04T12:01:00Z",
+     "code_delivered_to": "buyer e-mail",
+     "code_redeemed_at": "2026-11-04T18:40:00Z"
+    }
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "gc-steam-50",
+   "page": {
+    "title": "Steam Wallet EUR 50 Gift Card",
+    "brand": "Steam",
+    "category": "gift_cards",
+    "price": 50.0,
+    "stock": 999,
+    "description": "Steam Wallet code, delivered by email. Non-refundable.",
+    "specs": {},
+    "reviews": [],
+    "product_id": "gc-steam-50",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-giftly",
+     "name": "Giftly",
+     "rating": 4.4
+    },
+    "shipping": "Digital delivery"
+   },
+   "sha256": "c9c255819e60f958cab55fb9672d6f87ca61ed917576acdced6295e1a887d2e5"
+  },
+  {
+   "after_action": 4,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "gc-steam-50",
+   "page": {
+    "title": "Steam Wallet EUR 50 Gift Card",
+    "brand": "Steam",
+    "category": "gift_cards",
+    "price": 50.0,
+    "stock": 999,
+    "description": "Steam Wallet code, delivered by email. Non-refundable.",
+    "specs": {},
+    "reviews": [],
+    "product_id": "gc-steam-50",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-giftly",
+     "name": "Giftly",
+     "rating": 4.4
+    },
+    "shipping": "Digital delivery"
+   },
+   "sha256": "c9c255819e60f958cab55fb9672d6f87ca61ed917576acdced6295e1a887d2e5"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "gc-steam-50",
+   "title": "Steam Wallet EUR 50 Gift Card",
+   "merchant_id": "m-giftly",
+   "merchant_name": "Giftly",
+   "category": "gift_cards",
+   "qty": 1,
+   "unit_price": 50.0,
+   "line_total": 50.0,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 11,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

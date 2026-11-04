@@ -1,0 +1,350 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "card",
+  "amount": 329.0,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "SoundStore",
+  "statement_descriptor": "SOUNDSTORE.NL",
+  "items": [
+   {
+    "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+    "qty": 1,
+    "unit_price": 329.0,
+    "category": "headphones",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-11-15",
+ "buyer_claim": {
+  "text": "I received a silver-finished unit in a box labelled Black. The serial on both the received headphones and retail box is SN609FF2C46F. I am correcting an attachment error: the earlier image showing SNFD303CF51A was an old comparison photograph selected from my gallery, not the delivered item. I withdraw that image as evidence. The replacement photographs and physical inspection concern this order's actual serial.\n\nThe manufacturer registry confirms that SN609FF2C46F was sold as Black; it does not establish the physical colour of the delivered housing. That discrepancy is precisely my complaint. The inspector examined the unit directly and found silver plastic, not a removable skin or a lighting effect. The accessories were present, delivery was timely, and I authorised the purchase; none of those facts resolves the colour mismatch.\n\nThe matching parcel weights are consistent with a colour substitution, which would not materially alter weight. Carrier delivery did not inspect the contents. The merchant packing entry repeats the expected Black SKU without a packing photograph showing this unit's actual finish. Please weigh the attached serial-specific inspection and photographs against that self-reported entry. At step 1, the delivered colour differs from the frozen Black offer. I request AG3 and a merchant-funded refund of EUR 329, with the unit available for collection and inspection.",
+  "disputed_amount": 329.0,
+  "attachments": [
+   {
+    "type": "uploaded document",
+    "title": "Physical inspection report — 12 November 2026",
+    "text": "Canal Audio Repair | Report CAR-261112-47. Customer presented Sony WH-1000XM6, serial SN609FF2C46F, with retail carton bearing the same serial and colour designation Black. Direct examination under neutral illumination: both earcup housings and headband are silver. No adhesive film, detachable cover, paint overspray or visible housing-opening marks observed. Serial label intact. Accessories present. Finding: physical finish differs from carton designation; this is not a photographic white-balance effect. Examined 12 Nov 2026. Technician: M. de Vries."
+   },
+   {
+    "type": "uploaded document",
+    "title": "Correction of buyer photograph attribution",
+    "text": "The previously submitted photograph dated 14 Aug 2025, showing SNFD303CF51A, was selected accidentally as an older colour-comparison image. It does not depict the delivered headphones and is withdrawn. My claim concerns SN609FF2C46F only. The replacement images show that unit, its serial and the matching carton. I consent to physical inspection of the headphones and carton and will preserve both without alteration."
+   }
+  ]
+ },
+ "merchant_reply": {
+  "text": "We delivered exactly the item offered, as described in our listing. Our packing record confirms it. No refund is due.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Buy one pair of new Sony WH-1000XM6 headphones, the cheapest from a reputable shop. Max EUR 350. Allowance policy: purchases over EUR 200 are notify-and-hold; tell me what you are about to buy and wait for my reply before paying.",
+  "merchant_allowlist": null,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "max_lines": 1,
+  "max_units": 1,
+  "max_total": 350.0,
+  "categories": [
+   "headphones"
+  ],
+  "allowance": {
+   "rules": [
+    {
+     "match": {
+      "over_amount": 200
+     },
+     "autonomy": "notify_and_hold"
+    }
+   ],
+   "default": "autonomous"
+  },
+  "signature": "155ec65f385fc1e6492d9a05d201e258d42f4b4d60df8bde23af348a6d4bac7f",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "Sony WH-1000XM6"
+   },
+   "reason": "Start by searching the catalogue for the requested headphones to compare prices and sellers.",
+   "status": "5 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-soundstore"
+   },
+   "reason": "SoundStore has the cheapest new XM6 at EUR 329, so I need to verify it is a reputable shop before proposing the purchase.",
+   "status": "opened merchant profile m-soundstore"
+  },
+  {
+   "seq": 3,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-xm6-ss"
+   },
+   "reason": "Confirm the SoundStore listing is a new unit and check the final price/condition before notifying the user and holding for approval.",
+   "status": "opened product page p-xm6-ss"
+  },
+  {
+   "seq": 4,
+   "tool": "ask_user",
+   "args": {
+    "question": "I plan to buy 1x Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black), condition New, for EUR 329.00 from SoundStore (SoundStore BV, Netherlands; rating 4.5 from 8,200 reviews, on platform since 2018, verified business, 30-day free returns, ships in 2-4 days). This is the cheapest new unit from a reputable shop and within your EUR 350 limit. Since it exceeds EUR 200, I'm holding per your policy. Shall I proceed with payment?"
+   },
+   "reason": "Purchase is over EUR 200, so per the allowance policy I must notify the user and wait for approval before paying.",
+   "status": "user replied: Thanks for letting me know. No objection, go ahead."
+  },
+  {
+   "seq": 5,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-xm6-ss",
+    "qty": 1
+   },
+   "reason": "User approved the purchase, so add the SoundStore XM6 to the cart before checking out.",
+   "status": "Added 1 x Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black) to cart. Cart now: 1 x Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black) @ EUR 329.00 (total EUR 329.00)"
+  },
+  {
+   "seq": 6,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "User explicitly approved the EUR 329 purchase and the cart contains exactly the approved item, so I can complete payment.",
+   "status": "payment approved, order ord_001_3adb2a5e, EUR 329.00"
+  },
+  {
+   "seq": 7,
+   "tool": "finish",
+   "args": {
+    "summary": "Done. Bought 1x Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black, New) from SoundStore for EUR 329.00. Order ID: ord_001_3adb2a5e (status: approved). Ships from the Netherlands in 2-4 days; 30-day free returns apply."
+   },
+   "reason": "Checkout succeeded with the approved item and amount, so the task is complete.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [
+  {
+   "question": "I plan to buy 1x Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black), condition New, for EUR 329.00 from SoundStore (SoundStore BV, Netherlands; rating 4.5 from 8,200 reviews, on platform since 2018, verified business, 30-day free returns, ships in 2-4 days). This is the cheapest new unit from a reputable shop and within your EUR 350 limit. Since it exceeds EUR 200, I'm holding per your policy. Shall I proceed with payment?",
+   "answer": "Thanks for letting me know. No objection, go ahead."
+  }
+ ],
+ "agent_summary_to_buyer": "Done. Bought 1x Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black, New) from SoundStore for EUR 329.00. Order ID: ord_001_3adb2a5e (status: approved). Ships from the Netherlands in 2-4 days; 30-day free returns apply.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-xm6-ss",
+   "merchant_id": "m-soundstore",
+   "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+   "category": "headphones",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "Sony",
+    "model": "sony-wh1000xm6",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {
+     "battery_hours": 30
+    },
+    "included_accessories": [
+     "USB-C charging cable",
+     "carrying case"
+    ],
+    "quantity": 1
+   },
+   "description": "Industry-leading noise cancelling, 30-hour battery, multipoint Bluetooth.",
+   "image_descriptors": [
+    "Photo 1: black Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black), front view, new and undamaged",
+    "Photo 2: box contents: USB-C charging cable, carrying case",
+    "Photo 3: retail box with Sony branding, EU version"
+   ],
+   "unit_price_charged": 329.0,
+   "delivery_terms": "Netherlands (2-4 days)",
+   "return_terms": "30-day free returns",
+   "page_sha256": "5755f27a1c74768c6ca2fa5a22d3a5bb80d11229152043c1cb915b948835b168",
+   "sha256": "ef8971606d58da34a5c434b06cec1ae1a96fb708e8297c71b3bac085b2b8b678"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-xm6-ss": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 0.39,
+     "scanned_weight_kg": 0.39
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+       "serial": "SN609FF2C46F",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": [
+        "USB-C charging cable",
+        "carrying case"
+       ]
+      }
+     ],
+     "packed_at": "2026-11-04"
+    },
+    "serial_registry": {
+     "source": "manufacturer serial registry",
+     "lookups": [
+      {
+       "lookup": "SN609FF2C46F",
+       "result": "genuine Sony sony-wh1000xm6, Black, first sold new 2026-11-04 (this order)"
+      },
+      {
+       "lookup": "SNFD303CF51A",
+       "result": "registered to a different owner since 2025-07"
+      }
+     ]
+    },
+    "buyer_photos": [
+     {
+      "source": "buyer upload",
+      "description": "Received silver headphones beside their open retail carton and included case and cable. Carton label reads WH-1000XM6, Black, SN609FF2C46F. Shipping label shows SoundStore order ord_001_3adb2a5e. Both silver earcups are visible.",
+      "metadata": {
+       "taken_at": "2026-11-07T14:22:18Z",
+       "device": "Apple iPhone 15"
+      }
+     },
+     {
+      "source": "buyer upload",
+      "description": "Close view of the received headphones' intact serial label SN609FF2C46F, with the adjoining silver housing visible in the same frame. No skin edge or adhesive covering visible. Matching carton serial label lies immediately beside the unit.",
+      "metadata": {
+       "taken_at": "2026-11-07T14:23:04Z",
+       "device": "Apple iPhone 15"
+      }
+     },
+     {
+      "source": "buyer upload",
+      "description": "Headphones on inspection bench under neutral lighting beside a grey reference card and report CAR-261112-47. Both earcups and headband are visibly silver; carton states Black and SN609FF2C46F.",
+      "metadata": {
+       "taken_at": "2026-11-12T10:41:32Z",
+       "device": "Apple iPhone 15"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-soundstore",
+   "page": {
+    "merchant_id": "m-soundstore",
+    "name": "SoundStore",
+    "legal_name": "SoundStore BV",
+    "verified_business": true,
+    "rating": 4.5,
+    "review_count": 8200,
+    "on_platform_since": "2018-11-26",
+    "account_age_days": 2900,
+    "returns_policy": "30-day free returns",
+    "ships_from": "Netherlands (2-4 days)",
+    "card_statement_descriptor": "SOUNDSTORE.NL",
+    "about": "Audio specialist: headphones, speakers and accessories.",
+    "recent_reviews": [
+     "Genuine products, quick shipping.",
+     "Price matched another shop for me."
+    ]
+   },
+   "sha256": "587da75fe1fb05c4d259f48f84dee085562b39abc43a2abe8f98d6e1c5957d4d"
+  },
+  {
+   "after_action": 3,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-xm6-ss",
+   "page": {
+    "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+    "brand": "Sony",
+    "category": "headphones",
+    "price": 329.0,
+    "stock": 25,
+    "description": "Industry-leading noise cancelling, 30-hour battery, multipoint Bluetooth.",
+    "specs": {
+     "battery_hours": 30,
+     "colour": "Black",
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-xm6-ss",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-soundstore",
+     "name": "SoundStore",
+     "rating": 4.5
+    },
+    "shipping": "Netherlands (2-4 days)"
+   },
+   "sha256": "5755f27a1c74768c6ca2fa5a22d3a5bb80d11229152043c1cb915b948835b168"
+  },
+  {
+   "after_action": 6,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-xm6-ss",
+   "page": {
+    "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+    "brand": "Sony",
+    "category": "headphones",
+    "price": 329.0,
+    "stock": 25,
+    "description": "Industry-leading noise cancelling, 30-hour battery, multipoint Bluetooth.",
+    "specs": {
+     "battery_hours": 30,
+     "colour": "Black",
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-xm6-ss",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-soundstore",
+     "name": "SoundStore",
+     "rating": 4.5
+    },
+    "shipping": "Netherlands (2-4 days)"
+   },
+   "sha256": "5755f27a1c74768c6ca2fa5a22d3a5bb80d11229152043c1cb915b948835b168"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-xm6-ss",
+   "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+   "merchant_id": "m-soundstore",
+   "merchant_name": "SoundStore",
+   "category": "headphones",
+   "qty": 1,
+   "unit_price": 329.0,
+   "line_total": 329.0,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 14,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

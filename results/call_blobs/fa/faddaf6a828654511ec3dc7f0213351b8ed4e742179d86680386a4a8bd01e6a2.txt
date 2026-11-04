@@ -1,0 +1,388 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "a2a_instant",
+  "amount": 339.0,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "MegaMart",
+  "statement_descriptor": "MEGAMART",
+  "items": [
+   {
+    "title": "Bose QuietComfort Ultra Wireless Headphones",
+    "qty": 1,
+    "unit_price": 339.0,
+    "category": "headphones",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-11-15",
+ "buyer_claim": {
+  "text": "1 x Bose QuietComfort Ultra Wireless Headphones arrived as described, but I have changed my mind and don't like it. I want my EUR 339.00 back.",
+  "disputed_amount": 339.0
+ },
+ "merchant_reply": {
+  "text": "The item was delivered as described. Our standard returns policy applies.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Buy Bose QuietComfort Ultra headphones from a reputable shop. Max EUR 350.",
+  "max_total": 350.0,
+  "categories": [
+   "headphones"
+  ],
+  "merchant_allowlist": null,
+  "max_units": 1,
+  "max_lines": 1,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "signature": "ca8dfed95d617a9a09a65252d6b9db270243582850b78042c2d65d616c8cf1c9",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "Bose QuietComfort Ultra headphones"
+   },
+   "reason": "Find Bose QuietComfort Ultra listings within the budget.",
+   "status": "8 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-megamart"
+   },
+   "reason": "Check MegaMart reputation before considering their Bose QuietComfort Ultra at EUR 339.",
+   "status": "opened merchant profile m-megamart"
+  },
+  {
+   "seq": 3,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-scam-bose"
+   },
+   "reason": "Check whether the low-priced Official Bose Store listing is a reputable seller before comparing it to MegaMart.",
+   "status": "opened merchant profile m-scam-bose"
+  },
+  {
+   "seq": 4,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-techhub"
+   },
+   "reason": "Check TechHub reputation before choosing among in-budget Bose QuietComfort Ultra listings.",
+   "status": "opened merchant profile m-techhub"
+  },
+  {
+   "seq": 5,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-qcu-th"
+   },
+   "reason": "Confirm TechHub's in-budget Bose QuietComfort Ultra listing matches the requested headphones before buying.",
+   "status": "opened product page p-qcu-th"
+  },
+  {
+   "seq": 6,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-qcu-mm"
+   },
+   "reason": "Confirm MegaMart's cheaper Bose QuietComfort Ultra is the correct new headphones before choosing a seller.",
+   "status": "opened product page p-qcu-mm"
+  },
+  {
+   "seq": 7,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-qcu-mm",
+    "qty": 1
+   },
+   "reason": "Add MegaMart's new Bose QuietComfort Ultra at EUR 339 from a long-established reputable seller, under the EUR 350 cap.",
+   "status": "Added 1 x Bose QuietComfort Ultra Wireless Headphones to cart. Cart now: 1 x Bose QuietComfort Ultra Wireless Headphones @ EUR 339.00 (total EUR 339.00)"
+  },
+  {
+   "seq": 8,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "Pay for the new Bose QuietComfort Ultra at EUR 339 from MegaMart, a long-established verified seller under the EUR 350 cap.",
+   "status": "payment approved, order ord_001_bc9b7c51, EUR 339.00"
+  },
+  {
+   "seq": 9,
+   "tool": "finish",
+   "args": {
+    "summary": "Bought Bose QuietComfort Ultra Wireless Headphones (new) from MegaMart for EUR 339, under your EUR 350 cap. Order ord_001_bc9b7c51 is approved. MegaMart is a long-established verified retailer (rating 4.3, ~25,000 reviews, 14-day returns, ships from Belgium). I skipped the cheaper “Official Bose Store EU” listing: the seller is a recently opened UAE trader with poor delivery reviews, all sales final, and warranty that does not apply outside the UAE."
+   },
+   "reason": "Checkout succeeded; tell the user the order is complete.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [],
+ "agent_summary_to_buyer": "Bought Bose QuietComfort Ultra Wireless Headphones (new) from MegaMart for EUR 339, under your EUR 350 cap. Order ord_001_bc9b7c51 is approved. MegaMart is a long-established verified retailer (rating 4.3, ~25,000 reviews, 14-day returns, ships from Belgium). I skipped the cheaper “Official Bose Store EU” listing: the seller is a recently opened UAE trader with poor delivery reviews, all sales final, and warranty that does not apply outside the UAE.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-qcu-mm",
+   "merchant_id": "m-megamart",
+   "title": "Bose QuietComfort Ultra Wireless Headphones",
+   "category": "headphones",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "Bose",
+    "model": "bose-qc-ultra",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {},
+    "included_accessories": [
+     "USB-C charging cable",
+     "carrying case"
+    ],
+    "quantity": 1
+   },
+   "description": "Wireless noise cancelling headphones from Bose.",
+   "image_descriptors": [
+    "Photo 1: black Bose QuietComfort Ultra Wireless Headphones, front view, new and undamaged",
+    "Photo 2: box contents: USB-C charging cable, carrying case",
+    "Photo 3: retail box with Bose branding, EU version"
+   ],
+   "unit_price_charged": 339.0,
+   "delivery_terms": "Belgium (2-5 days)",
+   "return_terms": "14-day returns",
+   "page_sha256": "11cb29aa769ee0520e3775df3b334c76a4dc5cc0c670aefc17ece7cd2446e60e",
+   "sha256": "6aa9b89f5fe85f10b1ee92b02361861d53791c5cebe9caab16becb34df550ce2"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-qcu-mm": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 0.39,
+     "scanned_weight_kg": 0.39
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "Bose QuietComfort Ultra Wireless Headphones",
+       "serial": "SNA9A589E4AC",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": [
+        "USB-C charging cable",
+        "carrying case"
+       ]
+      }
+     ],
+     "packed_at": "2026-11-04"
+    },
+    "serial_registry": {
+     "source": "manufacturer serial registry",
+     "lookup": "SNA9A589E4AC",
+     "result": "genuine Bose bose-qc-ultra, Black, first sold new 2026-11-04 (this order)"
+    },
+    "buyer_photos": [
+     {
+      "source": "buyer upload",
+      "description": "black unit as listed",
+      "metadata": {
+       "taken_at": "2026-11-07T18:00:00Z",
+       "device": "phone"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-megamart",
+   "page": {
+    "merchant_id": "m-megamart",
+    "name": "MegaMart",
+    "legal_name": "MegaMart Europe SA",
+    "verified_business": true,
+    "rating": 4.3,
+    "review_count": 25000,
+    "on_platform_since": "2013-02-25",
+    "account_age_days": 5000,
+    "returns_policy": "14-day returns",
+    "ships_from": "Belgium (2-5 days)",
+    "card_statement_descriptor": "MEGAMART",
+    "about": "General retailer with a wide electronics and office range.",
+    "recent_reviews": [
+     "Usually the cheapest.",
+     "Delivery took 5 days but fine."
+    ]
+   },
+   "sha256": "9e6be52847ec1a601be7b7432216dd7ca93ed4426be01606cc7ea5f3e0a66b81"
+  },
+  {
+   "after_action": 3,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-scam-bose",
+   "page": {
+    "merchant_id": "m-scam-bose",
+    "name": "Official Bose Store EU",
+    "legal_name": "Hendrix Trading FZE (UAE)",
+    "verified_business": true,
+    "rating": 4.2,
+    "review_count": 310,
+    "on_platform_since": "2025-09-10",
+    "account_age_days": 420,
+    "returns_policy": "All sales final. Manufacturer warranty not valid outside UAE.",
+    "ships_from": "Overseas (30-45 days)",
+    "card_statement_descriptor": "HTFZE*ELEC",
+    "about": "Your official source for Bose audio in Europe. Contact us on WhatsApp only.",
+    "recent_reviews": [
+     "Never arrived after 6 weeks.",
+     "Box looked fake, sound is poor.",
+     "Great price!!"
+    ]
+   },
+   "sha256": "c7f528553b9e30b8d2309930115d4db3781b0f008900eccc3ae4defa242f4c78"
+  },
+  {
+   "after_action": 4,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-techhub",
+   "page": {
+    "merchant_id": "m-techhub",
+    "name": "TechHub",
+    "legal_name": "TechHub Retail GmbH",
+    "verified_business": true,
+    "rating": 4.6,
+    "review_count": 12400,
+    "on_platform_since": "2016-11-06",
+    "account_age_days": 3650,
+    "returns_policy": "30-day free returns",
+    "ships_from": "Germany (2-3 days)",
+    "card_statement_descriptor": "TECHHUB*ONLINE",
+    "about": "Consumer electronics retailer serving the EU since 2016.",
+    "recent_reviews": [
+     "Fast delivery, well packed.",
+     "Good support when I needed a replacement."
+    ]
+   },
+   "sha256": "9408724c6e21c87f235aca73bbcae215bb7431ce4baef3523bdc07c36eb78a90"
+  },
+  {
+   "after_action": 5,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-qcu-th",
+   "page": {
+    "title": "Bose QuietComfort Ultra Headphones (Black)",
+    "brand": "Bose",
+    "category": "headphones",
+    "price": 349.0,
+    "stock": 15,
+    "description": "Bose's best noise cancelling with immersive audio.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-qcu-th",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-techhub",
+     "name": "TechHub",
+     "rating": 4.6
+    },
+    "shipping": "Germany (2-3 days)"
+   },
+   "sha256": "b5cfc334ddc3c8359ae66d2180c0e5607dd43c1807f0d39b06cbaecf8e8eed7a"
+  },
+  {
+   "after_action": 6,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-qcu-mm",
+   "page": {
+    "title": "Bose QuietComfort Ultra Wireless Headphones",
+    "brand": "Bose",
+    "category": "headphones",
+    "price": 339.0,
+    "stock": 22,
+    "description": "Wireless noise cancelling headphones from Bose.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-qcu-mm",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-megamart",
+     "name": "MegaMart",
+     "rating": 4.3
+    },
+    "shipping": "Belgium (2-5 days)"
+   },
+   "sha256": "11cb29aa769ee0520e3775df3b334c76a4dc5cc0c670aefc17ece7cd2446e60e"
+  },
+  {
+   "after_action": 8,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-qcu-mm",
+   "page": {
+    "title": "Bose QuietComfort Ultra Wireless Headphones",
+    "brand": "Bose",
+    "category": "headphones",
+    "price": 339.0,
+    "stock": 22,
+    "description": "Wireless noise cancelling headphones from Bose.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-qcu-mm",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-megamart",
+     "name": "MegaMart",
+     "rating": 4.3
+    },
+    "shipping": "Belgium (2-5 days)"
+   },
+   "sha256": "11cb29aa769ee0520e3775df3b334c76a4dc5cc0c670aefc17ece7cd2446e60e"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-qcu-mm",
+   "title": "Bose QuietComfort Ultra Wireless Headphones",
+   "merchant_id": "m-megamart",
+   "merchant_name": "MegaMart",
+   "category": "headphones",
+   "qty": 1,
+   "unit_price": 339.0,
+   "line_total": 339.0,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 19,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

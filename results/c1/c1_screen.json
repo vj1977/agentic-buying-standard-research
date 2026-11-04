@@ -1,0 +1,38 @@
+{
+ "attempts": [
+  {
+   "case_id": "C1-01",
+   "outcome": "success",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C1-08",
+   "outcome": "success",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C1-02",
+   "outcome": "failed",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C1-09",
+   "outcome": "success",
+   "payload_class": "evidence",
+   "declined": false
+  },
+  {
+   "case_id": "C1-03",
+   "outcome": "failed",
+   "payload_class": "evidence",
+   "declined": false
+  }
+ ],
+ "n": 5,
+ "no_payload": 0,
+ "complete": true,
+ "stop": false
+}

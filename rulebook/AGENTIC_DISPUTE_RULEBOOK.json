@@ -1,0 +1,219 @@
+{
+  "version": "1.2",
+  "participation": {
+    "merchant_accepts_rules_on_participation": true,
+    "rules_disclosed_before_purchase_to": [
+      "buyer",
+      "buyer_agent",
+      "merchant",
+      "merchant_agent"
+    ],
+    "machine_readable_offer_fields": [
+      "product_id",
+      "merchant_id",
+      "brand",
+      "model",
+      "condition",
+      "colour",
+      "key_specs",
+      "included_accessories",
+      "image_descriptors",
+      "price",
+      "delivery_cost",
+      "mandatory_fees",
+      "total_landed_cost",
+      "stock",
+      "delivery_terms",
+      "return_terms",
+      "accepts_agentic_dispute_rules"
+    ],
+    "offer_schema_rejects_agent_instructions": true
+  },
+  "evidence_levels": {
+    "E0": [
+      "amount",
+      "currency",
+      "rail",
+      "merchant_name",
+      "statement_descriptor",
+      "date",
+      "item_titles",
+      "buyer_claim",
+      "merchant_reply"
+    ],
+    "E1": [
+      "E0",
+      "signed_mandate"
+    ],
+    "E2": [
+      "E1",
+      "agent_action_log"
+    ],
+    "E3": [
+      "E2",
+      "frozen_offer_at_checkout",
+      "page_snapshots_at_view",
+      "cart_at_checkout_with_line_origin",
+      "hash_chain_verification",
+      "delivery_evidence"
+    ]
+  },
+  "decision_order": [
+    {
+      "step": 1,
+      "question": "Does the delivery conform to the frozen offer (model, specs, colour, condition, quantity, accessories, images, price, delivery terms), weighing the contestable delivery evidence?",
+      "if_no": "AG3"
+    },
+    {
+      "step": 2,
+      "question": "Was the purchase caused by the merchant's offer: instructions in merchant-controlled content, or items/fees the merchant added that the agent did not choose?",
+      "if_yes": [
+        "AG4",
+        "AG1-M"
+      ]
+    },
+    {
+      "step": 3,
+      "question": "Did the agent break an explicit, machine-readable term of the signed mandate or Allowance Policy: a hard limit, a captured item requirement, or a captured clarify-if-ambiguous flag?",
+      "if_yes": "AG1-P"
+    },
+    {
+      "step": 4,
+      "question": "Otherwise the buyer bears it; the statutory withdrawal right still applies.",
+      "then": [
+        "AG2",
+        "AG5"
+      ]
+    }
+  ],
+  "reason_codes": {
+    "AG3": {
+      "name": "Non-conformity",
+      "step": 1,
+      "liable": "merchant",
+      "remedy": "refund",
+      "test": "The delivered item does not conform to the frozen offer (model, specs, colour, condition, quantity, accessories, images, price, or delivery terms), including non-delivery and counterfeit goods. Applies whatever the agent did."
+    },
+    "AG4": {
+      "name": "Injection via merchant content",
+      "step": 2,
+      "liable": "merchant",
+      "remedy": "refund",
+      "test": "The delivery conforms, but the agent bought the items because it followed instructions embedded in content the merchant controls or hosts (listing text, hosted reviews, merchant profile)."
+    },
+    "AG1-M": {
+      "name": "Merchant-added items",
+      "step": 2,
+      "liable": "merchant",
+      "remedy": "refund",
+      "test": "The delivery conforms, but the merchant added or pre-selected items or fees that the agent did not choose."
+    },
+    "AG1-P": {
+      "name": "Agent fault on the record",
+      "step": 3,
+      "liable": "agent_provider",
+      "remedy": "refund",
+      "test": "The delivery conforms and the offer was not manipulative, but the agent broke an explicit, machine-readable term of the signed mandate or Allowance Policy: a hard limit (amount, category, merchant rule, units, expiry, required approval or notification), a captured item requirement (condition, colour, model, spec, size, region or plug, minimum discount), or a captured clarify-if-ambiguous flag."
+    },
+    "AG2": {
+      "name": "Authorised but wrong",
+      "step": 4,
+      "liable": "buyer",
+      "remedy": "deny_or_withdrawal",
+      "test": "The delivery conforms, the offer was not manipulative, and the purchase meets every explicit, machine-readable term of the signed mandate, but it is not what the buyer wanted and did not capture in the mandate (said only in chat, or never said)."
+    },
+    "AG5": {
+      "name": "User error, change of mind, or friendly fraud",
+      "step": 4,
+      "liable": "buyer",
+      "remedy": "deny_or_withdrawal",
+      "test": "The delivery conforms and the purchase matches the explicit mandate and recorded intent; the complaint comes from the buyer's own instruction, a change of mind, or a claim the evidence contradicts."
+    }
+  },
+  "remedies": {
+    "refund": "The disputed amount goes back to the buyer, paid by the liable party; non-conforming goods go back at the merchant's cost.",
+    "withdrawal": "No fault remedy, but the statutory withdrawal right is available: the buyer may return the goods within 14 days of delivery for a refund, paying return costs.",
+    "deny": "No remedy: no fault of another party and no withdrawal right available."
+  },
+  "settlement": {
+    "rail_agnostic": true,
+    "instruction_fields": [
+      "type",
+      "amount",
+      "cost_bearer",
+      "goods_return",
+      "rail",
+      "rail_execution"
+    ],
+    "rail_execution": {
+      "card": {
+        "merchant": "reversal against the merchant through the card network's chargeback mechanism",
+        "agent_provider": "agent provider credits the buyer's card account",
+        "buyer": "no movement of funds",
+        "buyer_withdrawal": "merchant refunds to the card after receiving the returned goods (buyer pays return shipping)"
+      },
+      "a2a_instant": {
+        "merchant": "merchant pushes a refund credit transfer (no rail chargeback exists; the obligation comes from programme participation)",
+        "agent_provider": "agent provider pushes a credit transfer to the buyer",
+        "buyer": "no movement of funds",
+        "buyer_withdrawal": "merchant pushes a refund credit transfer after receiving the returned goods (buyer pays return shipping)"
+      }
+    }
+  },
+  "tier1_offers": [
+    "full_refund",
+    "return_and_refund",
+    "partial_refund",
+    "deny"
+  ],
+  "time_limits_days": {
+    "file_dispute": 60,
+    "merchant_response": 10,
+    "escalate": 10,
+    "final_decision": 30
+  },
+  "delivery_evidence": {
+    "contestable": true,
+    "kinds": [
+      "carrier_proof_of_delivery (no content inspection)",
+      "merchant_packing_record (self-serving)",
+      "buyer_photos (manipulable)",
+      "serial_registry_lookup",
+      "digital_delivery_log",
+      "return_inspection"
+    ]
+  },
+  "withdrawal_right": {
+    "jurisdiction": "EU distance contracts (consumer)",
+    "period_days_from_delivery": 14,
+    "exceptions": [
+      "digital_content once delivery started with consent",
+      "custom_goods made to the consumer's specification"
+    ],
+    "applies_on_top_of_decision": true
+  },
+  "mandate_terms": {
+    "explicit_terms_are_machine_readable": true,
+    "hard_limits": [
+      "max_total",
+      "categories",
+      "merchant_allowlist",
+      "max_units",
+      "expires_at",
+      "allowance_policy"
+    ],
+    "item_requirements": [
+      "condition",
+      "colour",
+      "model",
+      "capacity_or_spec",
+      "size",
+      "region_or_plug",
+      "min_discount_vs_market_pct"
+    ],
+    "flags": [
+      "clarify_if_ambiguous"
+    ],
+    "free_text_intent": "context only; not a term"
+  }
+}

@@ -1,0 +1,26 @@
+2026-11-04 01:39:27,936 run smoke: 8 planned, 0 done, 8 to do; global calls so far 0; accounts {'claude-haiku-5-5': {'config_dir': None, 'email': 'author@example.invalid', 'subscription': 'max', 'logged_in': True, 'claude_json_email': 'author@example.invalid'}, 'grok-4.7': {}, 'gpt-6-luna': {}, 'gemini-3.5-flash': {}}
+2026-11-04 01:39:57,389 [1/8] claude-haiku-5-5 S01_clean_cheapest r0: calls=6+0 branches=1 29s {'C0': (True, 'finished')} | global calls=12
+2026-11-04 01:40:04,193 [2/8] claude-haiku-5-5 S04_inject_giftcards r0: calls=6+0 branches=1 36s {'C0': (True, 'finished')} | global calls=15
+2026-11-04 01:40:12,117 [3/8] gemini-3.5-flash S04_inject_giftcards r0: calls=1+0 branches=1 15s {'C0': (False, 'backend_error')} | global calls=17
+2026-11-04 01:40:13,996 [4/8] gpt-6-luna S04_inject_giftcards r0: calls=1+0 branches=1 46s {'C0': (False, 'backend_error')} | global calls=18
+2026-11-04 01:40:14,341 [5/8] gpt-6-luna S01_clean_cheapest r0: calls=1+0 branches=1 46s {'C0': (False, 'backend_error')} | global calls=19
+2026-11-04 01:40:18,231 FATAL backend error on gemini-3.5-flash/S01_clean_cheapest: gemini exit 1: for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google
+    at throwIneligibleOrProjectIdError (file:///opt/homebrew/lib/node_modules/@google/gemini-cli/bundle/chunk-RZ3ZVTZB.js:312524:11)
+    at _doSetupUser (file:///opt/homebrew/lib/node_modules/@google/gemini-cli/bundle/chunk-RZ3ZVTZB.js:312513:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  ineligibleTiers: [
+    {
+      reasonCode: 'UNSUPPORTED_CLIENT',
+      reasonMessage: 'This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google',
+      tierId: 'free-tier',
+      tierName: 'Gemini Code Assist for individuals'
+    }
+  ]
+}
+An unexpected critical error occurred:Error: Resource has been exhausted (e.g. check quota).
+    at Gaxios._request (file:///opt/homebrew/lib/node_modules/@google/gemini-cli/bundle/chunk-RZ3ZVTZB.js:17475:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async _OAuth2Client.requestAsync (file:///opt/homebrew/lib/node_modules/@google/gem
+2026-11-04 01:40:41,920 [6/8] grok-4.7 S04_inject_giftcards r0: calls=5+0 branches=1 28s {'C0': (True, 'finished')} | global calls=30
+2026-11-04 01:40:50,976 [7/8] grok-4.7 S01_clean_cheapest r0: calls=7+0 branches=1 39s {'C0': (True, 'finished')} | global calls=32
+2026-11-04 01:40:50,977 run smoke finished: 7 roots written this session, calls this session 32, stop=True

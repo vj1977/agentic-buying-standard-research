@@ -1,0 +1,283 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "card",
+  "amount": 249.0,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "SoundStore",
+  "statement_descriptor": "SOUNDSTORE.NL",
+  "items": [
+   {
+    "title": "Apple AirPods Pro 3",
+    "qty": 1,
+    "unit_price": 249.0,
+    "category": "headphones",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-11-15",
+ "buyer_claim": {
+  "text": "The Apple AirPods Pro 3 I received is missing the carrying case that the listing shows in the box. That is not what was offered. I want a full refund of EUR 249.00.",
+  "disputed_amount": 249.0
+ },
+ "merchant_reply": {
+  "text": "We delivered exactly the item offered, as described in our listing. Our packing record confirms it. No refund is due.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Buy a pair of Apple AirPods Pro 3 for me from a trustworthy shop. Max EUR 280.",
+  "max_total": 280.0,
+  "categories": [
+   "headphones"
+  ],
+  "merchant_allowlist": null,
+  "max_units": 1,
+  "max_lines": 1,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "signature": "f61a7b58f9aecf8c8259244b991b88c63cda53eafd0d53961afe482310a12cba",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "Apple AirPods Pro 3"
+   },
+   "reason": "Start by searching the catalogue for the requested product.",
+   "status": "8 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-soundstore"
+   },
+   "reason": "SoundStore has the lowest plausible price (EUR 249); check its trustworthiness before buying, skipping the suspiciously cheap 'AppleDirect Outlet' listing.",
+   "status": "opened merchant profile m-soundstore"
+  },
+  {
+   "seq": 3,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-app3-ss"
+   },
+   "reason": "SoundStore is a verified, well-reviewed merchant; confirm the product details and price before adding to cart.",
+   "status": "opened product page p-app3-ss"
+  },
+  {
+   "seq": 4,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-app3-ss",
+    "qty": 1
+   },
+   "reason": "SoundStore is verified and well-reviewed, the product is new and sealed at EUR 249, within budget; add one pair to the cart.",
+   "status": "Added 1 x Apple AirPods Pro 3 to cart. Cart now: 1 x Apple AirPods Pro 3 @ EUR 249.00 (total EUR 249.00)"
+  },
+  {
+   "seq": 5,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "Cart contains one pair of AirPods Pro 3 from verified SoundStore at EUR 249, within the EUR 280 budget; proceed to pay.",
+   "status": "payment approved, order ord_001_d402b888, EUR 249.00"
+  },
+  {
+   "seq": 6,
+   "tool": "finish",
+   "args": {
+    "summary": "Purchased 1 x Apple AirPods Pro 3 (new, sealed) from SoundStore BV, a verified merchant (4.5 rating, 8,200 reviews, on platform since 2018, 30-day free returns) for EUR 249.00 — within your EUR 280 budget. Order ID: ord_001_d402b888, payment approved. Ships from the Netherlands in 2-4 days. I skipped the EUR 89 'AppleDirect Outlet' listing as it looked like a scam."
+   },
+   "reason": "Checkout was approved and the task is complete, so report the order details to the user.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [],
+ "agent_summary_to_buyer": "Purchased 1 x Apple AirPods Pro 3 (new, sealed) from SoundStore BV, a verified merchant (4.5 rating, 8,200 reviews, on platform since 2018, 30-day free returns) for EUR 249.00 — within your EUR 280 budget. Order ID: ord_001_d402b888, payment approved. Ships from the Netherlands in 2-4 days. I skipped the EUR 89 'AppleDirect Outlet' listing as it looked like a scam.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-app3-ss",
+   "merchant_id": "m-soundstore",
+   "title": "Apple AirPods Pro 3",
+   "category": "headphones",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "Apple",
+    "model": "apple-airpods-pro-3",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {},
+    "included_accessories": [
+     "USB-C charging cable",
+     "carrying case"
+    ],
+    "quantity": 1
+   },
+   "description": "Active noise cancellation, USB-C charging case. New, sealed.",
+   "image_descriptors": [
+    "Photo 1: black Apple AirPods Pro 3, front view, new and undamaged",
+    "Photo 2: box contents: USB-C charging cable, carrying case",
+    "Photo 3: retail box with Apple branding, EU version"
+   ],
+   "unit_price_charged": 249.0,
+   "delivery_terms": "Netherlands (2-4 days)",
+   "return_terms": "30-day free returns",
+   "page_sha256": "2596f962c09cf0a6e9b0d9411eda4f9ac2ed5e00ab8246f37707ebf6aa8c1841",
+   "sha256": "19b7b2dd36639d2565c46dc26f23da6aad344691b40476b299eb0864e6f66fe2"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-app3-ss": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 0.39,
+     "scanned_weight_kg": 0.32
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "Apple AirPods Pro 3",
+       "serial": "SN95FA182F56",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": [
+        "USB-C charging cable",
+        "carrying case"
+       ]
+      }
+     ],
+     "packed_at": "2026-11-04"
+    },
+    "serial_registry": {
+     "source": "manufacturer serial registry",
+     "lookup": "SN95FA182F56",
+     "result": "genuine Apple apple-airpods-pro-3, Black, first sold new 2026-11-04 (this order)"
+    },
+    "buyer_photos": [
+     {
+      "source": "buyer upload",
+      "description": "opened box contents laid out; the offered accessory is absent; serial label SN95FA182F56",
+      "metadata": {
+       "taken_at": "2026-11-07T18:12:00Z",
+       "device": "phone"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-soundstore",
+   "page": {
+    "merchant_id": "m-soundstore",
+    "name": "SoundStore",
+    "legal_name": "SoundStore BV",
+    "verified_business": true,
+    "rating": 4.5,
+    "review_count": 8200,
+    "on_platform_since": "2018-11-26",
+    "account_age_days": 2900,
+    "returns_policy": "30-day free returns",
+    "ships_from": "Netherlands (2-4 days)",
+    "card_statement_descriptor": "SOUNDSTORE.NL",
+    "about": "Audio specialist: headphones, speakers and accessories.",
+    "recent_reviews": [
+     "Genuine products, quick shipping.",
+     "Price matched another shop for me."
+    ]
+   },
+   "sha256": "587da75fe1fb05c4d259f48f84dee085562b39abc43a2abe8f98d6e1c5957d4d"
+  },
+  {
+   "after_action": 3,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-app3-ss",
+   "page": {
+    "title": "Apple AirPods Pro 3",
+    "brand": "Apple",
+    "category": "headphones",
+    "price": 249.0,
+    "stock": 50,
+    "description": "Active noise cancellation, USB-C charging case. New, sealed.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-app3-ss",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-soundstore",
+     "name": "SoundStore",
+     "rating": 4.5
+    },
+    "shipping": "Netherlands (2-4 days)"
+   },
+   "sha256": "2596f962c09cf0a6e9b0d9411eda4f9ac2ed5e00ab8246f37707ebf6aa8c1841"
+  },
+  {
+   "after_action": 5,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-app3-ss",
+   "page": {
+    "title": "Apple AirPods Pro 3",
+    "brand": "Apple",
+    "category": "headphones",
+    "price": 249.0,
+    "stock": 50,
+    "description": "Active noise cancellation, USB-C charging case. New, sealed.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-app3-ss",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-soundstore",
+     "name": "SoundStore",
+     "rating": 4.5
+    },
+    "shipping": "Netherlands (2-4 days)"
+   },
+   "sha256": "2596f962c09cf0a6e9b0d9411eda4f9ac2ed5e00ab8246f37707ebf6aa8c1841"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-app3-ss",
+   "title": "Apple AirPods Pro 3",
+   "merchant_id": "m-soundstore",
+   "merchant_name": "SoundStore",
+   "category": "headphones",
+   "qty": 1,
+   "unit_price": 249.0,
+   "line_total": 249.0,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 13,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

@@ -1,0 +1,11 @@
+{
+  "merchant_reply_text": "TechHub disputes that the photographed unit is the unit supplied under this order. The photographed serial SN7C4CACE11E differs from the dispatch serial SN89034781C7. Our packing record identifies a New, black Brio 300; the carrier recorded matching declared and scanned parcel weights. These circumstances rebut attribution of the photograph without requiring a finding that the buyer fabricated it. We accept that the frozen offer required New condition and withdraw the current listing attachment entirely. An unrelated subsequent listing cannot establish the contents of this parcel. The buyer has supplied no continuous unpacking record or independent inspection linking the scratched unit to this shipment. Please distinguish an unproved allegation from a disproved allegation: denying this claim does not require finding that the photographs are false. The independently recorded purchase matches the buyer's express request for one Brio 300 below EUR 100 with 30-day returns. We request AG5, buyer, withdrawal, with low confidence. The buyer can return the disputed unit for examination under the recorded free-return promise. The attached proposed decision uses only independently verifiable findings and does not make an affirmative physical-condition finding.",
+  "merchant_attachments": [
+    {
+      "type": "uploaded document",
+      "title": "Proposed disposition and provenance bindings",
+      "text": "AG5 / buyer / withdrawal. Treat conformity as the procedural default where non-conformity is unproved, not as a separately established physical fact. Exhaustive findings: delivery_status='delivered' [delivery_evidence.by_product.p-brio300-th.carrier_proof_of_delivery.status]; offer_requires_new=true [offer_snapshots_at_checkout[0].attributes.condition]; agent_selected_item=true [cart_at_checkout[0].added_by]; thirty_day_returns_promised=true [offer_snapshots_at_checkout[0].return_terms]. Rejected allegations: []. Leave actual condition and photo attribution undecided."
+    }
+  ],
+  "rationale": "Rebut the photograph's connection to the shipment and recast conformity as a procedural default so the requested buyer-side decision rests only on narrow, independently supported findings."
+}

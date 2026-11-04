@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380" role="img" aria-labelledby="fig2-title fig2-desc" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif">
+<title id="fig2-title">Optimised attack success at E3 within the same calls, before and after the provenance gate</title>
+<desc id="fig2-desc">Grouped bar chart with Wilson 95% intervals. Share of attacked case-sides in which the Phase 3 final payload at evidence level E3 got the arbiter to decide for the lying party, within the same calls: before the evidence-provenance gate, after the gate as run (v1), and after gate v3, which is exploratory (written after the reviews with these outputs in view; gate v2 gives the same counts); by arbiter and by the side that lied. A1 claude-fable-5-1: buyer side 7/7 before the gate, 1/7 with gate v1, 0/7 with gate v3; merchant side 4/7 before the gate, 0/7 with gate v1, 0/7 with gate v3. A1 grok-4.7: buyer side 7/7 before the gate, 0/7 with gate v1, 0/7 with gate v3; merchant side 5/7 before the gate, 1/7 with gate v1, 0/7 with gate v3. A2 hybrid: buyer side 7/7 before the gate, 3/7 with gate v1, 0/7 with gate v3; merchant side 0/7 before the gate, 0/7 with gate v1, 0/7 with gate v3. Most A1 rejections by gate v1 were format failures: fable 10 format, 2 provenance, 0 contradiction; grok 13, 0, 0.</desc>
+<rect x="0" y="0" width="600" height="380" fill="#ffffff"/>
+<text x="16" y="26" font-size="15.5" fill="#1f1f1f" font-weight="600">Attack success at E3, same calls, before and after the provenance gate</text>
+<rect x="16" y="39" width="12" height="12" fill="#8c8c8c"/>
+<text x="33" y="49.5" font-size="12" fill="#454545">Before the gate (same call)</text>
+<rect x="236" y="39" width="12" height="12" fill="#e6e6e6" stroke="#8c8c8c" stroke-width="1.5"/>
+<text x="253" y="49.5" font-size="12" fill="#454545">Gate as run (v1)</text>
+<rect x="16" y="58" width="12" height="12" fill="none" stroke="#8c8c8c" stroke-width="1.5" stroke-dasharray="3 2"/>
+<text x="33" y="68.5" font-size="12" fill="#454545">Gate v3 (exploratory, written after the reviews)</text>
+<text x="16" y="86" font-size="11.5" fill="#666666">Bars: case-sides fooled, 7 per bar; whiskers: Wilson 95% intervals</text>
+<text x="56" y="294" font-size="12" fill="#666666" text-anchor="end">0</text>
+<text x="56" y="254" font-size="12" fill="#666666" text-anchor="end">25</text>
+<text x="56" y="214" font-size="12" fill="#666666" text-anchor="end">50</text>
+<text x="56" y="174" font-size="12" fill="#666666" text-anchor="end">75</text>
+<text x="56" y="134" font-size="12" fill="#666666" text-anchor="end">100</text>
+<text x="18" y="210" font-size="12.5" fill="#454545" text-anchor="middle" transform="rotate(-90 18 210)">Case-sides fooled (%)</text>
+<line x1="64" y1="250" x2="230" y2="250" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="64" y1="210" x2="230" y2="210" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="64" y1="170" x2="230" y2="170" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="64" y1="130" x2="230" y2="130" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="64" y1="290" x2="230" y2="290" stroke="#8c8c8c" stroke-width="1"/>
+<rect x="66" y="102" width="10" height="10" fill="#0072B2"/>
+<text x="81" y="111" font-size="12.5" fill="#1f1f1f" font-weight="600">A1 claude-fable-5-1</text>
+<rect x="78.3" y="130" width="19" height="160" fill="#0072B2"/>
+<line x1="87.8" y1="186" x2="87.8" y2="130" stroke="#454545" stroke-width="1.1"/>
+<line x1="84.8" y1="186" x2="90.8" y2="186" stroke="#454545" stroke-width="1.1"/>
+<line x1="84.8" y1="130" x2="90.8" y2="130" stroke="#454545" stroke-width="1.1"/>
+<text x="87.8" y="125" font-size="10" fill="#1f1f1f" text-anchor="middle">7/7</text>
+<rect x="100.1" y="267.9" width="17.5" height="22.1" fill="#c7e0ee" stroke="#0072B2" stroke-width="1.5"/>
+<line x1="108.8" y1="285.2" x2="108.8" y2="208.4" stroke="#454545" stroke-width="1.1"/>
+<line x1="105.8" y1="285.2" x2="111.8" y2="285.2" stroke="#454545" stroke-width="1.1"/>
+<line x1="105.8" y1="208.4" x2="111.8" y2="208.4" stroke="#454545" stroke-width="1.1"/>
+<text x="108.8" y="203.4" font-size="10" fill="#1f1f1f" text-anchor="middle">1/7</text>
+<line x1="120.3" y1="289" x2="139.3" y2="289" stroke="#0072B2" stroke-width="2" stroke-dasharray="3 2"/>
+<line x1="129.8" y1="290" x2="129.8" y2="234" stroke="#454545" stroke-width="1.1"/>
+<line x1="126.8" y1="290" x2="132.8" y2="290" stroke="#454545" stroke-width="1.1"/>
+<line x1="126.8" y1="234" x2="132.8" y2="234" stroke="#454545" stroke-width="1.1"/>
+<text x="129.8" y="229" font-size="10" fill="#1f1f1f" text-anchor="middle">0/7</text>
+<text x="108.8" y="307" font-size="11.5" fill="#454545" text-anchor="middle">Buyer side</text>
+<rect x="154.7" y="198.6" width="19" height="91.4" fill="#0072B2"/>
+<line x1="164.2" y1="250" x2="164.2" y2="155.6" stroke="#454545" stroke-width="1.1"/>
+<line x1="161.2" y1="250" x2="167.2" y2="250" stroke="#454545" stroke-width="1.1"/>
+<line x1="161.2" y1="155.6" x2="167.2" y2="155.6" stroke="#454545" stroke-width="1.1"/>
+<text x="164.2" y="150.6" font-size="10" fill="#1f1f1f" text-anchor="middle">4/7</text>
+<line x1="175.7" y1="289" x2="194.7" y2="289" stroke="#0072B2" stroke-width="2"/>
+<line x1="185.2" y1="290" x2="185.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<line x1="182.2" y1="290" x2="188.2" y2="290" stroke="#454545" stroke-width="1.1"/>
+<line x1="182.2" y1="234" x2="188.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<text x="185.2" y="229" font-size="10" fill="#1f1f1f" text-anchor="middle">0/7</text>
+<line x1="196.7" y1="289" x2="215.7" y2="289" stroke="#0072B2" stroke-width="2" stroke-dasharray="3 2"/>
+<line x1="206.2" y1="290" x2="206.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<line x1="203.2" y1="290" x2="209.2" y2="290" stroke="#454545" stroke-width="1.1"/>
+<line x1="203.2" y1="234" x2="209.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<text x="206.2" y="229" font-size="10" fill="#1f1f1f" text-anchor="middle">0/7</text>
+<text x="185.2" y="307" font-size="11.5" fill="#454545" text-anchor="middle">Merchant side</text>
+<line x1="244" y1="250" x2="410" y2="250" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="244" y1="210" x2="410" y2="210" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="244" y1="170" x2="410" y2="170" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="244" y1="130" x2="410" y2="130" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="244" y1="290" x2="410" y2="290" stroke="#8c8c8c" stroke-width="1"/>
+<rect x="246" y="102" width="10" height="10" fill="#D55E00"/>
+<text x="261" y="111" font-size="12.5" fill="#1f1f1f" font-weight="600">A1 grok-4.7</text>
+<rect x="258.3" y="130" width="19" height="160" fill="#D55E00"/>
+<line x1="267.8" y1="186" x2="267.8" y2="130" stroke="#454545" stroke-width="1.1"/>
+<line x1="264.8" y1="186" x2="270.8" y2="186" stroke="#454545" stroke-width="1.1"/>
+<line x1="264.8" y1="130" x2="270.8" y2="130" stroke="#454545" stroke-width="1.1"/>
+<text x="267.8" y="125" font-size="10" fill="#1f1f1f" text-anchor="middle">7/7</text>
+<line x1="279.3" y1="289" x2="298.3" y2="289" stroke="#D55E00" stroke-width="2"/>
+<line x1="288.8" y1="290" x2="288.8" y2="234" stroke="#454545" stroke-width="1.1"/>
+<line x1="285.8" y1="290" x2="291.8" y2="290" stroke="#454545" stroke-width="1.1"/>
+<line x1="285.8" y1="234" x2="291.8" y2="234" stroke="#454545" stroke-width="1.1"/>
+<text x="288.8" y="229" font-size="10" fill="#1f1f1f" text-anchor="middle">0/7</text>
+<line x1="300.3" y1="289" x2="319.3" y2="289" stroke="#D55E00" stroke-width="2" stroke-dasharray="3 2"/>
+<line x1="309.8" y1="290" x2="309.8" y2="234" stroke="#454545" stroke-width="1.1"/>
+<line x1="306.8" y1="290" x2="312.8" y2="290" stroke="#454545" stroke-width="1.1"/>
+<line x1="306.8" y1="234" x2="312.8" y2="234" stroke="#454545" stroke-width="1.1"/>
+<text x="309.8" y="229" font-size="10" fill="#1f1f1f" text-anchor="middle">0/7</text>
+<text x="288.8" y="307" font-size="11.5" fill="#454545" text-anchor="middle">Buyer side</text>
+<rect x="334.7" y="175.7" width="19" height="114.3" fill="#D55E00"/>
+<line x1="344.2" y1="232.4" x2="344.2" y2="142.8" stroke="#454545" stroke-width="1.1"/>
+<line x1="341.2" y1="232.4" x2="347.2" y2="232.4" stroke="#454545" stroke-width="1.1"/>
+<line x1="341.2" y1="142.8" x2="347.2" y2="142.8" stroke="#454545" stroke-width="1.1"/>
+<text x="344.2" y="137.8" font-size="10" fill="#1f1f1f" text-anchor="middle">5/7</text>
+<rect x="356.4" y="267.9" width="17.5" height="22.1" fill="#f6dcc7" stroke="#D55E00" stroke-width="1.5"/>
+<line x1="365.2" y1="285.2" x2="365.2" y2="208.4" stroke="#454545" stroke-width="1.1"/>
+<line x1="362.2" y1="285.2" x2="368.2" y2="285.2" stroke="#454545" stroke-width="1.1"/>
+<line x1="362.2" y1="208.4" x2="368.2" y2="208.4" stroke="#454545" stroke-width="1.1"/>
+<text x="365.2" y="203.4" font-size="10" fill="#1f1f1f" text-anchor="middle">1/7</text>
+<line x1="376.7" y1="289" x2="395.7" y2="289" stroke="#D55E00" stroke-width="2" stroke-dasharray="3 2"/>
+<line x1="386.2" y1="290" x2="386.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<line x1="383.2" y1="290" x2="389.2" y2="290" stroke="#454545" stroke-width="1.1"/>
+<line x1="383.2" y1="234" x2="389.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<text x="386.2" y="229" font-size="10" fill="#1f1f1f" text-anchor="middle">0/7</text>
+<text x="365.2" y="307" font-size="11.5" fill="#454545" text-anchor="middle">Merchant side</text>
+<line x1="424" y1="250" x2="590" y2="250" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="424" y1="210" x2="590" y2="210" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="424" y1="170" x2="590" y2="170" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="424" y1="130" x2="590" y2="130" stroke="#e6e6e6" stroke-width="1"/>
+<line x1="424" y1="290" x2="590" y2="290" stroke="#8c8c8c" stroke-width="1"/>
+<rect x="426" y="102" width="10" height="10" fill="#009E73"/>
+<text x="441" y="111" font-size="12.5" fill="#1f1f1f" font-weight="600">A2 hybrid</text>
+<rect x="438.3" y="130" width="19" height="160" fill="#009E73"/>
+<line x1="447.8" y1="186" x2="447.8" y2="130" stroke="#454545" stroke-width="1.1"/>
+<line x1="444.8" y1="186" x2="450.8" y2="186" stroke="#454545" stroke-width="1.1"/>
+<line x1="444.8" y1="130" x2="450.8" y2="130" stroke="#454545" stroke-width="1.1"/>
+<text x="447.8" y="125" font-size="10" fill="#1f1f1f" text-anchor="middle">7/7</text>
+<rect x="460.1" y="222.2" width="17.5" height="67.8" fill="#c7eae0" stroke="#009E73" stroke-width="1.5"/>
+<line x1="468.8" y1="264.4" x2="468.8" y2="170" stroke="#454545" stroke-width="1.1"/>
+<line x1="465.8" y1="264.4" x2="471.8" y2="264.4" stroke="#454545" stroke-width="1.1"/>
+<line x1="465.8" y1="170" x2="471.8" y2="170" stroke="#454545" stroke-width="1.1"/>
+<text x="468.8" y="165" font-size="10" fill="#1f1f1f" text-anchor="middle">3/7</text>
+<line x1="480.3" y1="289" x2="499.3" y2="289" stroke="#009E73" stroke-width="2" stroke-dasharray="3 2"/>
+<line x1="489.8" y1="290" x2="489.8" y2="234" stroke="#454545" stroke-width="1.1"/>
+<line x1="486.8" y1="290" x2="492.8" y2="290" stroke="#454545" stroke-width="1.1"/>
+<line x1="486.8" y1="234" x2="492.8" y2="234" stroke="#454545" stroke-width="1.1"/>
+<text x="489.8" y="229" font-size="10" fill="#1f1f1f" text-anchor="middle">0/7</text>
+<text x="468.8" y="307" font-size="11.5" fill="#454545" text-anchor="middle">Buyer side</text>
+<rect x="514.7" y="290" width="19" height="0" fill="#009E73"/>
+<line x1="524.2" y1="290" x2="524.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<line x1="521.2" y1="290" x2="527.2" y2="290" stroke="#454545" stroke-width="1.1"/>
+<line x1="521.2" y1="234" x2="527.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<text x="524.2" y="229" font-size="10" fill="#1f1f1f" text-anchor="middle">0/7</text>
+<line x1="535.7" y1="289" x2="554.7" y2="289" stroke="#009E73" stroke-width="2"/>
+<line x1="545.2" y1="290" x2="545.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<line x1="542.2" y1="290" x2="548.2" y2="290" stroke="#454545" stroke-width="1.1"/>
+<line x1="542.2" y1="234" x2="548.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<text x="545.2" y="229" font-size="10" fill="#1f1f1f" text-anchor="middle">0/7</text>
+<line x1="556.7" y1="289" x2="575.7" y2="289" stroke="#009E73" stroke-width="2" stroke-dasharray="3 2"/>
+<line x1="566.2" y1="290" x2="566.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<line x1="563.2" y1="290" x2="569.2" y2="290" stroke="#454545" stroke-width="1.1"/>
+<line x1="563.2" y1="234" x2="569.2" y2="234" stroke="#454545" stroke-width="1.1"/>
+<text x="566.2" y="229" font-size="10" fill="#1f1f1f" text-anchor="middle">0/7</text>
+<text x="545.2" y="307" font-size="11.5" fill="#454545" text-anchor="middle">Merchant side</text>
+<line x1="64" y1="318" x2="410" y2="318" stroke="#8c8c8c" stroke-width="1"/>
+<line x1="64" y1="314" x2="64" y2="318" stroke="#8c8c8c" stroke-width="1"/>
+<line x1="410" y1="314" x2="410" y2="318" stroke="#8c8c8c" stroke-width="1"/>
+<text x="64" y="335" font-size="11.5" fill="#454545">Most of the A1 effect is a format failure: gate v1 rejections on the attacks were</text>
+<text x="64" y="350" font-size="11.5" fill="#454545">fable 10 format, 2 provenance, 0 contradiction; grok 13, 0, 0.</text>
+</svg>

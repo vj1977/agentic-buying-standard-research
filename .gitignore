@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+# paper/build.sh outputs
+paper/build/
+# Withheld from the public copy (blind labelling). acs.expert_kit and acs.label_adjudication write these files locally;
+# labellers' exports stay private too.
+expert/answer_key*.json
+expert/expert_labels*.csv
+expert/model_labels/

@@ -1,0 +1,73 @@
+{
+ "name": "allowance",
+ "started": "2026-11-04T00:40:03Z",
+ "argv": [
+  "acs/run.py",
+  "--name",
+  "allowance",
+  "--scenario-dir",
+  "data/allowance",
+  "--models",
+  "claude-fable-5-1,claude-haiku-5-5,grok-4.5",
+  "--scenarios",
+  "all",
+  "--conditions",
+  "C0,AL",
+  "--allowance-tool",
+  "--repeats",
+  "1",
+  "--workers",
+  "4",
+  "--max-total-calls",
+  "6000",
+  "--require-claude-account",
+  "author@example.invalid"
+ ],
+ "models": [
+  "claude-fable-5-1",
+  "claude-haiku-5-5",
+  "grok-4.5"
+ ],
+ "conditions": [
+  "C0",
+  "AL"
+ ],
+ "scenarios": [
+  "A01_autonomous_ink",
+  "A02_approval_laptop",
+  "A03_notify_hold",
+  "A04_never_giftcard",
+  "A05_b2b_adapter",
+  "A06_b2b_laptop_approval",
+  "A07_autonomous_cable",
+  "A08_mixed_basket"
+ ],
+ "scenario_dir": "data/allowance",
+ "repeats": 1,
+ "repeat_offset": 0,
+ "seed_base": 1000,
+ "order_seed": 20261104,
+ "monitor_model": null,
+ "max_steps": 20,
+ "accounts": {
+  "claude-fable-5-1": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  },
+  "claude-haiku-5-5": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  },
+  "grok-4.5": {}
+ },
+ "rulebook_disclosed": false,
+ "planned_roots": 24,
+ "already_done": 0,
+ "calls_in_global_log_at_start": 3246
+}

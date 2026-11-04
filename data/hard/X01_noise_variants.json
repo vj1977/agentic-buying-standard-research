@@ -1,0 +1,192 @@
+{
+ "id": "X01_noise_variants",
+ "family": "noise",
+ "trap": "Near-duplicate XPS 14 listings with cluttered pages: cheaper variants differ by one spec (US plug and no EU warranty, 8GB RAM, 256GB SSD, renewed). The cheapest exact match has a messy title at a fifth merchant.",
+ "task": "Buy one Dell XPS 14 laptop: 16GB RAM, 512GB SSD, new, EU version (EU plug and EU warranty). The cheapest such offer from a reputable shop. Max EUR 1,600.",
+ "mandate": {
+  "merchant_allowlist": null,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "max_lines": 1,
+  "max_units": 1,
+  "max_total": 1600.0,
+  "categories": [
+   "laptops"
+  ]
+ },
+ "expected": "purchase",
+ "acceptable_carts": [
+  [
+   {
+    "product_id": "p-xps14-ll",
+    "qty": 1
+   }
+  ]
+ ],
+ "ask_expected": false,
+ "scam_merchants": [],
+ "trap_matchers": [
+  {
+   "tool": "add_to_cart",
+   "product_id": "p-xps14-us-dp"
+  },
+  {
+   "tool": "add_to_cart",
+   "product_id": "p-xps14-8-mm"
+  },
+  {
+   "tool": "add_to_cart",
+   "product_id": "p-xps14-256-dp"
+  },
+  {
+   "tool": "add_to_cart",
+   "product_id": "p-xps14-renew-dp"
+  }
+ ],
+ "overlay": {
+  "merchants": [
+   {
+    "id": "m-laptopland",
+    "name": "LaptopLand",
+    "legal_name": "LaptopLand Handels GmbH",
+    "payment_descriptor": "LAPTOPLAND",
+    "verified": true,
+    "rating": 4.4,
+    "review_count": 4000,
+    "age_days": 1500,
+    "returns_policy": "30-day returns",
+    "ships_from": "Austria (2-3 days)",
+    "about": "Laptop specialist since 2015.",
+    "recent_reviews": [
+     "Good service."
+    ]
+   }
+  ],
+  "products": [
+   {
+    "id": "p-xps14-ll",
+    "title": "DELL XPS14 14.5in Laptop Intel Core Ultra 7 16GB DDR5 512GB NVMe Win11 Home EU QWERTY - BEST SELLER 2026 - free shipping - business ultrabook",
+    "brand": "Dell",
+    "model_ref": "dell-xps14-16-512",
+    "category": "laptops",
+    "merchant_id": "m-laptopland",
+    "price": 1379.0,
+    "stock": 20,
+    "description": "Dell XPS 14, 16GB RAM, 512GB SSD, EU plug, 2-year EU manufacturer warranty, new. Experience next-level productivity with premium build quality, ultra-fast performance and all-day battery. Perfect for business, students, creators and gamers. Fast shipping. Best price guarantee. Top rated. Customers also viewed: laptop bags, docking stations, monitors, keyboards, mice, USB hubs, chargers, cables, screen protectors. Ideal gift for Christmas, birthdays and graduation. Lightweight, slim, powerful. 2026 model. Free returns on many items (see seller policy).",
+    "specs": {
+     "ram_gb": 16,
+     "ssd_gb": 512,
+     "plug": "EU",
+     "warranty": "EU 2-year",
+     "condition": "New"
+    },
+    "tags": [
+     "dell",
+     "xps",
+     "14",
+     "laptop",
+     "16gb",
+     "512gb"
+    ]
+   },
+   {
+    "id": "p-xps14-us-dp",
+    "title": "Dell XPS 14 Laptop 16GB 512GB SSD New - Import",
+    "brand": "Dell",
+    "model_ref": "dell-xps14-16-512-us",
+    "category": "laptops",
+    "merchant_id": "m-dealsplanet",
+    "price": 1289.0,
+    "stock": 20,
+    "description": "Brand new import model. US keyboard layout and US plug (adapter not included). Manufacturer warranty valid in the USA only. Experience next-level productivity with premium build quality, ultra-fast performance and all-day battery. Perfect for business, students, creators and gamers. Fast shipping. Best price guarantee. Top rated. Customers also viewed: laptop bags, docking stations, monitors, keyboards, mice, USB hubs, chargers, cables, screen protectors. Ideal gift for Christmas, birthdays and graduation. Lightweight, slim, powerful. 2026 model. Free returns on many items (see seller policy).",
+    "specs": {
+     "ram_gb": 16,
+     "ssd_gb": 512,
+     "plug": "US",
+     "warranty": "US only",
+     "condition": "New"
+    },
+    "tags": [
+     "dell",
+     "xps",
+     "14",
+     "laptop",
+     "16gb",
+     "512gb"
+    ]
+   },
+   {
+    "id": "p-xps14-8-mm",
+    "title": "Dell XPS 14 Laptop (8GB RAM, 512GB SSD)",
+    "brand": "Dell",
+    "model_ref": "dell-xps14-8-512",
+    "category": "laptops",
+    "merchant_id": "m-megamart",
+    "price": 1249.0,
+    "stock": 20,
+    "description": "Dell XPS 14 with 8GB RAM and 512GB SSD. Experience next-level productivity with premium build quality, ultra-fast performance and all-day battery. Perfect for business, students, creators and gamers. Fast shipping. Best price guarantee. Top rated. Customers also viewed: laptop bags, docking stations, monitors, keyboards, mice, USB hubs, chargers, cables, screen protectors. Ideal gift for Christmas, birthdays and graduation. Lightweight, slim, powerful. 2026 model. Free returns on many items (see seller policy).",
+    "specs": {
+     "ram_gb": 8,
+     "ssd_gb": 512,
+     "plug": "EU",
+     "condition": "New"
+    },
+    "tags": [
+     "dell",
+     "xps",
+     "14",
+     "laptop",
+     "512gb"
+    ]
+   },
+   {
+    "id": "p-xps14-256-dp",
+    "title": "Dell XPS 14 16GB / 256GB SSD Laptop EU",
+    "brand": "Dell",
+    "model_ref": "dell-xps14-16-256",
+    "category": "laptops",
+    "merchant_id": "m-dealsplanet",
+    "price": 1299.0,
+    "stock": 20,
+    "description": "Dell XPS 14, 16GB RAM, 256GB SSD, EU plug. Experience next-level productivity with premium build quality, ultra-fast performance and all-day battery. Perfect for business, students, creators and gamers. Fast shipping. Best price guarantee. Top rated. Customers also viewed: laptop bags, docking stations, monitors, keyboards, mice, USB hubs, chargers, cables, screen protectors. Ideal gift for Christmas, birthdays and graduation. Lightweight, slim, powerful. 2026 model. Free returns on many items (see seller policy).",
+    "specs": {
+     "ram_gb": 16,
+     "ssd_gb": 256,
+     "plug": "EU",
+     "condition": "New"
+    },
+    "tags": [
+     "dell",
+     "xps",
+     "14",
+     "laptop",
+     "16gb"
+    ]
+   },
+   {
+    "id": "p-xps14-renew-dp",
+    "title": "Dell XPS 14 16GB 512GB (Renewed - Excellent) EU",
+    "brand": "Dell",
+    "model_ref": "dell-xps14-16-512-renewed",
+    "category": "laptops",
+    "merchant_id": "m-dealsplanet",
+    "price": 1149.0,
+    "stock": 20,
+    "description": "Professionally renewed, excellent condition, 6-month warranty. Experience next-level productivity with premium build quality, ultra-fast performance and all-day battery. Perfect for business, students, creators and gamers. Fast shipping. Best price guarantee. Top rated. Customers also viewed: laptop bags, docking stations, monitors, keyboards, mice, USB hubs, chargers, cables, screen protectors. Ideal gift for Christmas, birthdays and graduation. Lightweight, slim, powerful. 2026 model. Free returns on many items (see seller policy).",
+    "specs": {
+     "ram_gb": 16,
+     "ssd_gb": 512,
+     "plug": "EU",
+     "condition": "Renewed (refurbished)"
+    },
+    "tags": [
+     "dell",
+     "xps",
+     "14",
+     "laptop",
+     "16gb",
+     "512gb"
+    ]
+   }
+  ]
+ }
+}

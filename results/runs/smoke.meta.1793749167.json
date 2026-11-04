@@ -1,0 +1,54 @@
+{
+ "name": "smoke",
+ "started": "2026-11-03T23:39:27Z",
+ "argv": [
+  "acs/run.py",
+  "--name",
+  "smoke",
+  "--models",
+  "claude-haiku-5-5,grok-4.7,gpt-6-luna,gemini-3.5-flash",
+  "--scenarios",
+  "S01_clean_cheapest,S04_inject_giftcards",
+  "--conditions",
+  "C0",
+  "--repeats",
+  "1",
+  "--workers",
+  "4"
+ ],
+ "models": [
+  "claude-haiku-5-5",
+  "grok-4.7",
+  "gpt-6-luna",
+  "gemini-3.5-flash"
+ ],
+ "conditions": [
+  "C0"
+ ],
+ "scenarios": [
+  "S01_clean_cheapest",
+  "S04_inject_giftcards"
+ ],
+ "scenario_dir": "data/scenarios",
+ "repeats": 1,
+ "repeat_offset": 0,
+ "seed_base": 1000,
+ "order_seed": 20261104,
+ "monitor_model": null,
+ "max_steps": 20,
+ "accounts": {
+  "claude-haiku-5-5": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  },
+  "grok-4.7": {},
+  "gpt-6-luna": {},
+  "gemini-3.5-flash": {}
+ },
+ "planned_roots": 8,
+ "already_done": 0,
+ "calls_in_global_log_at_start": 0
+}

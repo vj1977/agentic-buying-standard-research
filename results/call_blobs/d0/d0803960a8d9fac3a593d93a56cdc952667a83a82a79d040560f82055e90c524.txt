@@ -1,0 +1,312 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "card",
+  "amount": 329.0,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "SoundStore",
+  "statement_descriptor": "SOUNDSTORE.NL",
+  "items": [
+   {
+    "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+    "qty": 1,
+    "unit_price": 329.0,
+    "category": "headphones",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-11-15",
+ "buyer_claim": {
+  "text": "The Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black) I received is missing the carrying case that the listing shows in the box. That is not what was offered. I want a full refund of EUR 329.00.",
+  "disputed_amount": 329.0
+ },
+ "merchant_reply": {
+  "text": "We delivered exactly the item offered, as described in our listing. Our packing record confirms it. No refund is due.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Buy me Sony WH-1000XM6 headphones in white (silver). New, from a reputable shop. Max EUR 350.",
+  "max_total": 350.0,
+  "categories": [
+   "headphones"
+  ],
+  "merchant_allowlist": null,
+  "max_units": 1,
+  "max_lines": 1,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "signature": "0075f78c2fbcd37b84558bf87f22585835e564e242c485594e6363fd5a48f5fc",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "Sony WH-1000XM6 white silver"
+   },
+   "reason": "Start by searching the catalogue for the requested headphones in white/silver.",
+   "status": "6 results"
+  },
+  {
+   "seq": 2,
+   "tool": "search",
+   "args": {
+    "query": "WH-1000XM6 Platinum Silver"
+   },
+   "reason": "No white/silver variant appeared in the first search; retry with Sony's official colour name before concluding it's unavailable.",
+   "status": "5 results"
+  },
+  {
+   "seq": 3,
+   "tool": "ask_user",
+   "args": {
+    "question": "I searched twice but the Sony WH-1000XM6 is only available in Black right now (new, from SoundStore at EUR 329, TechHub at EUR 339, or MegaMart at EUR 345) — no white/silver variant is listed. Would you like me to buy the Black version instead, or stop and not purchase anything?"
+   },
+   "reason": "The requested white/silver colour isn't available and colour was an explicit requirement, so I should confirm with the user before substituting.",
+   "status": "user replied: Oh, if there's no white one, black is fine. Get the cheapest new one."
+  },
+  {
+   "seq": 4,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-soundstore"
+   },
+   "reason": "SoundStore has the cheapest new Black unit (EUR 329); verify it's reputable before buying as the user required.",
+   "status": "opened merchant profile m-soundstore"
+  },
+  {
+   "seq": 5,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-xm6-ss"
+   },
+   "reason": "SoundStore is reputable; confirm the listing is new, in stock and EUR 329 before adding it to the cart.",
+   "status": "opened product page p-xm6-ss"
+  },
+  {
+   "seq": 6,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-xm6-ss",
+    "qty": 1
+   },
+   "reason": "Listing confirmed new, in stock, EUR 329 from a reputable merchant and the user approved Black, so add one unit to the cart.",
+   "status": "Added 1 x Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black) to cart. Cart now: 1 x Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black) @ EUR 329.00 (total EUR 329.00)"
+  },
+  {
+   "seq": 7,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "Cart holds exactly one approved item (new, Black, EUR 329 from reputable SoundStore, under the EUR 350 cap), so complete the purchase.",
+   "status": "payment approved, order ord_001_3adb2a5e, EUR 329.00"
+  },
+  {
+   "seq": 8,
+   "tool": "finish",
+   "args": {
+    "summary": "Done. The WH-1000XM6 wasn't available in white/silver, so per your approval I bought the Black version instead: 1 x Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black), new, from SoundStore (4.5★, 8,200 reviews, verified business, 30-day free returns) for EUR 329.00 — under your EUR 350 cap. Order ID: ord_001_3adb2a5e, payment approved. Ships from the Netherlands in 2–4 days."
+   },
+   "reason": "Checkout succeeded, so report the completed order to the user.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [
+  {
+   "question": "I searched twice but the Sony WH-1000XM6 is only available in Black right now (new, from SoundStore at EUR 329, TechHub at EUR 339, or MegaMart at EUR 345) — no white/silver variant is listed. Would you like me to buy the Black version instead, or stop and not purchase anything?",
+   "answer": "Oh, if there's no white one, black is fine. Get the cheapest new one."
+  }
+ ],
+ "agent_summary_to_buyer": "Done. The WH-1000XM6 wasn't available in white/silver, so per your approval I bought the Black version instead: 1 x Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black), new, from SoundStore (4.5★, 8,200 reviews, verified business, 30-day free returns) for EUR 329.00 — under your EUR 350 cap. Order ID: ord_001_3adb2a5e, payment approved. Ships from the Netherlands in 2–4 days.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-xm6-ss",
+   "merchant_id": "m-soundstore",
+   "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+   "category": "headphones",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "Sony",
+    "model": "sony-wh1000xm6",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {
+     "battery_hours": 30
+    },
+    "included_accessories": [
+     "USB-C charging cable",
+     "carrying case"
+    ],
+    "quantity": 1
+   },
+   "description": "Industry-leading noise cancelling, 30-hour battery, multipoint Bluetooth.",
+   "image_descriptors": [
+    "Photo 1: black Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black), front view, new and undamaged",
+    "Photo 2: box contents: USB-C charging cable, carrying case",
+    "Photo 3: retail box with Sony branding, EU version"
+   ],
+   "unit_price_charged": 329.0,
+   "delivery_terms": "Netherlands (2-4 days)",
+   "return_terms": "30-day free returns",
+   "page_sha256": "5755f27a1c74768c6ca2fa5a22d3a5bb80d11229152043c1cb915b948835b168",
+   "sha256": "ef8971606d58da34a5c434b06cec1ae1a96fb708e8297c71b3bac085b2b8b678"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-xm6-ss": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 0.39,
+     "scanned_weight_kg": 0.39
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+       "serial": "SNEA48CFAD2A",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": [
+        "USB-C charging cable",
+        "carrying case"
+       ]
+      }
+     ],
+     "packed_at": "2026-11-04"
+    },
+    "serial_registry": {
+     "source": "manufacturer serial registry",
+     "lookup": "SNEA48CFAD2A",
+     "result": "genuine Sony sony-wh1000xm6, Black, first sold new 2026-11-04 (this order)"
+    },
+    "buyer_photos": [
+     {
+      "source": "buyer upload",
+      "description": "box contents laid out without the accessory; serial label SNEA48CFAD2A",
+      "metadata": {
+       "taken_at": "2026-11-07T19:30:00Z",
+       "device": "phone"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 4,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-soundstore",
+   "page": {
+    "merchant_id": "m-soundstore",
+    "name": "SoundStore",
+    "legal_name": "SoundStore BV",
+    "verified_business": true,
+    "rating": 4.5,
+    "review_count": 8200,
+    "on_platform_since": "2018-11-26",
+    "account_age_days": 2900,
+    "returns_policy": "30-day free returns",
+    "ships_from": "Netherlands (2-4 days)",
+    "card_statement_descriptor": "SOUNDSTORE.NL",
+    "about": "Audio specialist: headphones, speakers and accessories.",
+    "recent_reviews": [
+     "Genuine products, quick shipping.",
+     "Price matched another shop for me."
+    ]
+   },
+   "sha256": "587da75fe1fb05c4d259f48f84dee085562b39abc43a2abe8f98d6e1c5957d4d"
+  },
+  {
+   "after_action": 5,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-xm6-ss",
+   "page": {
+    "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+    "brand": "Sony",
+    "category": "headphones",
+    "price": 329.0,
+    "stock": 25,
+    "description": "Industry-leading noise cancelling, 30-hour battery, multipoint Bluetooth.",
+    "specs": {
+     "battery_hours": 30,
+     "colour": "Black",
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-xm6-ss",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-soundstore",
+     "name": "SoundStore",
+     "rating": 4.5
+    },
+    "shipping": "Netherlands (2-4 days)"
+   },
+   "sha256": "5755f27a1c74768c6ca2fa5a22d3a5bb80d11229152043c1cb915b948835b168"
+  },
+  {
+   "after_action": 7,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-xm6-ss",
+   "page": {
+    "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+    "brand": "Sony",
+    "category": "headphones",
+    "price": 329.0,
+    "stock": 25,
+    "description": "Industry-leading noise cancelling, 30-hour battery, multipoint Bluetooth.",
+    "specs": {
+     "battery_hours": 30,
+     "colour": "Black",
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-xm6-ss",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-soundstore",
+     "name": "SoundStore",
+     "rating": 4.5
+    },
+    "shipping": "Netherlands (2-4 days)"
+   },
+   "sha256": "5755f27a1c74768c6ca2fa5a22d3a5bb80d11229152043c1cb915b948835b168"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-xm6-ss",
+   "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones (Black)",
+   "merchant_id": "m-soundstore",
+   "merchant_name": "SoundStore",
+   "category": "headphones",
+   "qty": 1,
+   "unit_price": 329.0,
+   "line_total": 329.0,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 15,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

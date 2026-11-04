@@ -1,0 +1,1 @@
+This is a connectivity and isolation check of a research harness. No task follows.

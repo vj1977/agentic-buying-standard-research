@@ -1,0 +1,14 @@
+D01 merchant True True None
+D02 merchant False False None
+D05 merchant False False None
+D06 merchant False False None
+D09 merchant True False None
+D08 merchant True False None
+D45 buyer True True None
+D10 merchant True False None
+D47 buyer True True None
+D46 buyer True False None
+D48 buyer True False None
+D50 buyer True False None
+D51 buyer True True None
+D49 buyer True True None

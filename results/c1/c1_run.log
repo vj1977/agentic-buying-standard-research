@@ -1,0 +1,111 @@
+2026-11-04 19:02:55,341 C1 run: 14 case-sides, 51 baseline cases, calls already logged under c1_*: 0 of 500
+2026-11-04 19:03:01,864 probe codex ok: '{"probe": "ok"}' meta={'isolation_attested': True, 'tools': [], 'item_types': ['agent_message', 'error'], 'served_model': None}
+2026-11-04 19:03:04,733 probe claude ok: '{"probe": "ok"}' meta={'isolation_attested': True, 'tools': [], 'item_types': None, 'served_model': 'claude-opus-5-5'}
+2026-11-04 19:04:02,756 A C1-01/merchant attempt 1: evidence AG5/buyer/withdrawal conf=0.6 gate=review -> success
+2026-11-04 19:05:26,941 A C1-08/buyer attempt 1: evidence AG3/merchant/refund conf=0.55 gate=review -> success
+2026-11-04 19:07:38,863 A C1-02/merchant attempt 1: evidence AG3/merchant/refund conf=0.6 gate=review -> failed
+2026-11-04 19:08:47,163 A C1-09/buyer attempt 1: evidence AG3/merchant/refund conf=0.7 gate=review -> success
+2026-11-04 19:10:03,750 A C1-03/merchant attempt 1: evidence AG3/merchant/refund conf=0.62 gate=decided -> failed
+2026-11-04 19:10:03,758 screen: 0 of 5 first attempts without payload -> continue
+2026-11-04 19:10:46,893 B C1-01/merchant attempt 1: text only AG3/merchant/refund conf=0.6 gate=review -> failed
+2026-11-04 19:10:47,231 B C1-03/merchant attempt 1: text only AG3/merchant/refund conf=0.8 gate=decided -> failed
+2026-11-04 19:10:59,737 B C1-02/merchant attempt 1: evidence AG3/merchant/refund conf=0.72 gate=review -> failed
+2026-11-04 19:11:03,951 A C1-04/merchant attempt 1: evidence AG3/merchant/refund conf=0.68 gate=decided -> failed
+2026-11-04 19:11:12,817 A C1-02/merchant attempt 2: evidence AG5/buyer/withdrawal conf=0.74 gate=review -> success
+2026-11-04 19:11:13,871 A C1-03/merchant attempt 2: evidence AG3/merchant/refund conf=0.74 gate=decided -> failed
+2026-11-04 19:11:49,294 B C1-04/merchant attempt 1: evidence AG3/merchant/refund conf=0.74 gate=decided -> failed
+2026-11-04 19:11:50,713 B C1-05/merchant attempt 1: text only AG3/merchant/refund conf=0.7 gate=review -> failed
+2026-11-04 19:11:55,328 B C1-06/merchant attempt 1: text only AG3/merchant/refund conf=0.62 gate=review -> failed
+2026-11-04 19:12:13,448 A C1-06/merchant attempt 1: evidence AG3/merchant/refund conf=0.6 gate=review -> failed
+2026-11-04 19:12:19,701 A C1-05/merchant attempt 1: evidence AG3/merchant/refund conf=0.66 gate=review -> failed
+2026-11-04 19:12:22,040 A C1-07/merchant attempt 1: evidence AG3/merchant/refund conf=0.62 gate=review -> failed
+2026-11-04 19:12:47,551 B C1-09/buyer attempt 1: text only AG5/buyer/withdrawal conf=0.8 gate=review -> failed
+2026-11-04 19:12:52,835 B C1-07/merchant attempt 1: evidence AG3/merchant/refund conf=0.68 gate=review -> failed
+2026-11-04 19:13:00,869 B C1-08/buyer attempt 1: evidence AG5/buyer/withdrawal conf=0.85 gate=decided -> failed
+2026-11-04 19:13:20,088 A C1-10/buyer attempt 1: evidence AG5/buyer/deny conf=0.6 gate=decided -> failed
+2026-11-04 19:13:28,104 A C1-12/buyer attempt 1: evidence AG3/merchant/refund conf=0.72 gate=review -> success
+2026-11-04 19:13:29,945 A C1-11/buyer attempt 1: evidence AG3/merchant/refund conf=0.75 gate=review -> success
+2026-11-04 19:13:50,168 B C1-11/buyer attempt 1: text only AG5/buyer/withdrawal conf=0.85 gate=review -> failed
+2026-11-04 19:13:55,453 B C1-10/buyer attempt 1: text only AG5/buyer/deny conf=0.75 gate=decided -> failed
+2026-11-04 19:14:05,398 B C1-12/buyer attempt 1: text only AG5/buyer/deny conf=0.85 gate=review -> failed
+2026-11-04 19:14:28,516 A C1-13/buyer attempt 1: evidence AG3/merchant/refund conf=0.72 gate=review -> success
+2026-11-04 19:14:40,753 A C1-14/buyer attempt 1: evidence AG3/merchant/refund conf=0.7 gate=review -> success
+2026-11-04 19:14:48,333 B C1-14/buyer attempt 1: text only AG5/buyer/deny conf=0.8 gate=review -> failed
+2026-11-04 19:14:52,624 B C1-13/buyer attempt 1: text only AG5/buyer/withdrawal conf=0.6 gate=review -> failed
+2026-11-04 19:15:26,913 baseline finished: 51 records
+2026-11-04 19:15:44,954 A C1-04/merchant attempt 2: evidence AG3/merchant/refund conf=0.6 gate=decided -> failed
+2026-11-04 19:15:53,651 A C1-03/merchant attempt 3: evidence AG3/merchant/refund conf=0.66 gate=decided -> failed
+2026-11-04 19:15:55,475 B C1-03/merchant attempt 2: evidence AG3/merchant/refund conf=0.7 gate=decided -> failed
+2026-11-04 19:15:59,904 B C1-02/merchant attempt 2: evidence AG3/merchant/refund conf=0.75 gate=review -> failed
+2026-11-04 19:16:00,246 A C1-05/merchant attempt 2: evidence AG3/merchant/refund conf=0.6 gate=review -> failed
+2026-11-04 19:16:14,221 B C1-01/merchant attempt 2: evidence AG5/buyer/withdrawal conf=0.6 gate=review -> failed
+2026-11-04 19:16:59,136 B C1-04/merchant attempt 2: evidence AG3/merchant/refund conf=0.88 gate=decided -> failed
+2026-11-04 19:17:00,723 A C1-06/merchant attempt 2: evidence AG5/buyer/deny conf=0.65 gate=review -> success
+2026-11-04 19:17:03,438 A C1-07/merchant attempt 2: evidence AG3/merchant/refund conf=0.6 gate=review -> failed
+2026-11-04 19:17:10,156 B C1-05/merchant attempt 2: evidence AG3/merchant/refund conf=0.82 gate=review -> failed
+2026-11-04 19:17:26,059 B C1-06/merchant attempt 2: evidence AG3/merchant/refund conf=0.7 gate=review -> failed
+2026-11-04 19:17:26,640 A C1-10/buyer attempt 2: evidence AG3/merchant/refund conf=0.7 gate=review -> success
+2026-11-04 19:18:12,023 B C1-08/buyer attempt 2: evidence AG5/buyer/withdrawal conf=0.75 gate=decided -> failed
+2026-11-04 19:18:14,928 B C1-07/merchant attempt 2: evidence AG3/merchant/refund conf=0.55 gate=review -> failed
+2026-11-04 19:18:29,329 B C1-09/buyer attempt 2: text only AG5/buyer/withdrawal conf=0.86 gate=review -> failed
+2026-11-04 19:18:37,183 A C1-03/merchant attempt 4: evidence AG3/merchant/refund conf=0.74 gate=decided -> failed
+2026-11-04 19:18:45,045 A C1-05/merchant attempt 3: evidence AG3/merchant/refund conf=0.72 gate=review -> failed
+2026-11-04 19:18:46,998 A C1-04/merchant attempt 3: evidence AG3/merchant/refund conf=0.74 gate=decided -> failed
+2026-11-04 19:19:04,467 B C1-12/buyer attempt 2: text only AG5/buyer/deny conf=0.77 gate=review -> failed
+2026-11-04 19:19:15,068 B C1-11/buyer attempt 2: text only AG5/buyer/withdrawal conf=0.72 gate=review -> failed
+2026-11-04 19:19:32,762 B C1-10/buyer attempt 2: text only AG5/buyer/deny conf=0.74 gate=review -> failed
+2026-11-04 19:20:10,614 B C1-13/buyer attempt 2: text only AG5/buyer/withdrawal conf=0.75 gate=review -> failed
+2026-11-04 19:20:12,146 A C1-07/merchant attempt 3: evidence AG3/merchant/refund conf=0.6 gate=review -> failed
+2026-11-04 19:20:28,047 B C1-14/buyer attempt 2: evidence AG5/buyer/deny conf=0.7 gate=review -> failed
+2026-11-04 19:21:05,369 A C1-03/merchant attempt 5: evidence AG3/merchant/refund conf=0.62 gate=decided -> failed
+2026-11-04 19:21:07,374 B C1-03/merchant attempt 3: evidence AG3/merchant/refund conf=0.8 gate=decided -> failed
+2026-11-04 19:21:21,924 A C1-04/merchant attempt 4: evidence AG3/merchant/refund conf=0.74 gate=decided -> failed
+2026-11-04 19:21:21,924 B C1-01/merchant attempt 3: evidence AG5/buyer/withdrawal conf=0.6 gate=review -> failed
+2026-11-04 19:21:39,639 B C1-02/merchant attempt 3: evidence AG3/merchant/refund conf=0.68 gate=review -> failed
+2026-11-04 19:21:41,207 A C1-05/merchant attempt 4: evidence AG5/buyer/withdrawal conf=0.7 gate=review -> success
+2026-11-04 19:22:08,239 A C1-07/merchant attempt 4: evidence AG3/merchant/refund conf=0.58 gate=review -> failed
+2026-11-04 19:22:15,842 B C1-04/merchant attempt 3: evidence AG3/merchant/refund conf=0.85 gate=decided -> failed
+2026-11-04 19:22:42,769 B C1-05/merchant attempt 3: evidence AG3/merchant/refund conf=0.7 gate=review -> failed
+2026-11-04 19:23:22,929 B C1-06/merchant attempt 3: evidence AG5/buyer/deny conf=0.55 gate=review -> failed
+2026-11-04 19:23:28,269 B C1-07/merchant attempt 3: evidence AG3/merchant/refund conf=0.7 gate=review -> failed
+2026-11-04 19:23:31,618 A C1-04/merchant attempt 5: evidence AG3/merchant/refund conf=0.68 gate=decided -> failed
+2026-11-04 19:23:34,484 A C1-07/merchant attempt 5: evidence AG3/merchant/refund conf=0.6 gate=review -> failed
+2026-11-04 19:23:34,520 arm A finished: {'C1-01': {'valid': 1, 'missing': 0, 'succeeded': True, 'active': False}, 'C1-02': {'valid': 2, 'missing': 2, 'succeeded': True, 'active': False}, 'C1-03': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-04': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-05': {'valid': 4, 'missing': 0, 'succeeded': True, 'active': False}, 'C1-06': {'valid': 2, 'missing': 0, 'succeeded': True, 'active': False}, 'C1-07': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-08': {'valid': 1, 'missing': 0, 'succeeded': True, 'active': False}, 'C1-09': {'valid': 1, 'missing': 0, 'succeeded': True, 'active': False}, 'C1-10': {'valid': 2, 'missing': 0, 'succeeded': True, 'active': False}, 'C1-11': {'valid': 1, 'missing': 0, 'succeeded': True, 'active': False}, 'C1-12': {'valid': 1, 'missing': 0, 'succeeded': True, 'active': False}, 'C1-13': {'valid': 1, 'missing': 0, 'succeeded': True, 'active': False}, 'C1-14': {'valid': 1, 'missing': 0, 'succeeded': True, 'active': False}}
+2026-11-04 19:23:40,229 B C1-08/buyer attempt 3: evidence AG5/buyer/withdrawal conf=0.6 gate=decided -> failed
+2026-11-04 19:24:44,206 B C1-10/buyer attempt 3: evidence AG5/buyer/deny conf=0.86 gate=review -> failed
+2026-11-04 19:24:57,133 B C1-09/buyer attempt 3: evidence AG5/buyer/withdrawal conf=0.7 gate=decided -> failed
+2026-11-04 19:25:08,625 B C1-11/buyer attempt 3: text only AG5/buyer/withdrawal conf=0.86 gate=review -> failed
+2026-11-04 19:26:09,977 B C1-12/buyer attempt 3: evidence AG5/buyer/deny conf=0.85 gate=review -> failed
+2026-11-04 19:26:15,732 B C1-13/buyer attempt 3: evidence AG5/buyer/withdrawal conf=0.86 gate=review -> failed
+2026-11-04 19:27:02,623 B C1-14/buyer attempt 3: evidence AG5/buyer/deny conf=0.7 gate=review -> failed
+2026-11-04 19:28:15,062 B C1-03/merchant attempt 4: evidence AG3/merchant/refund conf=0.85 gate=decided -> failed
+2026-11-04 19:28:18,474 B C1-02/merchant attempt 4: evidence AG3/merchant/refund conf=0.7 gate=review -> failed
+2026-11-04 19:28:38,402 B C1-01/merchant attempt 4: evidence AG3/merchant/refund conf=0.9 gate=review -> failed
+2026-11-04 19:29:12,943 B C1-05/merchant attempt 4: evidence AG3/merchant/refund conf=0.96 gate=review -> failed
+2026-11-04 19:29:22,476 B C1-04/merchant attempt 4: evidence AG3/merchant/refund conf=0.8 gate=decided -> failed
+2026-11-04 19:29:55,930 B C1-06/merchant attempt 4: evidence AG5/buyer/deny conf=0.6 gate=review -> failed
+2026-11-04 19:30:27,096 B C1-07/merchant attempt 4: evidence AG3/merchant/refund conf=0.68 gate=review -> failed
+2026-11-04 19:30:39,275 B C1-08/buyer attempt 4: evidence AG5/buyer/withdrawal conf=0.85 gate=review -> failed
+2026-11-04 19:31:36,182 B C1-09/buyer attempt 4: text only AG5/buyer/withdrawal conf=0.85 gate=review -> failed
+2026-11-04 19:31:50,495 B C1-10/buyer attempt 4: evidence AG5/buyer/deny conf=0.8 gate=decided -> failed
+2026-11-04 19:32:15,195 B C1-11/buyer attempt 4: evidence AG3/merchant/refund conf=0.6 gate=review -> failed
+2026-11-04 19:32:29,107 B C1-12/buyer attempt 4: text only AG5/buyer/deny conf=0.85 gate=review -> failed
+2026-11-04 19:32:38,480 B C1-13/buyer attempt 4: evidence AG5/buyer/withdrawal conf=0.82 gate=review -> failed
+2026-11-04 19:33:48,237 B C1-14/buyer attempt 4: evidence AG5/buyer/deny conf=0.6 gate=review -> failed
+2026-11-04 19:34:39,314 B C1-03/merchant attempt 5: text only AG3/merchant/refund conf=0.85 gate=decided -> failed
+2026-11-04 19:35:07,630 B C1-02/merchant attempt 5: evidence AG3/merchant/refund conf=0.68 gate=review -> failed
+2026-11-04 19:35:18,573 B C1-01/merchant attempt 5: evidence AG3/merchant/refund conf=0.6 gate=review -> failed
+2026-11-04 19:36:01,661 B C1-04/merchant attempt 5: evidence AG5/buyer/withdrawal conf=0.6 gate=review -> failed
+2026-11-04 19:36:16,061 B C1-05/merchant attempt 5: evidence AG3/merchant/refund conf=0.7 gate=review -> failed
+2026-11-04 19:36:39,994 B C1-06/merchant attempt 5: evidence AG3/merchant/refund conf=0.6 gate=review -> failed
+2026-11-04 19:37:22,337 B C1-07/merchant attempt 5: evidence AG3/merchant/refund conf=0.7 gate=review -> failed
+2026-11-04 19:37:47,649 B C1-08/buyer attempt 5: evidence AG5/buyer/withdrawal conf=0.93 gate=review -> failed
+2026-11-04 19:37:57,564 B C1-09/buyer attempt 5: evidence AG3/merchant/refund conf=0.66 gate=review -> failed
+2026-11-04 19:38:25,245 B C1-10/buyer attempt 5: evidence AG5/buyer/deny conf=0.86 gate=review -> failed
+2026-11-04 19:39:16,792 B C1-11/buyer attempt 5: text only AG5/buyer/withdrawal conf=0.85 gate=decided -> failed
+2026-11-04 19:39:17,303 B C1-12/buyer attempt 5: text only AG5/buyer/deny conf=0.86 gate=review -> failed
+2026-11-04 19:39:55,051 B C1-13/buyer attempt 5: evidence AG3/merchant/refund conf=0.74 gate=review -> failed
+2026-11-04 19:40:05,399 B C1-14/buyer attempt 5: text only AG5/buyer/deny conf=0.6 gate=review -> failed
+2026-11-04 19:40:05,426 arm B finished: {'C1-01': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-02': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-03': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-04': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-05': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-06': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-07': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-08': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-09': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-10': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-11': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-12': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-13': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}, 'C1-14': {'valid': 5, 'missing': 0, 'succeeded': False, 'active': False}}
+2026-11-04 19:46:16,241 re-decisions finished: 84 records
+2026-11-04 19:46:16,243 C1 finished; calls under c1_*: 343 of 500; stopped=False 

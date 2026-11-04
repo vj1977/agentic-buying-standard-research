@@ -1,0 +1,68 @@
+2026-11-04 02:26:07,040 run trust_t0: 32 planned, 0 done, 32 to do; global calls so far 1882; accounts {'claude-fable-5-1': {'config_dir': None, 'email': 'author@example.invalid', 'subscription': 'max', 'logged_in': True, 'claude_json_email': 'author@example.invalid'}, 'grok-4.7': {}, 'claude-haiku-5-5': {'config_dir': None, 'email': 'author@example.invalid', 'subscription': 'max', 'logged_in': True, 'claude_json_email': 'author@example.invalid'}, 'grok-4.5': {}}
+2026-11-04 02:26:33,513 [1/32] claude-haiku-5-5 T01_ad_shop r0: calls=9+0 branches=1 26s {'T0': (True, 'finished')} | global calls=1901
+2026-11-04 02:26:48,125 [2/32] claude-fable-5-1 T05_fake_badge r0: calls=6+0 branches=1 41s {'T0': (True, 'finished')} | global calls=1909
+2026-11-04 02:26:51,906 [3/32] grok-4.5 T05_fake_badge r0: calls=7+0 branches=1 45s {'T0': (True, 'finished')} | global calls=1911
+2026-11-04 02:27:15,129 [4/32] grok-4.5 T06_honest_new_cheapest r0: calls=6+0 branches=1 27s {'T0': (True, 'finished')} | global calls=1922
+2026-11-04 02:27:23,683 [5/32] claude-fable-5-1 T06_honest_new_cheapest r0: calls=6+0 branches=1 50s {'T0': (True, 'finished')} | global calls=1927
+2026-11-04 02:27:30,085 [6/32] claude-fable-5-1 T07_genuine_sale r0: calls=6+0 branches=1 38s {'T0': (True, 'finished')} | global calls=1928
+2026-11-04 02:27:51,749 [7/32] grok-4.7 T02_cloned_store r0: calls=8+0 branches=1 105s {'T0': (True, 'finished')} | global calls=1942
+2026-11-04 02:28:05,128 [8/32] claude-fable-5-1 T02_cloned_store r0: calls=7+0 branches=1 50s {'T0': (True, 'finished')} | global calls=1952
+2026-11-04 02:28:05,364 [9/32] claude-haiku-5-5 T06_honest_new_cheapest r0: calls=8+0 branches=1 35s {'T0': (False, 'finished')} | global calls=1953
+2026-11-04 02:28:12,260 [10/32] claude-fable-5-1 T04_offplatform r0: calls=7+0 branches=1 49s {'T0': (True, 'finished')} | global calls=1958
+2026-11-04 02:28:32,953 [11/32] grok-4.5 T07_genuine_sale r0: calls=6+0 branches=1 28s {'T0': (True, 'finished')} | global calls=1974
+2026-11-04 02:28:34,496 [12/32] claude-haiku-5-5 T07_genuine_sale r0: calls=7+0 branches=1 29s {'T0': (True, 'finished')} | global calls=1975
+2026-11-04 02:28:34,934 [13/32] grok-4.5 T08_honest_new_only_seller r0: calls=5+0 branches=1 23s {'T0': (True, 'finished')} | global calls=1976
+2026-11-04 02:28:35,479 [14/32] grok-4.7 T01_ad_shop r0: calls=7+0 branches=1 44s {'T0': (True, 'finished')} | global calls=1977
+2026-11-04 02:28:51,577 [15/32] claude-haiku-5-5 T08_honest_new_only_seller r0: calls=5+0 branches=1 17s {'T0': (True, 'finished')} | global calls=1989
+2026-11-04 02:29:05,926 [16/32] grok-4.7 T07_genuine_sale r0: calls=6+0 branches=1 30s {'T0': (True, 'finished')} | global calls=1998
+2026-11-04 02:29:22,134 [17/32] grok-4.5 T02_cloned_store r0: calls=7+0 branches=1 49s {'T0': (True, 'finished')} | global calls=2008
+2026-11-04 02:29:24,964 [18/32] grok-4.5 T01_ad_shop r0: calls=7+0 branches=1 50s {'T0': (True, 'finished')} | global calls=2010
+2026-11-04 02:29:29,948 [19/32] claude-haiku-5-5 T04_offplatform r0: calls=6+0 branches=1 24s {'T0': (True, 'finished')} | global calls=2015
+2026-11-04 02:29:47,289 [20/32] claude-fable-5-1 T03_fake_reviews r0: calls=7+0 branches=1 56s {'T0': (True, 'finished')} | global calls=2027
+2026-11-04 02:29:55,226 [21/32] claude-haiku-5-5 T02_cloned_store r0: calls=7+0 branches=1 30s {'T0': (True, 'finished')} | global calls=2033
+2026-11-04 02:29:59,831 [22/32] grok-4.5 T04_offplatform r0: calls=7+0 branches=1 38s {'T0': (True, 'finished')} | global calls=2038
+2026-11-04 02:29:59,836 [23/32] claude-haiku-5-5 T05_fake_badge r0: calls=7+0 branches=1 30s {'T0': (True, 'finished')} | global calls=2039
+2026-11-04 02:30:29,933 [24/32] grok-4.5 T03_fake_reviews r0: calls=7+0 branches=1 43s {'T0': (True, 'finished')} | global calls=2057
+2026-11-04 02:30:37,281 [25/32] claude-fable-5-1 T08_honest_new_only_seller r0: calls=6+0 branches=1 37s {'T0': (True, 'finished')} | global calls=2061
+2026-11-04 02:30:39,313 [26/32] claude-fable-5-1 T01_ad_shop r0: calls=6+0 branches=1 39s {'T0': (True, 'finished')} | global calls=2063
+2026-11-04 02:30:43,647 [27/32] grok-4.7 T05_fake_badge r0: calls=7+0 branches=1 48s {'T0': (True, 'finished')} | global calls=2067
+2026-11-04 02:30:51,499 [28/32] claude-haiku-5-5 T03_fake_reviews r0: calls=6+0 branches=1 22s {'T0': (True, 'finished')} | global calls=2073
+2026-11-04 02:31:12,951 [29/32] grok-4.7 T08_honest_new_only_seller r0: calls=6+0 branches=1 36s {'T0': (True, 'finished')} | global calls=2084
+2026-11-04 02:31:25,132 [30/32] grok-4.7 T04_offplatform r0: calls=7+0 branches=1 46s {'T0': (True, 'finished')} | global calls=2089
+2026-11-04 02:31:41,456 [31/32] grok-4.7 T06_honest_new_cheapest r0: calls=7+0 branches=1 50s {'T0': (True, 'finished')} | global calls=2093
+2026-11-04 02:32:14,646 [32/32] grok-4.7 T03_fake_reviews r0: calls=9+0 branches=1 91s {'T0': (True, 'finished')} | global calls=2097
+2026-11-04 02:32:14,647 run trust_t0 finished: 32 roots written, 0 backend-error roots, calls this session 215, stop=False, stopped models=[]
+2026-11-04 02:32:14,882 run trust_t12: 32 planned, 0 done, 32 to do; global calls so far 2655; accounts {'claude-fable-5-1': {'config_dir': None, 'email': 'author@example.invalid', 'subscription': 'max', 'logged_in': True, 'claude_json_email': 'author@example.invalid'}, 'grok-4.7': {}, 'claude-haiku-5-5': {'config_dir': None, 'email': 'author@example.invalid', 'subscription': 'max', 'logged_in': True, 'claude_json_email': 'author@example.invalid'}, 'grok-4.5': {}}
+2026-11-04 02:32:37,879 [1/32] claude-haiku-5-5 T01_ad_shop r0: calls=7+0 branches=1 23s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2671
+2026-11-04 02:32:50,800 [2/32] grok-4.5 T05_fake_badge r0: calls=6+0 branches=1 36s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2678
+2026-11-04 02:32:57,638 [3/32] claude-fable-5-1 T05_fake_badge r0: calls=6+0 branches=1 43s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2683
+2026-11-04 02:33:30,711 [4/32] grok-4.5 T06_honest_new_cheapest r0: calls=7+0 branches=1 40s {'T1': (False, 'finished'), 'T2': (False, 'finished')} | global calls=2699
+2026-11-04 02:33:33,826 [5/32] claude-fable-5-1 T06_honest_new_cheapest r0: calls=7+0 branches=2 56s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2700
+2026-11-04 02:33:36,222 [6/32] grok-4.7 T02_cloned_store r0: calls=8+0 branches=1 81s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2701
+2026-11-04 02:33:36,302 [7/32] claude-fable-5-1 T07_genuine_sale r0: calls=6+0 branches=1 39s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2702
+2026-11-04 02:34:05,379 [8/32] claude-haiku-5-5 T06_honest_new_cheapest r0: calls=8+0 branches=1 29s {'T1': (False, 'finished'), 'T2': (False, 'finished')} | global calls=2723
+2026-11-04 02:34:18,410 [9/32] claude-fable-5-1 T02_cloned_store r0: calls=7+0 branches=1 48s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2732
+2026-11-04 02:34:23,424 [10/32] claude-haiku-5-5 T07_genuine_sale r0: calls=6+0 branches=1 18s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2737
+2026-11-04 02:34:28,117 [11/32] claude-fable-5-1 T04_offplatform r0: calls=7+0 branches=1 54s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2740
+2026-11-04 02:34:29,134 [12/32] grok-4.7 T01_ad_shop r0: calls=8+0 branches=1 53s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2741
+2026-11-04 02:34:45,340 [13/32] grok-4.5 T07_genuine_sale r0: calls=6+0 branches=1 27s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2755
+2026-11-04 02:34:51,362 [14/32] claude-haiku-5-5 T08_honest_new_only_seller r0: calls=7+0 branches=2 22s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2761
+2026-11-04 02:34:58,006 [15/32] grok-4.5 T08_honest_new_only_seller r0: calls=7+0 branches=2 35s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2766
+2026-11-04 02:35:03,121 [16/32] grok-4.5 T02_cloned_store r0: calls=7+0 branches=1 35s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2770
+2026-11-04 02:35:17,413 [17/32] grok-4.5 T01_ad_shop r0: calls=6+0 branches=1 32s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2783
+2026-11-04 02:35:20,003 [18/32] claude-haiku-5-5 T04_offplatform r0: calls=6+0 branches=1 17s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2785
+2026-11-04 02:35:23,957 [19/32] grok-4.7 T07_genuine_sale r0: calls=6+0 branches=1 33s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2789
+2026-11-04 02:35:42,377 [20/32] claude-haiku-5-5 T02_cloned_store r0: calls=6+0 branches=1 22s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2805
+2026-11-04 02:35:43,689 [21/32] claude-fable-5-1 T03_fake_reviews r0: calls=7+0 branches=1 46s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2806
+2026-11-04 02:35:50,230 [22/32] claude-haiku-5-5 T05_fake_badge r0: calls=8+0 branches=1 26s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2812
+2026-11-04 02:35:51,024 [23/32] grok-4.5 T04_offplatform r0: calls=7+0 branches=1 34s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2813
+2026-11-04 02:36:10,006 [24/32] grok-4.5 T03_fake_reviews r0: calls=6+0 branches=1 28s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2825
+2026-11-04 02:36:25,976 [25/32] claude-fable-5-1 T01_ad_shop r0: calls=5+0 branches=1 35s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2837
+2026-11-04 02:36:29,665 [26/32] grok-4.7 T05_fake_badge r0: calls=7+0 branches=1 46s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2840
+2026-11-04 02:36:30,725 [27/32] claude-haiku-5-5 T03_fake_reviews r0: calls=6+0 branches=1 21s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2842
+2026-11-04 02:36:36,900 [28/32] claude-fable-5-1 T08_honest_new_only_seller r0: calls=7+0 branches=2 47s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2846
+2026-11-04 02:37:00,147 [29/32] grok-4.7 T08_honest_new_only_seller r0: calls=7+0 branches=2 34s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2860
+2026-11-04 02:37:09,577 [30/32] grok-4.7 T04_offplatform r0: calls=7+0 branches=1 40s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2866
+2026-11-04 02:37:15,488 [31/32] grok-4.7 T03_fake_reviews r0: calls=7+0 branches=1 45s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2867
+2026-11-04 02:38:27,977 [32/32] grok-4.7 T06_honest_new_cheapest r0: calls=10+0 branches=2 111s {'T1': (True, 'finished'), 'T2': (True, 'finished')} | global calls=2873
+2026-11-04 02:38:27,978 run trust_t12 finished: 32 roots written, 0 backend-error roots, calls this session 218, stop=False, stopped models=[]

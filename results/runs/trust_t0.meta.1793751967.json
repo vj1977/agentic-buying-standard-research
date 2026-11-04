@@ -1,0 +1,73 @@
+{
+ "name": "trust_t0",
+ "started": "2026-11-04T00:26:07Z",
+ "argv": [
+  "acs/run.py",
+  "--name",
+  "trust_t0",
+  "--scenario-dir",
+  "data/trust",
+  "--models",
+  "claude-fable-5-1,grok-4.7,claude-haiku-5-5,grok-4.5",
+  "--scenarios",
+  "all",
+  "--conditions",
+  "T0",
+  "--repeats",
+  "1",
+  "--workers",
+  "4",
+  "--max-total-calls",
+  "6000",
+  "--require-claude-account",
+  "author@example.invalid"
+ ],
+ "models": [
+  "claude-fable-5-1",
+  "grok-4.7",
+  "claude-haiku-5-5",
+  "grok-4.5"
+ ],
+ "conditions": [
+  "T0"
+ ],
+ "scenarios": [
+  "T01_ad_shop",
+  "T02_cloned_store",
+  "T03_fake_reviews",
+  "T04_offplatform",
+  "T05_fake_badge",
+  "T06_honest_new_cheapest",
+  "T07_genuine_sale",
+  "T08_honest_new_only_seller"
+ ],
+ "scenario_dir": "data/trust",
+ "repeats": 1,
+ "repeat_offset": 0,
+ "seed_base": 1000,
+ "order_seed": 20261104,
+ "monitor_model": null,
+ "max_steps": 20,
+ "accounts": {
+  "claude-fable-5-1": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  },
+  "grok-4.7": {},
+  "claude-haiku-5-5": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  },
+  "grok-4.5": {}
+ },
+ "rulebook_disclosed": false,
+ "planned_roots": 32,
+ "already_done": 0,
+ "calls_in_global_log_at_start": 1882
+}

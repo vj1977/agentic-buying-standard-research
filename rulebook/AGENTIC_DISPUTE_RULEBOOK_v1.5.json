@@ -1,0 +1,373 @@
+{
+  "version": "1.5",
+  "status": "current core from 2026-11-04 (founder ruling 2): v1.4 plus one rule, ABS-V1, a tiered burden of proof for merchant-performance claims (ABS v0.3 A4.1 Step 1 and A5.7). The threshold and cap defaults are a design proposal, not calibrated on loss data. No model has been run under this rulebook.",
+  "supersedes_for_new_runs": [
+    "1.2",
+    "1.3",
+    "1.4"
+  ],
+  "historical_note": "Phase 1-3 results were produced under v1.2 (v1.3 for the capture-duty arm). They stay reported under that rulebook; v1.4 is unchanged and stays the rule of the expert kit and the adjudicated key; see rulebook/VERSIONS.md.",
+  "changes_from_1_4": [
+    "ABS-V1 (burden_tiers): a non-delivery or non-conformity claim that no record with independent authority decides is no longer always sent to review. At or below the published order-value threshold, with the buyer under the per-buyer cap, the merchant that answered only with records it wrote itself refunds (AG3). Above the threshold, above the cap, or with a tier input missing, the case goes to review or an independent inspection, as in v1.4.",
+    "Nothing else changes: reason codes, decision order, terms, withdrawal overlay and settlement are those of v1.4."
+  ],
+  "participation": {
+    "merchant_accepts_rules_on_participation": true,
+    "agent_provider_is_a_party": true,
+    "agent_provider_required_at_tier1_for": [
+      "AG1-P",
+      "AG1-C"
+    ],
+    "rules_disclosed_before_purchase_to": [
+      "buyer",
+      "buyer_agent",
+      "merchant",
+      "merchant_agent",
+      "agent_provider"
+    ],
+    "offer_schema_rejects_agent_instructions": true
+  },
+  "evidence_levels": {
+    "E0": [
+      "amount",
+      "currency",
+      "rail",
+      "merchant_name",
+      "statement_descriptor",
+      "date",
+      "item_titles",
+      "buyer_claim",
+      "merchant_reply"
+    ],
+    "E1": [
+      "E0",
+      "signed_mandate"
+    ],
+    "E2": [
+      "E1",
+      "agent_action_log",
+      "buyer_clarifications",
+      "user_agent_conversation_before_purchase"
+    ],
+    "E3": [
+      "E2",
+      "frozen_offer_at_checkout",
+      "page_snapshots_at_view",
+      "cart_at_checkout_with_line_origin",
+      "hash_chain_verification_against_an_independent_payment_anchor",
+      "delivery_evidence"
+    ]
+  },
+  "terms": {
+    "what_binds": "A requirement binds as an explicit term only if it is captured in the signed Mandate or the Allowance Policy, in one of two forms (ABS v0.3 A4.1 Step 3): (1) machine-readable: a hard limit or other Mandate field, or a captured item requirement; (2) signed text the user confirmed: the instruction text shown verbatim at the confirmation tap (the Mandate's intent_hash), or a clarification the user answered with an authentication reference, which amends the Mandate. Breaking either form is AG1-P.",
+    "hard_limit": "Only a machine-readable term is a hard limit: the agent provider's enforcement (or the payment credential) checks it deterministically before paying. A signed text term binds the agent equally for liability (AG1-P) but is checked after the fact by a finding that cites the record.",
+    "stated_but_uncaptured": "Text the user said only in the conversation, or in a clarification answered without authentication, is not a term. If it stated a requirement about the purchase (what, from whom, at what price, by when, in what condition) that the agent should have captured, the failure is AG1-C (Step 3b); a preference the user left open ('ideally black, any colour is fine') is not such a requirement.",
+    "never_stated": "What the user meant without saying: Step 4, AG2. Unstated intent stays with the user.",
+    "hard_limits": [
+      "max_total",
+      "categories",
+      "merchant_allowlist",
+      "max_units",
+      "expires_at",
+      "delivery_country",
+      "required_approval_or_notification",
+      "qualified_merchant",
+      "allowance_policy"
+    ],
+    "item_requirements": [
+      "model",
+      "variant",
+      "capacity_or_spec",
+      "size",
+      "colour",
+      "region_or_plug",
+      "condition",
+      "package_contents",
+      "min_discount_vs_market_pct"
+    ],
+    "flags": [
+      "clarify_if_ambiguous",
+      "only_the_item_named"
+    ]
+  },
+  "decision_order": [
+    {
+      "step": 0,
+      "question": "Authorisation: was the Mandate created by the account holder with strong authentication performed by a PSP, and was the charge initiated by the buyer's agent under that Mandate, before expiry, with the mandate-bound credential? If not, AG0: refer to the payer's PSP (unauthorised payment is decided under payment law and scheme rules), except that a charge the provider's systems issued without a valid Mandate is the agent provider's, and a credential the merchant presented again or used after expiry is the merchant's.",
+      "if_no": "AG0"
+    },
+    {
+      "step": 1,
+      "question": "Does the delivery conform to the frozen offer (model, specs, colour, condition, quantity, accessories, images, price, fees, delivery terms), weighing the contestable delivery evidence? A non-conformity finding must not rest only on party-authored evidence. Where no record with independent authority for the contested fact supports either side, ABS-V1 decides: at or below the published threshold, with the buyer under the cap, the merchant refunds (AG3); otherwise review or an independent inspection.",
+      "if_no": "AG3"
+    },
+    {
+      "step": 2,
+      "question": "Was the purchase caused by the merchant's offer: instructions in merchant-controlled content (AG4), a statement of fact in merchant content shown false that the log shows influenced the choice (AG4-D), or items/fees the merchant added that the agent did not choose (AG1-M)?",
+      "if_yes": [
+        "AG4",
+        "AG4-D",
+        "AG1-M"
+      ]
+    },
+    {
+      "step": 3,
+      "question": "Did the agent break an explicit term captured in the signed Mandate or Allowance, machine-readable or signed text the user confirmed (the instruction text shown at the confirmation tap, or a clarification answered with authentication), or guess where it was told to ask?",
+      "if_yes": "AG1-P"
+    },
+    {
+      "step": "3b",
+      "question": "Capture failure: did the user state a requirement about the purchase only in the conversation, or in a clarification answered without authentication, that the agent should have captured into the Mandate it drafted and did not, and does the purchase miss it? If the agent provider cannot produce the conversation record, the question is decided against it (ABS-E1).",
+      "if_yes": "AG1-C"
+    },
+    {
+      "step": 4,
+      "question": "Otherwise the buyer bears it (AG2: fits every explicit term but not what the buyer meant and never said; AG5: user error, change of mind or a false claim); the statutory withdrawal overlay still applies.",
+      "then": [
+        "AG2",
+        "AG5"
+      ]
+    }
+  ],
+  "precedence_same_component": [
+    "AG0",
+    "ABS-C1",
+    "AG3",
+    "ABS-V1",
+    "AG4",
+    "AG4-D",
+    "AG1-M",
+    "ABS-X1",
+    "ABS-F1",
+    "AG1-P",
+    "AG1-C",
+    "AG2",
+    "AG5"
+  ],
+  "not_executed_by_the_reference_engine": [
+    "standing (ABS-OK, ABS-M1/M2, ABS-T1/T2, ABS-P1/P2, ABS-G1)",
+    "ABS-C1 conduct",
+    "ABS-S1/S2 construction",
+    "ABS-E1m/E2/H1/D1/D2",
+    "ABS-X1/X2 collusion and incentives",
+    "ABS-F1 feed signatures",
+    "ABS-R1 apportionment"
+  ],
+  "reason_codes": {
+    "AG0": {
+      "name": "No valid mandate",
+      "step": 0,
+      "liable": "rail_process",
+      "remedy": "refer_to_payer_psp",
+      "liable_variants": {
+        "invalid_mandate": "rail_process",
+        "issued_by_provider_without_mandate": "agent_provider",
+        "charged_by_merchant_outside_mandate": "merchant"
+      },
+      "test": "The Mandate was not created by the account holder with PSP-performed strong authentication, or the charge was not initiated under it. Whether the payment is unauthorised in law is the payer's PSP's question (PSD2 Arts 64, 72-74; scheme rules); ABS refers the case and supplies the Mandate record. A charge the provider's systems issued without a valid Mandate: agent provider refunds. A credential the merchant presented again or used after expiry: merchant refunds."
+    },
+    "AG3": {
+      "name": "Non-conformity",
+      "step": 1,
+      "liable": "merchant",
+      "remedy": "refund",
+      "test": "The delivered item does not conform to the frozen offer (model, specs, colour, condition, quantity, accessories, images, price or fees charged, delivery terms), including non-delivery and counterfeit goods, established on evidence an independent record corroborates. Applies whatever the agent did. Exception (ABS-V1): a low-value claim that no such record decides is decided against the merchant that answered only with its own records."
+    },
+    "AG4": {
+      "name": "Injection via merchant content",
+      "step": 2,
+      "liable": "merchant",
+      "remedy": "refund",
+      "test": "The delivery conforms, but the agent bought the items because it followed instructions embedded in content the merchant controls or hosts (listing text, hosted reviews, merchant profile, a seller agent's statements)."
+    },
+    "AG4-D": {
+      "name": "Deceptive offer content",
+      "step": 2,
+      "liable": "merchant",
+      "remedy": "refund",
+      "remedy_basis": "the difference against the best conforming offer the agent had seen, or the affected item where no conforming offer existed",
+      "test": "The delivery conforms, but a statement of fact in merchant content is shown false (a reference price never charged, false scarcity, invented urgency, endorsements) and the log shows it influenced the choice."
+    },
+    "AG1-M": {
+      "name": "Merchant-added items or worse terms than relied on",
+      "step": 2,
+      "liable": "merchant",
+      "remedy": "refund",
+      "test": "The delivery conforms, but the merchant added or pre-selected items or fees that the agent did not choose, or the snapshot's price, fees or terms are worse than the signed Offer Feed record the agent relied on."
+    },
+    "AG1-P": {
+      "name": "Agent fault on the record",
+      "step": 3,
+      "liable": "agent_provider",
+      "remedy": "refund",
+      "test": "The delivery conforms and the offer was not manipulative, but the agent broke a term captured in the signed Mandate or Allowance, machine-readable (a hard limit or captured item requirement) or signed text the user confirmed (the instruction text shown at the confirmation tap, or a clarification answered with the user's authentication), or it guessed where the Mandate told it to ask."
+    },
+    "AG1-C": {
+      "name": "Capture failure",
+      "step": "3b",
+      "liable": "agent_provider",
+      "remedy": "refund",
+      "test": "The purchase fits every term captured in the Mandate, but the record of the conversation that produced the Mandate, or a later clarification answered without authentication, shows the user stated a requirement about the purchase that the agent should have captured and did not, and the purchase misses it. An open preference is not such a requirement. The agent provider keeps the conversation record and bears the loss when it cannot produce it (ABS-E1)."
+    },
+    "AG2": {
+      "name": "Authorised but wrong",
+      "step": 4,
+      "liable": "buyer",
+      "remedy": "deny_or_withdrawal",
+      "test": "The delivery conforms, the offer was not manipulative, the purchase meets every explicit term, and no stated requirement went uncaptured; it is not what the buyer meant and never said."
+    },
+    "AG5": {
+      "name": "User error, change of mind, or a false claim",
+      "step": 4,
+      "liable": "buyer",
+      "remedy": "deny_or_withdrawal",
+      "test": "The delivery conforms and the purchase matches the explicit terms and recorded intent; the complaint comes from the buyer's own instruction, a change of mind, or a claim the evidence contradicts."
+    }
+  },
+  "burden_tiers": {
+    "code": "ABS-V1",
+    "name": "Tiered burden of proof for merchant-performance claims",
+    "source": "founder ruling 2, 2026-11-04: the card-scheme view applied in his labels (results/LABEL_ADJUDICATION_2026-11-04.md, 10 of 30 differences)",
+    "claims_in_scope": [
+      "non_delivery",
+      "non_conformity"
+    ],
+    "applies_when": "Step 0 has established a valid mandate, the claim alleges non-delivery or non-conformity and nothing else, and no record with independent authority decides the contested fact: none supports the merchant, and none supports the buyer's claim",
+    "never_applies_to": [
+      "Step 0 authorisation (AG0): the tier never overrides it",
+      "agent-instruction and capture disputes (AG1-P, AG1-C, AG2), Step 2 merchant-offer claims (AG4, AG4-D, AG1-M), and any claim that also alleges one of them",
+      "a claim a record with independent authority decides: a merchant with independent proof wins on the evidence as in v1.4, a buyer with it wins under AG3 as in v1.4"
+    ],
+    "independent_support": "a record with independent authority for the contested fact (ABS v0.3 A5.7 test (a)): carrier scan events, handover record and scanned weight; a serial-registry binding; an inspection by an inspector without a stake; a certified capture only together with a record that ties the photographed unit to the order. The merchant's own packing record, photos, current listing and statements never count for the merchant, and a carrier 'delivered' status never answers a claim about content.",
+    "tiers": {
+      "low_value": "order value at or below the threshold for its currency, and the buyer under the cap: the merchant refunds (AG3, merchant, refund). The contested fact is not found; liability follows the burden, as card-scheme practice asks a merchant for compelling evidence.",
+      "cap_reached": "the buyer identity has already had cap_per_buyer ABS-V1 refunds in the window: the claim takes the high-value path.",
+      "high_value": "order value above the threshold, or no threshold published for the currency: review by a human or on an independent inspection request, as in v1.4.",
+      "unknown": "the order value or the payer PSP's count is not in the record: the high-value path (fail safe)."
+    },
+    "programme_parameters": {
+      "low_value_threshold": {
+        "EUR": 100.0
+      },
+      "threshold_basis": "the order value (the authorised transaction amount), inclusive, per currency; a currency without a published threshold has no low-value tier",
+      "cap_per_buyer": 3,
+      "cap_window_days": 365,
+      "cap_counts": "ABS-V1 refunds decided for the same buyer identity in the window, as known to and counted by the payer's PSP",
+      "published": true,
+      "defaults_status": "design proposal (founder ruling 2): EUR 100 and 3 per 12 months are not calibrated on loss data. The cap is modelled on the use of prior undisputed history in Visa Compelling Evidence 3.0; it is not a scheme rule."
+    },
+    "residual_risk": "the expected loss from fabricated low-value claims is bounded by threshold x cap per buyer identity per window (EUR 300 a year with the defaults). A person with several identities, or accounts at several PSPs whose counts are not shared, multiplies the bound.",
+    "other_burden_defaults": "ABS-V1 does not displace ABS-E1m (a merchant that cannot produce a record it had to keep loses at any value), the handover default for non-delivery (no carrier handover record means not received, at any value) or ABS-E2 (a not-as-described claim with no content evidence from the buyer fails at any value). At or below the threshold it decides the conflict between the parties' own records that ABS-H1 would send to review.",
+    "decision_record": {
+      "confirmation_route": "low_value_burden",
+      "provenance_gate": "not_applicable: ABS-V1 is a burden-of-proof default, not a Finding resting on evidence (ABS v0.3 A5.7)"
+    }
+  },
+  "remedies": {
+    "refund": "The disputed amount (AG4-D: the difference or the affected item) goes back to the buyer, paid by the liable party; non-conforming goods go back at the merchant's cost.",
+    "withdrawal": "No fault remedy, but the statutory withdrawal right is available: the buyer may withdraw within the window; the trader refunds within 14 days by the same means, on receipt of the goods or proof of dispatch, whichever is earlier; routed through the trader's Art 11a withdrawal function.",
+    "deny": "No remedy: no fault of another party and the withdrawal right is established as not available.",
+    "undetermined": "Liability is decided but whether the withdrawal right is available cannot be established from the record (a prerequisite is missing); a human resolves it before any settlement instruction issues. Never converted to deny.",
+    "refer_to_payer_psp": "AG0 with no ABS-liable party: the case leaves ABS for the payer's PSP; ABS supplies the Mandate record and records the outcome."
+  },
+  "withdrawal_right": {
+    "jurisdiction": "EU distance contracts with a consumer (Directive 2011/83/EU); business purchases have no withdrawal right",
+    "period_days_from_delivery": 14,
+    "period_start": "goods: the day the consumer acquires physical possession (Art 9(2)(b)); the reference engine reads delivered_on",
+    "exceptions": [
+      "custom_goods made to the consumer's specification or clearly personalised (Art 16(c))",
+      "sealed goods not suitable for return for health protection or hygiene reasons, unsealed after delivery (Art 16(e))",
+      "sealed audio, video or software, unsealed after delivery (Art 16(i))",
+      "accommodation, transport of goods, car rental, catering or leisure services for a specific date or period (Art 16(l))",
+      "digital_content not on a tangible medium once performance has begun, ONLY where the consumer gave prior express consent, acknowledged the loss of the right AND the trader provided the confirmation (Art 16(m)); without all three the exception does not apply"
+    ],
+    "prerequisites": {
+      "scope": "buyer is a consumer and the contract is an EU distance contract; business buyer: no right; other jurisdictions: unresolved (national law)",
+      "dates": "delivered_on and dispute_date are valid ISO dates and dispute_date is not before delivered_on; otherwise unresolved",
+      "digital_content": "prior_express_consent, acknowledged_loss_of_right and trader_confirmation are each recorded true (exception applies), any recorded false (exception does not apply), or missing (unresolved)"
+    },
+    "missing_prerequisite": "unresolved: remedy 'undetermined', escalated to a human; never 'deny'",
+    "not_stated_by_abs_v0_3": [
+      "period start for digital content and services (Art 9(2)(a), (c))",
+      "Art 16(a) fully performed services",
+      "Art 10 extension when the trader failed to inform"
+    ],
+    "applies_on_top_of_decision": true,
+    "passenger_transport": "outside the directive altogether (Art 3(3)(k)), not an exception"
+  },
+  "settlement": {
+    "rail_agnostic": true,
+    "abs_never_moves_money": true,
+    "no_recall": "A SEPA recall (camt.056) is started only by the payer's PSP for duplicate sending, technical error or fraud; a customer-reason recall request depends on the beneficiary's consent; SCT Inst has no return. Recall and return are not ABS mechanisms.",
+    "no_abs_chargeback": "Card disputes are raised by the issuer at the cardholder's request; the Decision Center cannot raise one and supplies the Decision and Evidence Package as evidence.",
+    "instruction_fields": [
+      "type",
+      "amount",
+      "cost_bearer",
+      "goods_return",
+      "rail",
+      "rail_execution",
+      "if_unpaid"
+    ],
+    "recovery_routes": {
+      "abs_refund": "the liable party pays the Settlement Instruction (merchant refund, provider credit, withdrawal refund)",
+      "contractual_collection": "an unpaid Settlement Instruction is collected under the Participation Agreement by the licensed PSP or acquirer as creditor in its own licence (direct debit mandate, reserve, bank guarantee, netting), or is owed to the buyer directly; the only tool against a refusing merchant on push A2A rails",
+      "issuer_dispute": "card rails only: the buyer's own card dispute, raised by the issuer at the cardholder's request within the scheme deadline (deadline guard); ABS supplies evidence",
+      "unavailable": "no rail route exists (push A2A after an ABS outcome that wronged the buyer, or a vanished payee with no payee-side hold and nothing to collect); the buyer keeps statutory routes and the courts"
+    },
+    "rail_execution": {
+      "card": {
+        "merchant": "ABS refund: merchant-initiated refund to the original card credential",
+        "agent_provider": "ABS refund by the agent provider: a new credit pushed to the card as a sponsored originator (Visa original credit transaction, Mastercard Send) or a credit transfer to the buyer's account; no card message lets a third party reverse the purchase",
+        "buyer": "no movement of funds",
+        "buyer_withdrawal": "merchant refund to the card within 14 days by the same means, on receipt of the goods or proof of dispatch, whichever is earlier (CRD Arts 13(1), 13(3)), through the Art 11a withdrawal function",
+        "rail_process": "referred to the cardholder's issuer under payment law and scheme rules; ABS supplies the Mandate record"
+      },
+      "a2a_instant": {
+        "merchant": "ABS refund: new credit transfer from the merchant to the buyer (pain.001 to pacs.008) with the case id in remittance information; no scheme message reverses the original transfer",
+        "agent_provider": "ABS refund by the agent provider: credit transfer to the buyer (pain.001 to pacs.008)",
+        "buyer": "no movement of funds",
+        "buyer_withdrawal": "merchant credit transfer to the buyer within 14 days, on receipt of the goods or proof of dispatch, whichever is earlier, through the Art 11a withdrawal function",
+        "rail_process": "referred to the payer's PSP (unauthorised-payment process under PSD2 Arts 64 and 72-74)"
+      }
+    },
+    "if_unpaid": {
+      "card": [
+        "contractual_collection",
+        "issuer_dispute"
+      ],
+      "a2a_instant": [
+        "contractual_collection"
+      ]
+    }
+  },
+  "tier1_offers": [
+    "full_refund",
+    "return_and_refund",
+    "partial_refund",
+    "replacement",
+    "deny"
+  ],
+  "time_limits_days": {
+    "file_dispute": 60,
+    "merchant_response": 10,
+    "escalate": 10,
+    "final_decision": 30,
+    "human_review_request": 10,
+    "appeal": 10,
+    "pay_decided_amount": 10,
+    "scheme_deadline_guard": "the Decision issues, or the user is told to file with the issuer, before the scheme's own dispute deadline; ABS clocks pause while a rail dispute runs"
+  },
+  "delivery_evidence": {
+    "contestable": true,
+    "provenance_gate": "a non-conformity finding must not rest only on party-authored evidence (buyer photos and descriptions, merchant packing record, either side's text) that no independent record corroborates; otherwise review; except under ABS-V1 (burden_tiers), where a low-value claim no independent record decides is decided against the merchant",
+    "kinds": [
+      "carrier_proof_of_delivery (no content inspection)",
+      "merchant_packing_record (self-serving)",
+      "buyer_photos (manipulable)",
+      "serial_registry_lookup",
+      "digital_delivery_log",
+      "return_inspection"
+    ]
+  }
+}

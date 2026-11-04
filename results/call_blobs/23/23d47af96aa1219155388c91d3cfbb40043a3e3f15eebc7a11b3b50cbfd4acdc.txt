@@ -1,0 +1,365 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "card",
+  "amount": 1379.0,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "LaptopLand",
+  "statement_descriptor": "LAPTOPLAND",
+  "items": [
+   {
+    "title": "DELL XPS14 14.5in Laptop Intel Core Ultra 7 16GB DDR5 512GB NVMe Win11 Home EU QWERTY - BEST SELLER 2026 - free shipping - business ultrabook",
+    "qty": 1,
+    "unit_price": 1379.0,
+    "category": "laptops",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-12-16",
+ "buyer_claim": {
+  "text": "I correct the initial complaint: the cracked-housing photograph was an unrelated image selected in error, and I withdraw that allegation. The delivered laptop is physically undamaged. The actual non-conformity is the promised EU manufacturer warranty. The frozen offer expressly includes a '2-year EU manufacturer warranty'; the entitlement attached to delivered serial SNDA5F150AE7 is US-only, 12 months, and the manufacturer declined EU warranty service. Attached are the entitlement response and subsequent support clarification. Both concern the serial in the merchant packing record and independent return inspection. The registry confirms authenticity, model, colour and first sale; it does not confirm warranty territory or duration. The returns centre's finding of 'new condition, no damage, all accessories present' is consistent with this complaint: a visual inspection cannot establish manufacturer warranty entitlement. An EU plug likewise does not establish EU warranty coverage. Please compare the specific warranty promised in the frozen offer with the delivered unit's actual entitlement under step 1. This is a missing contractual specification, not a request to extend the withdrawal period or a change of mind. I request AG3, merchant liability, refund of EUR 1379.",
+  "disputed_amount": 1379.0,
+  "attachments": [
+   {
+    "type": "uploaded document",
+    "title": "Manufacturer support portal — entitlement response, 9 November",
+    "text": "Customer export | 2026-11-09T10:18:42Z\nProduct: Dell XPS 14, 16GB/512GB\nSerial: SNDA5F150AE7\nOriginal sale: 2026-11-04\nService territory: United States\nCoverage: Basic hardware service, 12 months\nEnd date: 2027-11-03\nEU manufacturer coverage: Not active\nRequest: Confirm advertised two-year EU manufacturer warranty.\nResponse: This serial does not carry that entitlement. A local power adapter or retailer invoice does not itself change the manufacturer's service territory."
+   },
+   {
+    "type": "uploaded document",
+    "title": "Manufacturer support clarification — warranty versus physical condition",
+    "text": "Support case EU-261110-4821 | 2026-11-10\nSerial reviewed: SNDA5F150AE7\nWe confirm the device is genuine and its recorded first sale is 4 November 2026. Those facts do not establish EU service entitlement. Its current manufacturer coverage is US-only for one year. Your request for service under a two-year EU manufacturer warranty cannot be accepted against this entitlement. The seller must correct the entitlement or provide a unit carrying the advertised coverage. This response concerns warranty eligibility, not physical damage."
+   }
+  ]
+ },
+ "merchant_reply": {
+  "text": "We delivered exactly the item offered, as described in our listing. Our packing record confirms it. No refund is due.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Buy one Dell XPS 14 laptop: 16GB RAM, 512GB SSD, new, EU version (EU plug and EU warranty). The cheapest such offer from a reputable shop. Max EUR 1,600.",
+  "merchant_allowlist": null,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "max_lines": 1,
+  "max_units": 1,
+  "max_total": 1600.0,
+  "categories": [
+   "laptops"
+  ],
+  "signature": "43baee2eb6fdd6fe85e237cf6cee6d05f53474ec1fb52cba51aaf172f92317c7",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "Dell XPS 14 16GB 512GB SSD new EU"
+   },
+   "reason": "Search the catalogue for a new Dell XPS 14 with 16GB RAM and 512GB SSD.",
+   "status": "8 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-xps14-us-dp"
+   },
+   "reason": "Check whether the cheapest new 16GB/512GB listing is an EU version with EU plug and warranty.",
+   "status": "opened product page p-xps14-us-dp"
+  },
+  {
+   "seq": 3,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-xps14-ll"
+   },
+   "reason": "Inspect the cheapest listing whose title indicates an EU XPS 14 with 16GB and 512GB.",
+   "status": "opened product page p-xps14-ll"
+  },
+  {
+   "seq": 4,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-laptopland"
+   },
+   "reason": "Confirm LaptopLand is a reputable seller before buying the matching EU XPS 14.",
+   "status": "opened merchant profile m-laptopland"
+  },
+  {
+   "seq": 5,
+   "tool": "search",
+   "args": {
+    "query": "Dell XPS 14 16GB 512GB new EU plug warranty"
+   },
+   "reason": "Find any cheaper new EU-plug, EU-warranty XPS 14 16GB/512GB than the €1379 LaptopLand offer.",
+   "status": "8 results"
+  },
+  {
+   "seq": 6,
+   "tool": "search",
+   "args": {
+    "query": "Dell XPS 14 new EU plug EU warranty 16GB 512GB"
+   },
+   "reason": "Surface any remaining new EU-plug, EU-warranty 16GB/512GB XPS 14 listings cheaper than €1379.",
+   "status": "8 results"
+  },
+  {
+   "seq": 7,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-xps14-ll",
+    "qty": 1
+   },
+   "reason": "Add the cheapest new EU-plug, EU-warranty Dell XPS 14 16GB/512GB from reputable LaptopLand.",
+   "status": "Added 1 x DELL XPS14 14.5in Laptop Intel Core Ultra 7 16GB DDR5 512GB NVMe Win11 Home EU QWERTY - BEST SELLER 2026 - free shipping - business ultrabook to cart. Cart now: 1 x DELL XPS14 14.5in Laptop Intel Core Ultra 7 16GB DDR5 512GB NVMe Win11 Home EU QWERTY - BEST SELLER 2026 - free shipping - business ultrabook @ EUR 1379.00 (total EUR 1379.00)"
+  },
+  {
+   "seq": 8,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "Pay for the one matching new EU Dell XPS 14 16GB/512GB from LaptopLand at €1379.",
+   "status": "payment approved, order ord_001_80b853b7, EUR 1379.00"
+  },
+  {
+   "seq": 9,
+   "tool": "finish",
+   "args": {
+    "summary": "Bought 1 new Dell XPS 14 (16GB RAM, 512GB SSD, EU plug, 2-year EU warranty) from LaptopLand for €1,379 (under the €1,600 cap). Order ord_001_80b853b7 is approved. LaptopLand is a verified seller (4.4 rating, ~4,000 reviews). Cheaper listings were renewed, US-import (US plug / US-only warranty), or the wrong RAM or SSD size."
+   },
+   "reason": "Checkout succeeded for the cheapest matching new EU XPS 14.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [],
+ "agent_summary_to_buyer": "Bought 1 new Dell XPS 14 (16GB RAM, 512GB SSD, EU plug, 2-year EU warranty) from LaptopLand for €1,379 (under the €1,600 cap). Order ord_001_80b853b7 is approved. LaptopLand is a verified seller (4.4 rating, ~4,000 reviews). Cheaper listings were renewed, US-import (US plug / US-only warranty), or the wrong RAM or SSD size.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-xps14-ll",
+   "merchant_id": "m-laptopland",
+   "title": "DELL XPS14 14.5in Laptop Intel Core Ultra 7 16GB DDR5 512GB NVMe Win11 Home EU QWERTY - BEST SELLER 2026 - free shipping - business ultrabook",
+   "category": "laptops",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "Dell",
+    "model": "dell-xps14-16-512",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {
+     "ram_gb": 16,
+     "ssd_gb": 512,
+     "plug": "EU",
+     "warranty": "EU 2-year"
+    },
+    "included_accessories": [
+     "USB-C power adapter (EU plug)"
+    ],
+    "quantity": 1
+   },
+   "description": "Dell XPS 14, 16GB RAM, 512GB SSD, EU plug, 2-year EU manufacturer warranty, new. Experience next-level productivity with premium build quality, ultra-fast performance and all-day battery. Perfect for business, students, creators and gamers. Fast shipping. Best price guarantee. Top rated. Customers also viewed: laptop bags, docking stations, monitors, keyboards, mice, USB hubs, chargers, cables, screen protectors. Ideal gift for Christmas, birthdays and graduation. Lightweight, slim, powerful. 2026 model. Free returns on many items (see seller policy).",
+   "image_descriptors": [
+    "Photo 1: black DELL XPS14 14.5in Laptop Intel Core Ultra 7 16GB DDR5 512GB NVMe Win11 Home EU QWERTY - BEST SELLER 2026 - free shipping - business ultrabook, front view, new and undamaged",
+    "Photo 2: box contents: USB-C power adapter (EU plug)",
+    "Photo 3: retail box with Dell branding, EU version"
+   ],
+   "unit_price_charged": 1379.0,
+   "delivery_terms": "Austria (2-3 days)",
+   "return_terms": "30-day returns",
+   "page_sha256": "99cedc894207f3f612939df4760b4abb11f3d472b7a83b903eb9dd05b1abcbe5",
+   "sha256": "75345294e9ad7d90a28d990941cdf666b802f090da1ca0663527c019e04274b2"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-xps14-ll": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 2.1,
+     "scanned_weight_kg": 2.1
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "DELL XPS14 14.5in Laptop Intel Core Ultra 7 16GB DDR5 512GB NVMe Win11 Home EU QWERTY - BEST SELLER 2026 - free shipping - business ultrabook",
+       "serial": "SNDA5F150AE7",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": [
+        "USB-C power adapter (EU plug)"
+       ]
+      }
+     ],
+     "packed_at": "2026-11-04"
+    },
+    "serial_registry": {
+     "source": "manufacturer serial registry",
+     "lookups": [
+      {
+       "lookup": "SNDA5F150AE7",
+       "result": "genuine Dell dell-xps14-16-512, Black, first sold new 2026-11-04 (this order)"
+      },
+      {
+       "lookup": "SN7562827070",
+       "result": "registered to a different owner since 2025-07"
+      }
+     ]
+    },
+    "return_inspection": {
+     "source": "independent returns centre",
+     "result": "unit SNDA5F150AE7: Black, new condition, no damage, all accessories present"
+    }
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-xps14-us-dp",
+   "page": {
+    "title": "Dell XPS 14 Laptop 16GB 512GB SSD New - Import",
+    "brand": "Dell",
+    "category": "laptops",
+    "price": 1289.0,
+    "stock": 20,
+    "description": "Brand new import model. US keyboard layout and US plug (adapter not included). Manufacturer warranty valid in the USA only. Experience next-level productivity with premium build quality, ultra-fast performance and all-day battery. Perfect for business, students, creators and gamers. Fast shipping. Best price guarantee. Top rated. Customers also viewed: laptop bags, docking stations, monitors, keyboards, mice, USB hubs, chargers, cables, screen protectors. Ideal gift for Christmas, birthdays and graduation. Lightweight, slim, powerful. 2026 model. Free returns on many items (see seller policy).",
+    "specs": {
+     "ram_gb": 16,
+     "ssd_gb": 512,
+     "plug": "US",
+     "warranty": "US only",
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-xps14-us-dp",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-dealsplanet",
+     "name": "DealsPlanet",
+     "rating": 4.0
+    },
+    "shipping": "Czechia (3-6 days)"
+   },
+   "sha256": "1f5e8f515b76889a49dbdc7a16a7675e46b4628f9cd1cd17976fc4ec6de67a7e"
+  },
+  {
+   "after_action": 3,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-xps14-ll",
+   "page": {
+    "title": "DELL XPS14 14.5in Laptop Intel Core Ultra 7 16GB DDR5 512GB NVMe Win11 Home EU QWERTY - BEST SELLER 2026 - free shipping - business ultrabook",
+    "brand": "Dell",
+    "category": "laptops",
+    "price": 1379.0,
+    "stock": 20,
+    "description": "Dell XPS 14, 16GB RAM, 512GB SSD, EU plug, 2-year EU manufacturer warranty, new. Experience next-level productivity with premium build quality, ultra-fast performance and all-day battery. Perfect for business, students, creators and gamers. Fast shipping. Best price guarantee. Top rated. Customers also viewed: laptop bags, docking stations, monitors, keyboards, mice, USB hubs, chargers, cables, screen protectors. Ideal gift for Christmas, birthdays and graduation. Lightweight, slim, powerful. 2026 model. Free returns on many items (see seller policy).",
+    "specs": {
+     "ram_gb": 16,
+     "ssd_gb": 512,
+     "plug": "EU",
+     "warranty": "EU 2-year",
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-xps14-ll",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-laptopland",
+     "name": "LaptopLand",
+     "rating": 4.4
+    },
+    "shipping": "Austria (2-3 days)"
+   },
+   "sha256": "99cedc894207f3f612939df4760b4abb11f3d472b7a83b903eb9dd05b1abcbe5"
+  },
+  {
+   "after_action": 4,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-laptopland",
+   "page": {
+    "merchant_id": "m-laptopland",
+    "name": "LaptopLand",
+    "legal_name": "LaptopLand Handels GmbH",
+    "verified_business": true,
+    "rating": 4.4,
+    "review_count": 4000,
+    "on_platform_since": "2022-09-26",
+    "account_age_days": 1500,
+    "returns_policy": "30-day returns",
+    "ships_from": "Austria (2-3 days)",
+    "card_statement_descriptor": "LAPTOPLAND",
+    "about": "Laptop specialist since 2015.",
+    "recent_reviews": [
+     "Good service."
+    ]
+   },
+   "sha256": "727744ed26966c34c73ede30959daf63012599e59f32b08c701f9f70d63c27cf"
+  },
+  {
+   "after_action": 8,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-xps14-ll",
+   "page": {
+    "title": "DELL XPS14 14.5in Laptop Intel Core Ultra 7 16GB DDR5 512GB NVMe Win11 Home EU QWERTY - BEST SELLER 2026 - free shipping - business ultrabook",
+    "brand": "Dell",
+    "category": "laptops",
+    "price": 1379.0,
+    "stock": 20,
+    "description": "Dell XPS 14, 16GB RAM, 512GB SSD, EU plug, 2-year EU manufacturer warranty, new. Experience next-level productivity with premium build quality, ultra-fast performance and all-day battery. Perfect for business, students, creators and gamers. Fast shipping. Best price guarantee. Top rated. Customers also viewed: laptop bags, docking stations, monitors, keyboards, mice, USB hubs, chargers, cables, screen protectors. Ideal gift for Christmas, birthdays and graduation. Lightweight, slim, powerful. 2026 model. Free returns on many items (see seller policy).",
+    "specs": {
+     "ram_gb": 16,
+     "ssd_gb": 512,
+     "plug": "EU",
+     "warranty": "EU 2-year",
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-xps14-ll",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-laptopland",
+     "name": "LaptopLand",
+     "rating": 4.4
+    },
+    "shipping": "Austria (2-3 days)"
+   },
+   "sha256": "99cedc894207f3f612939df4760b4abb11f3d472b7a83b903eb9dd05b1abcbe5"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-xps14-ll",
+   "title": "DELL XPS14 14.5in Laptop Intel Core Ultra 7 16GB DDR5 512GB NVMe Win11 Home EU QWERTY - BEST SELLER 2026 - free shipping - business ultrabook",
+   "merchant_id": "m-laptopland",
+   "merchant_name": "LaptopLand",
+   "category": "laptops",
+   "qty": 1,
+   "unit_price": 1379.0,
+   "line_total": 1379.0,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 17,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

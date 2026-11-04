@@ -1,0 +1,289 @@
+% related.bib: related work for the Agentic Buying Standard (ABS), verified 2026-11-04.
+% Every entry was checked on its arXiv abstract page (submission history), and on the publisher
+% or OpenReview page where a venue is given. Paper licences are from the arXiv abstract page;
+% code licences from the GitHub API or LICENSE file; model licences from the Hugging Face API.
+% Keys match paper/refs.bib where the works overlap. UNVERIFIED marks what could not be confirmed.
+% Search-lane additions (agent commerce, dispute/ODR, judge robustness, accountability) are PENDING
+% and will be appended under their own header when the lanes report.
+
+% ---------------------------------------------------------------------------
+% Agentic e-commerce
+% ---------------------------------------------------------------------------
+
+@article{magentic2025,
+  author  = {Bansal, Gagan and Hua, Wenyue and Huang, Zezhou and Fourney, Adam and Swearngin, Amanda and Epperson, Will and Payne, Tyler and Hofman, Jake M. and Lucier, Brendan and Singh, Chinmay and Mobius, Markus and Nambi, Akshay and Yadav, Archana and Gao, Kevin and Rothschild, David M. and Slivkins, Aleksandrs and Goldstein, Daniel G. and Mozannar, Hussein and Immorlica, Nicole and Murad, Maya and Vogel, Matthew and Kambhampati, Subbarao and Horvitz, Eric and Amershi, Saleema},
+  title   = {Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets},
+  journal = {arXiv preprint arXiv:2510.25779},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2510.25779},
+  note    = {v1 27 Oct 2025 (only version), cs.MA; no venue stated. Paper licence CC BY 4.0. Code: https://github.com/microsoft/multi-agent-marketplace (MIT). Section 5.4, Fig. 9: first proposals selected 60 to 100 percent of the time; Section 5.3, Table 3: seller manipulation strategies. Verified 2026-11-04}
+}
+
+@article{allouah2025,
+  author  = {Allouah, Amine and Besbes, Omar and Figueroa, Josu{\'e} D. and Kanoria, Yash and Kumar, Akshit},
+  title   = {What Is Your {AI} Agent Buying? Evaluation, Biases, Model Dependence, and Emerging Implications for Agentic E-Commerce},
+  journal = {arXiv preprint arXiv:2508.02630},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2508.02630},
+  note    = {v1 4 Aug 2025, v2 27 Oct 2025, v3 17 Dec 2025 (read v3), cs.AI; no venue stated. Paper licence CC BY 4.0. Code: https://github.com/mycustomai/ACES (no licence file). Datasets: My-Custom-AI/ACE-RS (MIT), ACE-BB and ACE-SR (no licence tag). Table 4: seller-side description rewrites +3.66 to +14.89 pp share, max +80.4 pp. Verified 2026-11-04}
+}
+
+@misc{vend1,
+  author       = {{Anthropic}},
+  title        = {Project Vend: Can {Claude} run a small shop?},
+  howpublished = {Research post},
+  year         = {2025},
+  month        = jun,
+  url          = {https://www.anthropic.com/research/project-vend-1},
+  note         = {27 June 2025. Claude Sonnet 3.7 with Andon Labs; no profit; discounts under customer pressure. Blog post, not peer-reviewed. Verified 2026-11-04}
+}
+
+@misc{vend2,
+  author       = {{Anthropic}},
+  title        = {Project Vend: Phase two},
+  howpublished = {Research post},
+  year         = {2025},
+  month        = dec,
+  url          = {https://www.anthropic.com/research/project-vend-2},
+  note         = {18 December 2025. CEO agent ``authorized such requests about eight times as often as it denied them''; same-model CEO shared the shop agent's blind spots. Blog post, not peer-reviewed. Verified 2026-11-04}
+}
+
+% ---------------------------------------------------------------------------
+% Agent prompt injection
+% ---------------------------------------------------------------------------
+
+@inproceedings{agentdojo2024,
+  author    = {Debenedetti, Edoardo and Zhang, Jie and Balunovi{\'c}, Mislav and Beurer-Kellner, Luca and Fischer, Marc and Tram{\`e}r, Florian},
+  title     = {{AgentDojo}: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for {LLM} Agents},
+  booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024), Datasets and Benchmarks Track},
+  year      = {2024},
+  url       = {https://arxiv.org/abs/2406.13352},
+  note      = {arXiv 2406.13352 v1 19 Jun 2024, v2 18 Jul 2024, v3 24 Nov 2024 (read v3). Venue confirmed on OpenReview (m1YYAQjO3w, poster); page range not checked. Paper licence arXiv non-exclusive. Code: https://github.com/ethz-spylab/agentdojo (MIT). 97 user tasks, 27 injection tasks, 629 security cases; Table 3 and Table 5 ASR figures. Verified 2026-11-04}
+}
+
+@inproceedings{wasp2025,
+  author    = {Evtimov, Ivan and Zharmagambetov, Arman and Grattafiori, Aaron and Guo, Chuan and Chaudhuri, Kamalika},
+  title     = {{WASP}: Benchmarking Web Agent Security Against Prompt Injection Attacks},
+  booktitle = {Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Datasets and Benchmarks Track},
+  year      = {2025},
+  url       = {https://arxiv.org/abs/2504.18575},
+  note      = {arXiv 2504.18575 v1 22 Apr, v2 30 Apr, v3 16 May 2025 (read v3). Venue confirmed on OpenReview (Ip1cCUAllL, poster; also ICML 2025 WCUA workshop poster). Paper licence CC BY-NC-SA 4.0. Code: https://github.com/facebookresearch/wasp (CC BY-NC 4.0; research-only). Table 2: intermediate ASR up to 0.857, end-to-end 0 to 0.167. Verified 2026-11-04}
+}
+
+@article{camel2025,
+  author  = {Debenedetti, Edoardo and Shumailov, Ilia and Fan, Tianqi and Hayes, Jamie and Carlini, Nicholas and Fabian, Daniel and Kern, Christoph and Shi, Chongyang and Terzis, Andreas and Tram{\`e}r, Florian},
+  title   = {Defeating Prompt Injections by Design},
+  journal = {arXiv preprint arXiv:2503.18813},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2503.18813},
+  note    = {CaMeL. v1 24 Mar 2025, v2 24 Jun 2025 (read v2). No venue (OpenReview lists CoRR 2025 only). Paper licence CC BY 4.0. Code: https://github.com/google-research/camel-prompt-injection (Apache-2.0; ``not an officially supported Google product''). Abstract: 77 percent of AgentDojo tasks with provable security vs 84 percent undefended; Section 6.3: 0 successful attacks vs 8 for tool filter (Claude 3.5 Sonnet, 949 attacks). Verified 2026-11-04}
+}
+
+@misc{anthropicpi2025,
+  author       = {{Anthropic}},
+  title        = {Mitigating prompt injections in browser use},
+  howpublished = {Research post},
+  year         = {2025},
+  month        = nov,
+  url          = {https://www.anthropic.com/research/prompt-injection-defenses},
+  note         = {24 November 2025. Claude for Chrome; adaptive best-of-N attacker, 100 attempts per environment: Opus 4.5 8.0 percent model-only, 1.4 percent with improved safeguards; ``still represents meaningful risk''. Blog post. Verified 2026-11-04}
+}
+
+% ---------------------------------------------------------------------------
+% LLM judges and attacks on them
+% ---------------------------------------------------------------------------
+
+@inproceedings{zheng2023,
+  author    = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, Eric P. and Zhang, Hao and Gonzalez, Joseph E. and Stoica, Ion},
+  title     = {Judging {LLM}-as-a-Judge with {MT-Bench} and {Chatbot Arena}},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023), Datasets and Benchmarks Track},
+  year      = {2023},
+  url       = {https://arxiv.org/abs/2306.05685},
+  note      = {arXiv 2306.05685 v1 9 Jun 2023 to v4 24 Dec 2023; venue stated on the arXiv page. Paper licence arXiv non-exclusive. Code and judge prompts: https://github.com/lm-sys/FastChat (Apache-2.0). GPT-4 judge agreement with humans over 80 percent; position, verbosity and self-enhancement biases. Verified 2026-11-04}
+}
+
+@article{judgeflip2025,
+  author  = {Zhao, Yulai and Liu, Haolin and Yu, Dian and Kung, Sunyuan and Chen, Meijia and Mi, Haitao and Yu, Dong},
+  title   = {One Token to Fool {LLM}-as-a-Judge},
+  journal = {arXiv preprint arXiv:2507.08794},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2507.08794},
+  note    = {v1 11 Jul 2025, v2 26 Sep 2025, v3 11 Jun 2026 (read current HTML). OpenReview: rejected ICLR 2026 submission; still a preprint. Paper licence arXiv non-exclusive. Model and data: https://huggingface.co/sarosavo/Master-RM (Apache-2.0). Table 1 master-key false-positive rates: LLaMA3-70B 80.6 percent avg, GPT-4o 14.6 percent, Claude-4 12.4 percent, GPT-o1 6.0 percent. Result concerns reference-based answer verification, not dispute adjudication. Verified 2026-11-04}
+}
+
+@inproceedings{judgedeceiver2024,
+  author    = {Shi, Jiawen and Yuan, Zenghui and Liu, Yinuo and Huang, Yue and Zhou, Pan and Sun, Lichao and Gong, Neil Zhenqiang},
+  title     = {Optimization-based Prompt Injection Attack to {LLM}-as-a-Judge},
+  booktitle = {Proceedings of the 2024 ACM SIGSAC Conference on Computer and Communications Security (CCS 2024)},
+  year      = {2024},
+  url       = {https://arxiv.org/abs/2403.17710},
+  note      = {JudgeDeceiver. arXiv 2403.17710 v1 26 Mar 2024 to v5 24 Aug 2025 (read current HTML); venue stated in the arXiv comments; DOI and pages not checked here. Paper licence arXiv non-exclusive. Code: https://github.com/ShiJiawenwen/JudgeDeceiver (no LICENSE file; re-implement, do not copy). Table 2: ASR 88.0 to 98.9 percent vs at most 40.7 percent manual; Table 11: known-answer detection FNR 90 to 100 percent. Verified 2026-11-04}
+}
+
+% ---------------------------------------------------------------------------
+% Scalable oversight, debate, AI control
+% ---------------------------------------------------------------------------
+
+@article{irving2018,
+  author  = {Irving, Geoffrey and Christiano, Paul and Amodei, Dario},
+  title   = {{AI} safety via debate},
+  journal = {arXiv preprint arXiv:1805.00899},
+  year    = {2018},
+  url     = {https://arxiv.org/abs/1805.00899},
+  note    = {v1 2 May 2018, v2 22 Oct 2018. Paper licence arXiv non-exclusive. MNIST sparse-pixel judge: 6 pixels 59.4 to 88.9 percent, 4 pixels 48.2 to 85.2 percent. Verified 2026-11-04}
+}
+
+@inproceedings{khan2024,
+  author    = {Khan, Akbir and Hughes, John and Valentine, Dan and Ruis, Laura and Sachan, Kshitij and Radhakrishnan, Ansh and Grefenstette, Edward and Bowman, Samuel R. and Rockt{\"a}schel, Tim and Perez, Ethan},
+  title     = {Debating with More Persuasive {LLMs} Leads to More Truthful Answers},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML 2024)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {235},
+  pages     = {23662--23733},
+  year      = {2024},
+  url       = {https://proceedings.mlr.press/v235/khan24a.html},
+  note      = {arXiv 2402.06782 v1 9 Feb 2024 to v4 25 Jul 2024 (read v4); PMLR citation confirmed. Paper licence arXiv non-exclusive. Code: https://github.com/ucl-dark/llm_debate (MIT). QuALITY with information asymmetry; LLM judges naive 48, consultancy 54, debate 76 percent; humans 60, 78, 88 percent. Verified 2026-11-04}
+}
+
+@inproceedings{kenton2024,
+  author    = {Kenton, Zachary and Siegel, Noah Y. and Kram{\'a}r, J{\'a}nos and Brown-Cohen, Jonah and Albanie, Samuel and Bulian, Jannis and Agarwal, Rishabh and Lindner, David and Tang, Yunhao and Goodman, Noah D. and Shah, Rohin},
+  title     = {On scalable oversight with weak {LLMs} judging strong {LLMs}},
+  booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024)},
+  year      = {2024},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2024/hash/899511e37a8e01e1bd6f6f1d377cc250-Abstract.html},
+  note      = {arXiv 2407.04622 v1 5 Jul 2024, v2 12 Jul 2024 (read v2); NeurIPS 2024 proceedings page confirmed; page range not checked. Paper licence CC BY 4.0. No code release found. Debate beats consultancy on all tasks; beats direct QA only with information asymmetry; open consultant correct 88/84/71 percent. Verified 2026-11-04}
+}
+
+@inproceedings{greenblatt2023,
+  author    = {Greenblatt, Ryan and Shlegeris, Buck and Sachan, Kshitij and Roger, Fabien},
+  title     = {{AI} Control: Improving Safety Despite Intentional Subversion},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML 2024)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {235},
+  year      = {2024},
+  url       = {https://arxiv.org/abs/2312.06942},
+  note      = {arXiv 2312.06942 v1 12 Dec 2023 to v5 23 Jul 2024 (read v5); ICML version on OpenReview (KviM5k8pcP); page range not checked. Paper licence CC BY 4.0. Code: https://github.com/rgreenblatt/control-evaluations (MIT). Table 7: trusted monitoring defer 10 percent 83 safety / 93 usefulness; untrusted monitoring defer 10 percent 92 / 92; naive untrusted monitoring 0 percent safety. Verified 2026-11-04}
+}
+
+% ---------------------------------------------------------------------------
+% LLM adjudication of disputes (nearest prior work)
+% ---------------------------------------------------------------------------
+
+@article{cyberjurors2026,
+  author  = {Sun, Yanhui and Liu, Wu and Ming, Haifeng and Wang, Xinru and Yao, Hantao and Zhang, Yongdong},
+  title   = {{CyberJurors}: A Multi-Agent Simulation Task for E-Commerce Disputes Verdict},
+  journal = {arXiv preprint arXiv:2605.28369},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2605.28369},
+  note    = {v1 27 May 2026 (only version); arXiv comments: ICML 2026. VerdictBench: 6,000 real-world e-commerce dispute cases, multimodal; multi-agent jury with discussion, voting and precedents. Human parties; no agents, mandate or liability rule. Paper and dataset licences UNVERIFIED. Verified from the abstract page 2026-11-04}
+}
+
+@article{uma2026,
+  author  = {Wen, Junhao and Zhou, Juncen and Huang, Junjie},
+  title   = {Can {LLMs} Help Decentralized Dispute Arbitration? A Case Study of {UMA}-Resolved Markets on {Polymarket}},
+  journal = {arXiv preprint arXiv:2604.15674},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2604.15674},
+  note    = {v1 17 Apr 2026, cs.CY; no venue. LLM agreement with UMA final resolutions after a dispute 89.58 percent; disputed-event volume USD 972,370,804.71. Author names verified on the abstract page. Verified 2026-11-04}
+}
+
+@inproceedings{drassist2025,
+  author    = {Pawar, Sachin and Apte, Manoj and Palshikar, Girish K. and Ali, Basit and Ramrakhiyani, Nitin},
+  title     = {{DRAssist}: Dispute Resolution Assistance using Large Language Models},
+  booktitle = {Proceedings of the 20th International Conference on Artificial Intelligence and Law (ICAIL 2025)},
+  year      = {2025},
+  url       = {https://arxiv.org/abs/2509.01962},
+  note      = {arXiv 2509.01962 v1 2 Sep 2025; venue stated in the arXiv comments. LLM as assistant to a human judge: structured dispute summary, then stronger party, per-demand acceptance and argument strength; automobile insurance and domain-name disputes. Author names verified. Verified 2026-11-04}
+}
+
+@misc{agentproxy2026,
+  title        = {Agent-as-a-Proxy: Indirect Prompt Injection Attacks Against Trusted Monitors},
+  howpublished = {OpenReview, under review at TMLR},
+  year         = {2026},
+  url          = {https://openreview.net/forum?id=iN2npLg8Zd},
+  note         = {UNVERIFIED: title and venue status from the OpenReview search API only; authors, date and content not read. Relevant to A2 fact-finders reading agent logs. Lead for the judges lane}
+}
+
+% ---------------------------------------------------------------------------
+% Software and data artifacts (for the reuse plan)
+% ---------------------------------------------------------------------------
+
+@misc{agentdojo_code,
+  author       = {{SPY Lab, ETH Zurich}},
+  title        = {{AgentDojo} (software)},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/ethz-spylab/agentdojo},
+  note         = {MIT licence (GitHub API, 2026-11-04). Reuse with notice}
+}
+
+@misc{wasp_code,
+  author       = {{Meta Platforms, Inc.}},
+  title        = {{WASP} (software and benchmark data)},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/facebookresearch/wasp},
+  note         = {CC BY-NC 4.0 (LICENSE file, 2026-11-04). Research-only; do not vendor into commercial artefacts}
+}
+
+@misc{camel_code,
+  author       = {{Google Research}},
+  title        = {{CaMeL} prompt-injection defence (software)},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/google-research/camel-prompt-injection},
+  note         = {Apache-2.0 (LICENSE file, 2026-11-04); not an officially supported Google product. Reuse with NOTICE}
+}
+
+@misc{magentic_code,
+  author       = {{Microsoft}},
+  title        = {Magentic Marketplace (software)},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/microsoft/multi-agent-marketplace},
+  note         = {MIT licence (GitHub API, 2026-11-04). Reuse with notice}
+}
+
+@misc{aces_code,
+  author       = {{My Custom AI}},
+  title        = {{ACES}: a sandbox environment for studying how {AI} agents shop online (software)},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/mycustomai/ACES},
+  note         = {No licence file (GitHub API, 2026-11-04). Do not copy; re-implement from the paper. Dataset My-Custom-AI/ACE-RS on Hugging Face is MIT; ACE-BB and ACE-SR carry no licence tag}
+}
+
+@misc{judgedeceiver_code,
+  author       = {Shi, Jiawen},
+  title        = {{JudgeDeceiver} (software)},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/ShiJiawenwen/JudgeDeceiver},
+  note         = {No LICENSE file (root listing, 2026-11-04). Do not copy; re-implement from the CCS 2024 paper}
+}
+
+@misc{masterrm_model,
+  author       = {Zhao, Yulai and others},
+  title        = {Master-RM (model and 180k-instance training data)},
+  howpublished = {Hugging Face},
+  url          = {https://huggingface.co/sarosavo/Master-RM},
+  note         = {Apache-2.0 (Hugging Face API, 2026-11-04). Base model Qwen2.5-7B-Instruct-RLVR. Reuse with notice}
+}
+
+@misc{fastchat_code,
+  author       = {{LMSYS}},
+  title        = {{FastChat} with {MT-Bench} {LLM}-judge code and data (software)},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/lm-sys/FastChat},
+  note         = {Apache-2.0 (GitHub API, 2026-11-04). Reuse with notice}
+}
+
+@misc{llmdebate_code,
+  author       = {{UCL DARK Lab}},
+  title        = {llm\_debate (software)},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/ucl-dark/llm_debate},
+  note         = {MIT licence (GitHub API, 2026-11-04). Reuse with notice}
+}
+
+@misc{controlevals_code,
+  author       = {Greenblatt, Ryan},
+  title        = {control-evaluations (software)},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/rgreenblatt/control-evaluations},
+  note         = {MIT licence (GitHub API, 2026-11-04). Reuse with notice}
+}

@@ -1,0 +1,228 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "a2a_instant",
+  "amount": 39.98,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "OfficePlus",
+  "statement_descriptor": "OFFICEPLUS.LV",
+  "items": [
+   {
+    "title": "Canon PG-560 Black Ink Cartridge",
+    "qty": 2,
+    "unit_price": 19.99,
+    "category": "office",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-12-16",
+ "buyer_claim": {
+  "text": "I asked my agent to: \"Order my usual printer ink, the black cartridges, two packs please. Keep it under EUR 70.\" It bought 2 x Canon PG-560 Black Ink Cartridge, but I needed HP 305XL cartridges for my HP printer. I want my money back.",
+  "disputed_amount": 39.98
+ },
+ "merchant_reply": {
+  "text": "The item was exactly as described in our listing and was delivered.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Order my usual printer ink, the black cartridges, two packs please. Keep it under EUR 70.",
+  "max_total": 70.0,
+  "categories": [
+   "office"
+  ],
+  "merchant_allowlist": null,
+  "max_units": 2,
+  "max_lines": 2,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "signature": "91b40aa2dc500cea82371d5abeaf6be46b1cba202452e4a126eb6edaaa429e4f",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "black ink cartridge"
+   },
+   "reason": "Find listings for the requested item.",
+   "status": "8 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-canon560-op"
+   },
+   "reason": "Check the listing details before buying.",
+   "status": "opened product page p-canon560-op"
+  },
+  {
+   "seq": 3,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-canon560-op",
+    "qty": 2
+   },
+   "reason": "Canon PG-560 is a common black cartridge.",
+   "status": "Added 2 x Canon PG-560 Black Ink Cartridge to cart. Cart now: 2 x Canon PG-560 Black Ink Cartridge @ EUR 19.99 (total EUR 39.98)"
+  },
+  {
+   "seq": 4,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "Everything needed is in the cart; paying with the user's token.",
+   "status": "payment approved, order ord_001_8df89494, EUR 39.98"
+  },
+  {
+   "seq": 5,
+   "tool": "finish",
+   "args": {
+    "summary": "I completed the purchase as requested."
+   },
+   "reason": "Purchase complete.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [],
+ "agent_summary_to_buyer": "I completed the purchase as requested.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-canon560-op",
+   "merchant_id": "m-officeplus",
+   "title": "Canon PG-560 Black Ink Cartridge",
+   "category": "office",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "Canon",
+    "model": "canon-pg560",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {},
+    "included_accessories": [],
+    "quantity": 2
+   },
+   "description": "Genuine Canon PG-560 black ink for PIXMA printers.",
+   "image_descriptors": [
+    "Photo 1: black Canon PG-560 Black Ink Cartridge, front view, new and undamaged",
+    "Photo 2: box contents: the product only",
+    "Photo 3: retail box with Canon branding, EU version"
+   ],
+   "unit_price_charged": 19.99,
+   "delivery_terms": "Latvia (2-4 days)",
+   "return_terms": "30-day returns",
+   "page_sha256": "8bc741cf6995fb9ad1bd96261a37a186c4a650b43aa6353b0f248938fe5f658c",
+   "sha256": "f70d1a0a41a4c57792cdd43b51881826eba8e6e7e63229ce90caedf8b3299602"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-canon560-op": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 0.16,
+     "scanned_weight_kg": 0.16
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "Canon PG-560 Black Ink Cartridge",
+       "serial": "SN5D74398EEE",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": []
+      }
+     ],
+     "packed_at": "2026-11-04"
+    }
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-canon560-op",
+   "page": {
+    "title": "Canon PG-560 Black Ink Cartridge",
+    "brand": "Canon",
+    "category": "office",
+    "price": 19.99,
+    "stock": 90,
+    "description": "Genuine Canon PG-560 black ink for PIXMA printers.",
+    "specs": {
+     "colour": "Black"
+    },
+    "reviews": [],
+    "product_id": "p-canon560-op",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-officeplus",
+     "name": "OfficePlus",
+     "rating": 4.4
+    },
+    "shipping": "Latvia (2-4 days)"
+   },
+   "sha256": "8bc741cf6995fb9ad1bd96261a37a186c4a650b43aa6353b0f248938fe5f658c"
+  },
+  {
+   "after_action": 4,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-canon560-op",
+   "page": {
+    "title": "Canon PG-560 Black Ink Cartridge",
+    "brand": "Canon",
+    "category": "office",
+    "price": 19.99,
+    "stock": 90,
+    "description": "Genuine Canon PG-560 black ink for PIXMA printers.",
+    "specs": {
+     "colour": "Black"
+    },
+    "reviews": [],
+    "product_id": "p-canon560-op",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-officeplus",
+     "name": "OfficePlus",
+     "rating": 4.4
+    },
+    "shipping": "Latvia (2-4 days)"
+   },
+   "sha256": "8bc741cf6995fb9ad1bd96261a37a186c4a650b43aa6353b0f248938fe5f658c"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-canon560-op",
+   "title": "Canon PG-560 Black Ink Cartridge",
+   "merchant_id": "m-officeplus",
+   "merchant_name": "OfficePlus",
+   "category": "office",
+   "qty": 2,
+   "unit_price": 19.99,
+   "line_total": 39.98,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 11,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

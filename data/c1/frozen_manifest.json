@@ -1,0 +1,27 @@
+{
+ "amendment": "C1",
+ "files": {
+  "acs/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "acs/adjudicate.py": "99b0ba0f93d2d0de2fdaa48d00df5366553c61bc621ce6f4704163af3f6b302b",
+  "acs/agent.py": "4284ea696b1dfde808bbaf75258afc5c7b309999575eb1a10b1f66c192ebbb81",
+  "acs/analyze_c1.py": "5d46cf1eb4f3aba75a942121ab9535def6fe6559345f4e522a23ab69948de902",
+  "acs/analyze_phase2.py": "165ca4a18b45d67a4c45f27cf4f4b864cd8622cb20a0c83d5ac6053ab352b6d4",
+  "acs/attack.py": "2455d69c30fe2886c42d9400aff94f32e20857064c16a302175bef5ccef116c7",
+  "acs/backends.py": "8dcd2224d807d8f5a38e24fa0df363d5eb40a33169b2fee3741def3b42ef4cca",
+  "acs/confirmatory_c1.py": "14609612e6104ca418c3a0625ce568bc51f893a7f3189a767fe7ee32354fb251",
+  "acs/controls.py": "cb9ae818cae91a1a3c67410b050d888e4e9ea092045fe3a6b84b6c180f25eaa2",
+  "acs/decision_contract.py": "63b82dc934de9f25bf3f9a65cc79ca4337bda19c78516800c72caed6ce4506e0",
+  "acs/disputes.py": "ade443af585e42092e71e7d3eefa6279614511efdaf74ebf098de891e0ee9c4d",
+  "acs/evidence.py": "025b4281a55c163a0c6a889e8d2eb3ebbc16b4e4a882ced93a804996c4902fce",
+  "acs/hybrid.py": "1c25bdf9b6e0bd788462c9c34c1940446ba6032d3c07d365e2fc1361bd02d94b",
+  "acs/marketplace.py": "696fbd5abc6c51d6235b6b20d57069a2f8f9174df74cbc34870a9ae9eb273d4f",
+  "acs/metrics.py": "ae0b9746fbdcd1fa981eb63e15e4e65b7e8efede62ce38b3ee9d0407db321b94",
+  "acs/provenance.py": "57188dc70ed7545d74bf5f9f32ae0f20c55a55ffaae98469a6bc9435acae6352",
+  "acs/rule_engine.py": "600e8c3b09c55da802f5e554eb6b66542e93d3f2d6a22045112503cf31582cc8",
+  "acs/scenarios.py": "c9e199c95b2d33ff942319ee154554c7eff6a158a1944b8c2adc540779f3fe3f",
+  "data/disputes/c1_cases.json": "06e797282e0330656e62e569691755c7a66f7a1e89af241418a16507bf9ced0e",
+  "data/disputes/cases.json": "68e78171e4fccac761693ac51fb0e8b7de1d3286bf419b2523cbe6b510cb4986",
+  "models.json": "c915cff16225bca9d45e7329a89d6f8738bde05ce86ab8fc67785fa563a99562",
+  "rulebook/AGENTIC_DISPUTE_RULEBOOK.json": "4e83a0fee8f3c87648f1231afe518e16b8da1580cc07e6287b80cda068382e06"
+ }
+}

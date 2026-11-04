@@ -1,0 +1,551 @@
+% refs.bib for "Who pays when the agent is wrong?" (Vadims Juruss, 2026-11-04).
+% Every entry was verified on the web on 2026-11-04 by the paper's verification lanes
+% (protocols, regulation, literature) or by the author's own fetch. The note field records
+% what was confirmed and any caveat. EU acts were read from the Publications Office
+% (publications.europa.eu/resource/celex/<CELEX>), which serves the Official Journal text;
+% the canonical ELI URL is cited.
+
+% ---------------------------------------------------------------------------
+% Agent payment and commerce protocols, schemes, rails
+% ---------------------------------------------------------------------------
+
+@techreport{ap2spec,
+  author      = {{Google}},
+  title       = {Agent Payments Protocol ({AP2}) Specification, version 0.2},
+  institution = {Google},
+  year        = {2026},
+  month       = apr,
+  url         = {https://raw.githubusercontent.com/google-agentic-commerce/AP2/main/docs/ap2/specification.md},
+  note        = {Release v0.2.0, 28 April 2026. Accessed 2026-11-04. Mandates secured as SD-JWTs; states that how its artefacts are used for dispute resolution, retention and retrieval is outside the scope of the specification}
+}
+
+@misc{fido2026,
+  author       = {{FIDO Alliance}},
+  title        = {{FIDO} Alliance to Develop Standards for Trusted {AI} Agent Interactions},
+  howpublished = {Press release},
+  year         = {2026},
+  month        = apr,
+  url          = {https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/},
+  note         = {28 April 2026. Accessed 2026-11-04. Google's AP2 and Mastercard's Verifiable Intent contributed; Payments Technical Working Group chaired by members from Mastercard and Visa}
+}
+
+@misc{ucp,
+  author       = {{UCP Authors}},
+  title        = {Universal Commerce Protocol ({UCP})},
+  howpublished = {Web site},
+  year         = {2026},
+  url          = {https://ucp.dev/},
+  note         = {Accessed 2026-11-04. ``You remain the Merchant of Record and your business logic stays intact''}
+}
+
+@misc{ucpblog2026,
+  author       = {Handa, Amit and Gupta, Ashish},
+  title        = {Under the Hood: Universal Commerce Protocol ({UCP})},
+  howpublished = {Google Developers Blog},
+  year         = {2026},
+  month        = jan,
+  url          = {https://developers.googleblog.com/en/under-the-hood-universal-commerce-protocol-ucp/},
+  note         = {11 January 2026. Accessed 2026-11-04. Developed with Shopify, Etsy, Wayfair, Target and Walmart}
+}
+
+@misc{acp,
+  author       = {{OpenAI}},
+  title        = {Agentic Commerce: full documentation ({Agentic Commerce Protocol})},
+  howpublished = {Developer documentation},
+  year         = {2026},
+  url          = {https://developers.openai.com/commerce/llms-full.txt},
+  note         = {Accessed 2026-11-04. Product Feed Spec, Agentic Checkout Spec and Delegated Payment Spec; ``OpenAI is not the merchant of record''; refunds and chargebacks remain with the merchant and its PSP}
+}
+
+@techreport{visarules2026,
+  author      = {{Visa Inc.}},
+  title       = {Visa Core Rules and Visa Product and Service Rules},
+  institution = {Visa Inc.},
+  year        = {2026},
+  month       = oct,
+  url         = {https://usa.visa.com/dam/VCOM/download/about-visa/visa-rules-public.pdf},
+  note        = {Edition of 24 October 2026. Section 4.1.23.10, ID 0031176, p. 268 (rule last updated April 2026). Accessed 2026-11-04}
+}
+
+@misc{visatap2025,
+  author       = {{Visa Inc.}},
+  title        = {Visa Introduces Trusted Agent Protocol: An Ecosystem-Led Framework for {AI} Commerce},
+  howpublished = {Press release (Business Wire)},
+  year         = {2025},
+  month        = oct,
+  url          = {https://investor.visa.com/news/news-details/2025/Visa-Introduces-Trusted-Agent-Protocol-An-Ecosystem-Led-Framework-for-AI-Commerce/default.aspx},
+  note         = {14 October 2025. Accessed 2026-11-04 (the Business Wire copy refuses automated access; the Visa investor-relations copy was read)}
+}
+
+@misc{amex2026,
+  author       = {{American Express}},
+  title        = {Agentic Commerce Experiences},
+  howpublished = {Web page},
+  year         = {2026},
+  url          = {https://www.americanexpress.com/en-us/company/agentic-commerce/},
+  note         = {Accessed 2026-11-04. Announces Amex Agent Purchase Protection for registered agents, U.S. credit cards only; forward-looking (``In the future''); ``Full terms and conditions will be made available in the future''}
+}
+
+@misc{amexdive2026,
+  author       = {Marek, Lynne},
+  title        = {Amex pushes for agentic standards},
+  howpublished = {Payments Dive},
+  year         = {2026},
+  month        = apr,
+  url          = {https://www.paymentsdive.com/news/amex-pushes-for-agentic-standards/818782/},
+  note         = {29 April 2026. Accessed 2026-11-04. Reports the 14 April 2026 American Express announcement}
+}
+
+@misc{paypalagent,
+  author       = {{PayPal}},
+  title        = {Agent-Ready Payments for {AI} Agents},
+  howpublished = {Web page},
+  year         = {2026},
+  url          = {https://www.paypal.ai/agent-ready},
+  note         = {Accessed 2026-11-04. ``Seller and Purchase Protection, fraud tools, chargeback coverage, and identity services now extend to agentic transactions''; Purchase Protection on eligible transactions, terms apply}
+}
+
+@techreport{emvco2026,
+  author      = {{EMVCo}},
+  title       = {{EMV} Agentic Payments: Framework for Specifications (version 1.0, draft for comment)},
+  institution = {EMVCo},
+  year        = {2026},
+  month       = sep,
+  url         = {https://www.emvco.com/news-publications/emvco-requests-feedback-on-framework-for-secure-interoperable-and-scalable-card-based-agentic-payments/},
+  note        = {Released for comment on 1 September 2026; comment period closed 30 September 2026; introduces ``Intent Services''. Accessed 2026-11-04}
+}
+
+@misc{mastercardagentpay2025,
+  author       = {{Mastercard}},
+  title        = {Mastercard unveils Agent Pay, pioneering agentic payments technology to power commerce in the age of {AI}},
+  howpublished = {Press release},
+  year         = {2025},
+  month        = apr,
+  url          = {https://newsroom.mastercard.com/news/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai},
+  note         = {29 April 2025. Accessed 2026-11-04. Agentic Payments Program; Mastercard Agentic Tokens}
+}
+
+@misc{ethoca2026,
+  author       = {{Mastercard}},
+  title        = {How {Ethoca} helps prevent chargebacks, reduce revenue loss and improve customer experience},
+  howpublished = {Mastercard UK Insights},
+  year         = {2026},
+  month        = aug,
+  url          = {https://www.mastercard.com/gb/en/news-and-trends/Insights/2026/how-ethoca-helps-prevent-chargebacks-reduce-revenue-loss-and-improve-customer-experience.html},
+  note         = {11 August 2026. Accessed 2026-11-04. Mastercard's own figure of more than 39 million chargebacks prevented in 2025}
+}
+
+@misc{visavamp2025,
+  author       = {{Visa}},
+  title        = {Visa Acquirer Monitoring Program Overview},
+  howpublished = {Fact sheet},
+  year         = {2025},
+  url          = {https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf},
+  note         = {Threshold updates effective 1 June 2025; advisory period to 30 September 2025. Accessed 2026-11-04}
+}
+
+@misc{psrapp,
+  author       = {{Payment Systems Regulator}},
+  title        = {Authorised push payment ({APP}) scams: Information on consumer communications for payment service providers},
+  howpublished = {Information sheet, version 3},
+  year         = {2024},
+  month        = oct,
+  url          = {https://www.psr.org.uk/media/x4tji2en/psr-app-scams-psp-information-sheet-v3.pdf},
+  note         = {Requirement applies to payments made on or after 7 October 2024; compliance with Specific Direction 20 is a legal requirement. Accessed 2026-11-04}
+}
+
+@techreport{psrcivil2024,
+  author      = {{Payment Systems Regulator}},
+  title       = {Guidance supporting the identification of {APP} scams and civil disputes},
+  institution = {Payment Systems Regulator},
+  year        = {2024},
+  month       = sep,
+  url         = {https://www.psr.org.uk/media/ldmnhzps/app-scams-civil-dispute-guidance-sept-2024.pdf},
+  note        = {A civil dispute: payment to a legitimate supplier for goods or services not received or defective, with no indication of intent to defraud. Accessed 2026-11-04}
+}
+
+@techreport{epcsct2025,
+  author      = {{European Payments Council}},
+  title       = {{SEPA} Credit Transfer Scheme Rulebook},
+  institution = {European Payments Council AISBL},
+  number      = {EPC125-05},
+  year        = {2026},
+  month       = sep,
+  url         = {https://www.europeanpaymentscouncil.eu/sites/default/files/kb/file/2026-09/EPC125-05%202025%20SCT%20Rulebook%20version%201.2.pdf},
+  note        = {2025 version 1.2, issued and effective 30 September 2026. Section 4.3.2.3: the Recall procedure ``can be initiated only by the Originator PSP'' for duplicate sending, technical problems or fraudulent origination; a Request for Recall by the Originator depends on the Beneficiary's consent. Accessed 2026-11-04}
+}
+
+@techreport{epcsctinst2025,
+  author      = {{European Payments Council}},
+  title       = {{SEPA} Instant Credit Transfer Scheme Rulebook},
+  institution = {European Payments Council AISBL},
+  number      = {EPC004-16},
+  year        = {2026},
+  month       = sep,
+  url         = {https://www.europeanpaymentscouncil.eu/sites/default/files/kb/file/2026-09/EPC004-16%202025%20SCT%20Instant%20Rulebook%20v1.2.pdf},
+  note        = {2025 version 1.2, issued and effective 30 September 2026. Accessed 2026-11-04}
+}
+
+@misc{iso20022,
+  author       = {{ISO 20022 Registration Authority}},
+  title        = {{ISO} 20022 Message Definitions},
+  howpublished = {Web page},
+  year         = {2026},
+  url          = {https://www.iso20022.org/iso-20022-message-definitions},
+  note         = {Accessed 2026-11-04 through the Internet Archive snapshot of 1 October 2026 (the live page refuses automated access). Lists pacs.008 FIToFICustomerCreditTransfer, pacs.004 PaymentReturn, camt.056 FIToFIPaymentCancellationRequest and camt.029 ResolutionOfInvestigation}
+}
+
+% ---------------------------------------------------------------------------
+% Regulation, case law, terms, ADR
+% ---------------------------------------------------------------------------
+
+@misc{aiact2024,
+  author = {{European Parliament and Council of the European Union}},
+  title  = {Regulation ({EU}) 2024/1689 laying down harmonised rules on artificial intelligence ({Artificial Intelligence Act})},
+  year   = {2024},
+  url    = {https://eur-lex.europa.eu/eli/reg/2024/1689/oj},
+  note   = {OJ L, 2024/1689, 12.7.2024. Annex III point 8(a); recital 61; Articles 14 and 86. Accessed 2026-11-04}
+}
+
+@misc{omnibus2026,
+  author = {{European Parliament and Council of the European Union}},
+  title  = {Regulation ({EU}) 2026/1744 amending Regulations ({EU}) 2024/1689, ({EU}) 2018/1139 and ({EU}) 2023/1230 ({Digital Omnibus on AI})},
+  year   = {2026},
+  url    = {https://eur-lex.europa.eu/eli/reg/2026/1744/oj},
+  note   = {OJ L, 2026/1744, 24.7.2026. Article 1(40)(b) replaces Article 113(c) of the AI Act: Annex III high-risk obligations apply from 2 December 2027. Accessed 2026-11-04}
+}
+
+@misc{gdpr2016,
+  author = {{European Parliament and Council of the European Union}},
+  title  = {Regulation ({EU}) 2016/679 on the protection of natural persons with regard to the processing of personal data ({General Data Protection Regulation})},
+  year   = {2016},
+  url    = {https://eur-lex.europa.eu/eli/reg/2016/679/oj},
+  note   = {OJ L 119, 4.5.2016, p. 1. Article 22(1), (2) and (3). Accessed 2026-11-04}
+}
+
+@misc{adr2013,
+  author = {{European Parliament and Council of the European Union}},
+  title  = {Directive 2013/11/{EU} on alternative dispute resolution for consumer disputes},
+  year   = {2013},
+  url    = {https://eur-lex.europa.eu/eli/dir/2013/11/oj},
+  note   = {OJ L 165, 18.6.2013, p. 63. Articles 6, 10 and 11. Accessed 2026-11-04}
+}
+
+@misc{adr2025,
+  author = {{European Parliament and Council of the European Union}},
+  title  = {Directive ({EU}) 2025/2647 amending Directive 2013/11/{EU} on alternative dispute resolution for consumer disputes},
+  year   = {2025},
+  url    = {https://eur-lex.europa.eu/eli/dir/2025/2647/oj},
+  note   = {OJ L, 2025/2647, 30.12.2025. New Article 5(2)(d): parties informed in advance of automated means and entitled to review of the outcome by a natural person. Transposition by 20 March 2028; applies from 20 September 2028. Accessed 2026-11-04}
+}
+
+@misc{crd2011,
+  author = {{European Parliament and Council of the European Union}},
+  title  = {Directive 2011/83/{EU} on consumer rights},
+  year   = {2011},
+  url    = {https://eur-lex.europa.eu/eli/dir/2011/83/oj},
+  note   = {OJ L 304, 22.11.2011, p. 64, as amended by Directive (EU) 2019/2161. Articles 9 and 16. Accessed 2026-11-04}
+}
+
+@misc{sgd2019,
+  author = {{European Parliament and Council of the European Union}},
+  title  = {Directive ({EU}) 2019/771 on certain aspects concerning contracts for the sale of goods},
+  year   = {2019},
+  url    = {https://eur-lex.europa.eu/eli/dir/2019/771/oj},
+  note   = {OJ L 136, 22.5.2019, p. 28. Articles 6, 7(5), 10, 11 and 21. Accessed 2026-11-04}
+}
+
+@misc{psd2,
+  author = {{European Parliament and Council of the European Union}},
+  title  = {Directive ({EU}) 2015/2366 on payment services in the internal market ({PSD2})},
+  year   = {2015},
+  url    = {https://eur-lex.europa.eu/eli/dir/2015/2366/oj},
+  note   = {OJ L 337, 23.12.2015, p. 35. Articles 64, 72 to 77, 87 and 97. Accessed 2026-11-04. PSD3 and the Payment Services Regulation were not in the Official Journal on that date}
+}
+
+@misc{schufa2023,
+  author = {{Court of Justice of the European Union}},
+  title  = {Judgment of 7 December 2023, {OQ} v {Land Hessen} ({SCHUFA Holding}), Case C-634/21},
+  year   = {2023},
+  url    = {https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0634},
+  note   = {ECLI:EU:C:2023:957. Paragraph 50 (``determining role'') and the operative part (a third party ``draws strongly on'' the automated value). Accessed 2026-11-04}
+}
+
+@misc{anthropicterms,
+  author       = {{Anthropic}},
+  title        = {Consumer Terms of Service},
+  howpublished = {Web page},
+  year         = {2025},
+  url          = {https://www.anthropic.com/legal/consumer-terms},
+  note         = {Effective 8 October 2025. Section 4 (user responsible for all Inputs and Actions) and section 11 (liability cap: the greater of six months' fees and EUR 100). Accessed 2026-11-04}
+}
+
+@misc{uncitral2016,
+  author = {{United Nations Commission on International Trade Law}},
+  title  = {Technical Notes on Online Dispute Resolution},
+  year   = {2016},
+  url    = {https://uncitral.un.org/en/texts/onlinedispute},
+  note   = {Accessed 2026-11-04}
+}
+
+@misc{aaa2025,
+  author       = {{American Arbitration Association}},
+  title        = {Your Questions Answered About the {AAA} {AI} Arbitrator},
+  howpublished = {Web page},
+  year         = {2025},
+  month        = oct,
+  url          = {https://www.adr.org/news-and-insights/ai-arbitrator-faq/},
+  note         = {Published 13 October 2025. Two-party, documents-only construction disputes; ``no case is decided solely by AI''; a human arbitrator finalises and issues the award. Accessed 2026-11-04}
+}
+
+% ---------------------------------------------------------------------------
+% AI oversight, control, LLM judges, agent security, agent markets
+% ---------------------------------------------------------------------------
+
+@article{camel2025,
+  author  = {Debenedetti, E. and Shumailov, I. and Fan, T. and Hayes, J. and Carlini, N. and Fabian, D. and Kern, C. and Shi, C. and Terzis, A. and Tram{\`e}r, F.},
+  title   = {Defeating Prompt Injections by Design},
+  journal = {arXiv preprint arXiv:2503.18813},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2503.18813},
+  note    = {CaMeL. Accessed 2026-11-04}
+}
+
+@inproceedings{agentdojo2024,
+  author    = {Debenedetti, E. and Zhang, J. and Balunovi{\'c}, M. and Beurer-Kellner, L. and Fischer, M. and Tram{\`e}r, F.},
+  title     = {{AgentDojo}: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for {LLM} Agents},
+  booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024), Datasets and Benchmarks Track},
+  year      = {2024},
+  pages     = {82895--82920},
+  url       = {https://arxiv.org/abs/2406.13352},
+  note      = {Accessed 2026-11-04}
+}
+
+@inproceedings{wasp2025,
+  author    = {Evtimov, I. and Zharmagambetov, A. and Grattafiori, A. and Guo, C. and Chaudhuri, K.},
+  title     = {{WASP}: Benchmarking Web Agent Security Against Prompt Injection Attacks},
+  booktitle = {Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Datasets and Benchmarks Track},
+  year      = {2025},
+  url       = {https://arxiv.org/abs/2504.18575},
+  note      = {Accessed 2026-11-04}
+}
+
+@article{magentic2025,
+  author  = {Bansal, G. and Hua, W. and Huang, Z. and Fourney, A. and Swearngin, A. and Epperson, W. and Payne, T. and Hofman, J. M. and Lucier, B. and Singh, C. and Mobius, M. and Nambi, A. and Yadav, A. and Gao, K. and Rothschild, D. M. and Slivkins, A. and Goldstein, D. G. and Mozannar, H. and Immorlica, N. and Murad, M. and Vogel, M. and Kambhampati, S. and Horvitz, E. and Amershi, S.},
+  title   = {Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets},
+  journal = {arXiv preprint arXiv:2510.25779},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2510.25779},
+  note    = {Section 5.4: first proposals selected in 60 to 100 percent of cases; section 5.3: seller-side persuasion and prompt injection. Accessed 2026-11-04}
+}
+
+@article{allouah2025,
+  author  = {Allouah, A. and Besbes, O. and Figueroa, J. D. and Kanoria, Y. and Kumar, A.},
+  title   = {What Is Your {AI} Agent Buying? Evaluation, Biases, Model Dependence, and Emerging Implications for Agentic E-Commerce},
+  journal = {arXiv preprint arXiv:2508.02630},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2508.02630},
+  note    = {Accessed 2026-11-04}
+}
+
+@inproceedings{zheng2023,
+  author    = {Zheng, L. and Chiang, W.-L. and Sheng, Y. and Zhuang, S. and Wu, Z. and Zhuang, Y. and Lin, Z. and Li, Z. and Li, D. and Xing, E. P. and Zhang, H. and Gonzalez, J. E. and Stoica, I.},
+  title     = {Judging {LLM}-as-a-Judge with {MT-Bench} and {Chatbot Arena}},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023), Datasets and Benchmarks Track},
+  year      = {2023},
+  url       = {https://arxiv.org/abs/2306.05685},
+  note      = {Accessed 2026-11-04}
+}
+
+@article{judgeflip2025,
+  author  = {Zhao, Y. and Liu, H. and Yu, D. and Kung, S. and Chen, M. and Mi, H. and Yu, D.},
+  title   = {One Token to Fool {LLM}-as-a-Judge},
+  journal = {arXiv preprint arXiv:2507.08794},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2507.08794},
+  note    = {Result concerns reference-based answer verification by generative reward models (``master key'' responses such as a colon or ``Thought process:'' earn false positives); transfer to dispute adjudication untested. Preprint (rejected submission to ICLR 2026 per OpenReview). Accessed 2026-11-04}
+}
+
+@inproceedings{judgedeceiver2024,
+  author    = {Shi, J. and Yuan, Z. and Liu, Y. and Huang, Y. and Zhou, P. and Sun, L. and Gong, N. Z.},
+  title     = {Optimization-based Prompt Injection Attack to {LLM}-as-a-Judge},
+  booktitle = {Proceedings of the 2024 ACM SIGSAC Conference on Computer and Communications Security (CCS 2024)},
+  year      = {2024},
+  pages     = {660--674},
+  doi       = {10.1145/3658644.3690291},
+  url       = {https://arxiv.org/abs/2403.17710},
+  note      = {JudgeDeceiver. Accessed 2026-11-04}
+}
+
+@article{irving2018,
+  author  = {Irving, G. and Christiano, P. and Amodei, D.},
+  title   = {{AI} safety via debate},
+  journal = {arXiv preprint arXiv:1805.00899},
+  year    = {2018},
+  url     = {https://arxiv.org/abs/1805.00899},
+  note    = {Accessed 2026-11-04}
+}
+
+@inproceedings{khan2024,
+  author    = {Khan, A. and Hughes, J. and Valentine, D. and Ruis, L. and Sachan, K. and Radhakrishnan, A. and Grefenstette, E. and Bowman, S. R. and Rockt{\"a}schel, T. and Perez, E.},
+  title     = {Debating with More Persuasive {LLMs} Leads to More Truthful Answers},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML 2024)},
+  series    = {PMLR},
+  volume    = {235},
+  pages     = {23662--23733},
+  year      = {2024},
+  url       = {https://arxiv.org/abs/2402.06782},
+  note      = {Accessed 2026-11-04}
+}
+
+@inproceedings{kenton2024,
+  author    = {Kenton, Z. and Siegel, N. Y. and Kram{\'a}r, J. and Brown-Cohen, J. and Albanie, S. and Bulian, J. and Agarwal, R. and Lindner, D. and Tang, Y. and Goodman, N. D. and Shah, R.},
+  title     = {On scalable oversight with weak {LLMs} judging strong {LLMs}},
+  booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024)},
+  year      = {2024},
+  pages     = {75229--75276},
+  url       = {https://arxiv.org/abs/2407.04622},
+  note      = {Accessed 2026-11-04}
+}
+
+@inproceedings{greenblatt2023,
+  author    = {Greenblatt, R. and Shlegeris, B. and Sachan, K. and Roger, F.},
+  title     = {{AI} Control: Improving Safety Despite Intentional Subversion},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML 2024)},
+  series    = {PMLR},
+  volume    = {235},
+  pages     = {16295--16336},
+  year      = {2024},
+  url       = {https://arxiv.org/abs/2312.06942},
+  note      = {arXiv preprint December 2023. Accessed 2026-11-04}
+}
+
+@misc{vend1,
+  author       = {{Anthropic}},
+  title        = {Project Vend: Can {Claude} run a small shop?},
+  howpublished = {Research post},
+  year         = {2025},
+  month        = jun,
+  url          = {https://www.anthropic.com/research/project-vend-1},
+  note         = {27 June 2025. Accessed 2026-11-04}
+}
+
+@misc{vend2,
+  author       = {{Anthropic}},
+  title        = {Project Vend: Phase two},
+  howpublished = {Research post},
+  year         = {2025},
+  month        = dec,
+  url          = {https://www.anthropic.com/research/project-vend-2},
+  note         = {18 December 2025. The CEO agent authorised lenient requests (discounts, free items) about eight times as often as it denied them; same model, same blind spots. Accessed 2026-11-04}
+}
+
+@misc{anthropicpi2025,
+  author       = {{Anthropic}},
+  title        = {Mitigating prompt injections in browser use},
+  howpublished = {Research post},
+  year         = {2025},
+  month        = nov,
+  url          = {https://www.anthropic.com/research/prompt-injection-defenses},
+  note         = {24 November 2025. Claude Opus 4.5 against an adaptive best-of-N attacker with 100 attempts per environment: 8.0 percent attack success model-only, 1.4 percent with improved safeguards. Accessed 2026-11-04}
+}
+
+@article{cyberjurors2026,
+  author  = {Sun, Yanhui and Liu, Wu and Ming, Haifeng and Wang, Xinru and Yao, Hantao and Zhang, Yongdong},
+  title   = {{CyberJurors}: A Multi-Agent Simulation Task for E-Commerce Disputes Verdict},
+  journal = {arXiv preprint arXiv:2605.28369},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2605.28369},
+  note    = {v1 27 May 2026 (only version); arXiv comments: ICML 2026. VerdictBench: 6,000 real-world, multimodal e-commerce dispute cases; multi-agent jury with discussion, voting and precedents. Licence of paper and benchmark unverified. Author names verified on the arXiv abstract page by the related-work lane. Accessed 2026-11-04}
+}
+
+@article{uma2026,
+  author  = {Wen, Junhao and Zhou, Juncen and Huang, Junjie},
+  title   = {Can {LLMs} Help Decentralized Dispute Arbitration? A Case Study of {UMA}-Resolved Markets on {Polymarket}},
+  journal = {arXiv preprint arXiv:2604.15674},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2604.15674},
+  note    = {v1 17 April 2026, cs.CY; no venue. Web-enabled LLMs agree with UMA's final on-chain resolutions in 89.58 percent of disputed markets. Author names verified on the arXiv abstract page by the related-work lane. Accessed 2026-11-04}
+}
+
+@inproceedings{drassist2025,
+  author    = {Pawar, Sachin and Apte, Manoj and Palshikar, Girish K. and Ali, Basit and Ramrakhiyani, Nitin},
+  title     = {{DRAssist}: Dispute Resolution Assistance using Large Language Models},
+  booktitle = {Proceedings of the 20th International Conference on Artificial Intelligence and Law (ICAIL 2025)},
+  year      = {2025},
+  url       = {https://arxiv.org/abs/2509.01962},
+  note      = {arXiv 2509.01962, v1 2 September 2025; venue stated in the arXiv comments. LLM as assistant to a human judge: structured dispute summary, then decision at three levels. Author names verified on the arXiv abstract page by the related-work lane. Accessed 2026-11-04}
+}
+
+% ---------------------------------------------------------------------------
+% Internet standards
+% ---------------------------------------------------------------------------
+
+@techreport{rfc8785,
+  author      = {Rundgren, A. and Jordan, B. and Erdtman, S.},
+  title       = {{JSON} Canonicalization Scheme ({JCS})},
+  institution = {RFC Editor},
+  type        = {RFC},
+  number      = {8785},
+  year        = {2020},
+  month       = jun,
+  url         = {https://www.rfc-editor.org/rfc/rfc8785},
+  note        = {Informational (Independent Submission stream). Accessed 2026-11-04}
+}
+
+@techreport{rfc7515,
+  author      = {Jones, M. and Bradley, J. and Sakimura, N.},
+  title       = {{JSON} Web Signature ({JWS})},
+  institution = {RFC Editor},
+  type        = {RFC},
+  number      = {7515},
+  year        = {2015},
+  month       = may,
+  url         = {https://www.rfc-editor.org/rfc/rfc7515},
+  note        = {Proposed Standard. Accessed 2026-11-04}
+}
+
+@techreport{rfc9421,
+  author      = {Backman, A. and Richer, J. and Sporny, M.},
+  title       = {{HTTP} Message Signatures},
+  institution = {RFC Editor},
+  type        = {RFC},
+  number      = {9421},
+  year        = {2024},
+  month       = feb,
+  url         = {https://www.rfc-editor.org/rfc/rfc9421},
+  note        = {Proposed Standard. Accessed 2026-11-04}
+}
+
+@techreport{rfc9162,
+  author      = {Laurie, B. and Messeri, E. and Stradling, R.},
+  title       = {Certificate Transparency Version 2.0},
+  institution = {RFC Editor},
+  type        = {RFC},
+  number      = {9162},
+  year        = {2021},
+  url         = {https://www.rfc-editor.org/rfc/rfc9162},
+  note        = {Experimental. Accessed 2026-11-04 (author's own fetch of the RFC Editor info page)}
+}
+
+% ---------------------------------------------------------------------------
+% Internal review (a file in this repository, not a web source; not web-verified)
+% ---------------------------------------------------------------------------
+
+@misc{audit1,
+  author       = {{Internal review}},
+  title        = {Audit 1: a read-only review of the agent-commerce-safety package at commit 3a6746d},
+  howpublished = {Repository file \texttt{audits/AUDIT\_1\_INDEPENDENT\_AI\_REVIEW.md}},
+  year         = {2026},
+  month        = nov,
+  note         = {4 November 2026. An AI review commissioned by the author, not an external publication. 30 findings; recommended rejection and resubmission after corrections, which this version applies}
+}
+
+@misc{audit3,
+  author       = {{Independent re-check}},
+  title        = {Audit 3: an independent read-only re-check of the corrected agent-commerce-safety package at commit 2e83085},
+  howpublished = {Repository file \texttt{audits/AUDIT\_3\_INDEPENDENT\_AI\_RECHECK.md}},
+  year         = {2026},
+  month        = nov,
+  note         = {4 November 2026. An AI re-check commissioned by the author, not an external publication. Of 30 earlier findings 13 closed, 16 partly closed, 1 open; 8 new findings; paper verdict borderline}
+}

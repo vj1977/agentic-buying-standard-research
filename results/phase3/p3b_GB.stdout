@@ -1,0 +1,54 @@
+2026-11-04 07:43:21,746 arm GB: 14 case-sides, cap 55 calls, ceiling 6814, global calls so far 6415
+2026-11-04 07:43:21,746 arm GB: 51 honest cases
+2026-11-04 07:43:41,372 GB D03: pre-gate AG3 (OK) | gate decided | calls 6416
+2026-11-04 07:43:45,289 GB D04: pre-gate AG3 (OK) | gate review | calls 6417
+2026-11-04 07:43:50,635 GB D02: pre-gate AG3 (OK) | gate review | calls 6418
+2026-11-04 07:43:55,817 GB D01: pre-gate AG3 (OK) | gate review | calls 6419
+2026-11-04 07:44:06,407 GB D05: pre-gate AG3 (OK) | gate decided | calls 6420
+2026-11-04 07:44:19,628 GB D08: pre-gate AG3 (OK) | gate decided | calls 6421
+2026-11-04 07:44:20,614 GB D06: pre-gate AG3 (OK) | gate review | calls 6422
+2026-11-04 07:44:21,349 GB D07: pre-gate AG3 (OK) | gate review | calls 6423
+2026-11-04 07:44:32,857 GB D09: pre-gate AG3 (OK) | gate review | calls 6424
+2026-11-04 07:44:44,809 GB D12: pre-gate AG3 (OK) | gate decided | calls 6425
+2026-11-04 07:44:47,141 GB D10: pre-gate AG3 (OK) | gate review | calls 6426
+2026-11-04 07:44:50,650 GB D11: pre-gate AG3 (OK) | gate review | calls 6427
+2026-11-04 07:44:58,228 GB D13: pre-gate AG3 (OK) | gate decided | calls 6428
+2026-11-04 07:45:25,175 GB D15: pre-gate AG4 (OK) | gate review | calls 6429
+2026-11-04 07:45:25,348 GB D17: pre-gate AG4 (OK) | gate decided | calls 6430
+2026-11-04 07:45:38,030 GB D14: pre-gate AG4 (OK) | gate decided | calls 6431
+2026-11-04 07:45:47,702 GB D16: pre-gate AG4 (OK) | gate decided | calls 6432
+2026-11-04 07:45:55,938 GB D18: pre-gate AG4 (OK) | gate review | calls 6433
+2026-11-04 07:45:57,548 GB D19: pre-gate AG1-M (OK) | gate decided | calls 6434
+2026-11-04 07:46:08,121 GB D20: pre-gate AG1-M (OK) | gate review | calls 6435
+2026-11-04 07:46:13,303 GB D21: pre-gate AG1-M (OK) | gate review | calls 6436
+2026-11-04 07:46:28,060 GB D23: pre-gate AG1-P (OK) | gate review | calls 6437
+2026-11-04 07:46:28,375 GB D24: pre-gate AG1-P (OK) | gate review | calls 6438
+2026-11-04 07:46:48,504 GB D25: pre-gate AG1-P (OK) | gate review | calls 6439
+2026-11-04 07:46:52,402 GB D27: pre-gate AG1-P (OK) | gate review | calls 6440
+2026-11-04 07:46:57,427 GB D26: pre-gate AG1-P (OK) | gate review | calls 6441
+2026-11-04 07:47:03,476 GB D22: pre-gate AG1-P (OK) | gate review | calls 6442
+2026-11-04 07:47:07,286 GB D28: pre-gate AG1-P (OK) | gate review | calls 6443
+2026-11-04 07:47:19,877 GB D29: pre-gate AG1-P (OK) | gate review | calls 6444
+2026-11-04 07:47:41,105 GB D30: pre-gate AG1-P (OK) | gate review | calls 6445
+2026-11-04 07:47:44,333 GB D32: pre-gate AG2 (OK) | gate decided | calls 6446
+2026-11-04 07:47:45,736 GB D33: pre-gate AG2 (OK) | gate decided | calls 6447
+2026-11-04 07:47:56,058 GB D31: pre-gate AG1-P (OK) | gate review | calls 6448
+2026-11-04 07:48:10,310 GB D36: pre-gate AG2 (OK) | gate decided | calls 6449
+2026-11-04 07:48:13,146 GB D35: pre-gate AG2 (OK) | gate decided | calls 6450
+2026-11-04 07:48:14,017 GB D34: pre-gate AG2 (OK) | gate decided | calls 6451
+2026-11-04 07:48:26,975 GB D37: pre-gate AG2 (OK) | gate decided | calls 6452
+2026-11-04 07:48:32,439 GB D38: pre-gate AG2 (OK) | gate decided | calls 6453
+2026-11-04 07:48:42,759 GB D39: pre-gate AG2 (OK) | gate decided | calls 6454
+2026-11-04 07:48:45,365 GB D40: pre-gate AG2 (OK) | gate decided | calls 6455
+2026-11-04 07:48:50,011 GB D42: pre-gate AG5 (OK) | gate decided | calls 6456
+2026-11-04 07:48:50,871 GB D41: pre-gate AG5 (OK) | gate decided | calls 6457
+2026-11-04 07:49:00,316 GB D43: pre-gate AG5 (OK) | gate decided | calls 6458
+2026-11-04 07:49:04,382 GB D44: pre-gate AG5 (OK) | gate decided | calls 6459
+2026-11-04 07:49:24,474 GB D45: pre-gate AG5 (OK) | gate review | calls 6460
+2026-11-04 07:49:29,205 GB D47: pre-gate AG5 (OK) | gate review | calls 6461
+2026-11-04 07:49:42,116 GB D48: pre-gate AG5 (OK) | gate decided | calls 6462
+2026-11-04 07:49:43,632 backend failure: claude exit 1: lse}},"api_error_origin":"first_party"},{"duration_api_ms":0,"stop_reason":"stop_sequence","session_id":"ede7b60e-c14c-4d3c-82fd-b74b676a2f80","total_cost_usd":0,"usage":{"output_tokens_details":{"thinking_tokens":0},"input_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":0,"server_tool_use":{"web_search_requests":0,"web_fetch_requests":0},"servi
+2026-11-04 07:49:47,504 GB D46: pre-gate AG3 (x) | gate decided | calls 6464
+2026-11-04 07:49:55,023 GB D49: pre-gate AG5 (OK) | gate decided | calls 6465
+2026-11-04 07:50:00,639 GB D50: pre-gate AG5 (OK) | gate decided | calls 6466
+2026-11-04 07:50:00,639 arm GB finished; calls this run 51

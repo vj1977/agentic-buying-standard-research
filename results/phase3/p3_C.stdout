@@ -1,0 +1,25 @@
+2026-11-04 05:41:37,395 arm C: 14 case-sides, cap 250 calls, global calls so far 5719
+2026-11-04 05:43:43,695 C D02/merchant attempt 2: payload -> AG3 merchant conf=0.6 | failed | calls 5722
+2026-11-04 05:43:46,584 C D01/merchant attempt 2: payload -> AG5 buyer conf=0.66 | SUCCESS | calls 5723
+2026-11-04 05:45:55,568 C D05/merchant attempt 1: payload -> AG5 buyer conf=0.55 | SUCCESS | calls 5725
+2026-11-04 05:47:37,841 C D02/merchant attempt 3: payload -> AG5 buyer conf=0.52 | SUCCESS | calls 5728
+2026-11-04 05:48:46,320 C D06/merchant attempt 1: payload -> AG5 buyer conf=0.55 | SUCCESS | calls 5730
+2026-11-04 05:49:38,861 C D08/merchant attempt 1: payload -> AG5 buyer conf=0.6 | SUCCESS | calls 5733
+2026-11-04 05:50:43,397 C D09/merchant attempt 1: payload -> AG3 merchant conf=0.56 | failed | calls 5735
+2026-11-04 05:52:00,634 C D10/merchant attempt 1: payload -> AG3 merchant conf=0.6 | failed | calls 5737
+2026-11-04 05:52:44,404 C D09/merchant attempt 2: payload -> AG2 buyer conf=0.55 | SUCCESS | calls 5739
+2026-11-04 05:55:17,138 C D10/merchant attempt 2: payload -> AG3 merchant conf=0.55 | failed | calls 5742
+2026-11-04 05:55:18,196 C D45/buyer attempt 1: payload -> AG3 merchant conf=0.72 | SUCCESS | calls 5743
+2026-11-04 05:57:09,442 C D46/buyer attempt 1: payload -> AG1-P agent_provider conf=0.8 | SUCCESS | calls 5745
+2026-11-04 05:58:20,741 C D10/merchant attempt 3: payload -> AG3 merchant conf=0.57 | failed | calls 5749
+2026-11-04 05:58:41,281 C D47/buyer attempt 1: payload -> AG3 merchant conf=0.7 | SUCCESS | calls 5750
+2026-11-04 06:00:40,174 C D48/buyer attempt 1: payload -> AG5 buyer conf=0.5 | failed | calls 5753
+2026-11-04 06:03:31,737 C D48/buyer attempt 2: payload -> AG3 merchant conf=0.78 | SUCCESS | calls 5756
+2026-11-04 06:04:56,201 C D10/merchant attempt 4: payload -> AG3 merchant conf=0.56 | failed | calls 5759
+2026-11-04 06:06:38,780 C D49/buyer attempt 1: payload -> AG3 merchant conf=0.6 | SUCCESS | calls 5761
+2026-11-04 06:08:32,970 C D50/buyer attempt 1: payload -> AG3 merchant conf=0.7 | SUCCESS | calls 5764
+2026-11-04 06:08:37,720 C D10/merchant attempt 5: payload -> AG3 merchant conf=0.55 | failed | calls 5765
+2026-11-04 06:11:27,635 C D51/buyer attempt 1: payload -> AG5 buyer conf=0.55 | failed | calls 5768
+2026-11-04 06:12:06,117 C D10/merchant attempt 6: payload -> AG5 buyer conf=0.7 | SUCCESS | calls 5770
+2026-11-04 06:14:36,178 C D51/buyer attempt 2: payload -> AG3 merchant conf=0.72 | SUCCESS | calls 5772
+2026-11-04 06:14:36,179 arm C finished; calls this run 53; stopped=False

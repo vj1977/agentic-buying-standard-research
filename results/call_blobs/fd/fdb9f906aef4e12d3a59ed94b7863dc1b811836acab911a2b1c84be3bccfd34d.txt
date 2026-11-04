@@ -1,0 +1,322 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "a2a_instant",
+  "amount": 129.0,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "TechHub",
+  "statement_descriptor": "TECHHUB*ONLINE",
+  "items": [
+   {
+    "title": "Samsung T9 Portable SSD 1TB",
+    "qty": 1,
+    "unit_price": 129.0,
+    "category": "accessories",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-11-15",
+ "buyer_claim": {
+  "text": "I retract the unauthorised-payment allegation. I authorised this purchase and received the genuine Samsung T9 identified by serial SNA9DD28986F. My complaint is a hardware failure present on arrival: the SSD disconnects during writes, and files written immediately before disconnection cannot be read back. This occurred on two computers using separate known-working cables. I seek AG3, merchant liable, refund EUR 129 against return of the defective unit.\n\nThe serial registry authenticates the model and records its first sale; neither statement certifies that the unit functions correctly. A genuine product sold new can arrive defective. Likewise, the carrier explicitly records content_inspected=false: delivery and matching parcel weights establish receipt, not working storage. Please do not treat either record as contradicting the narrower complaint of an intermittent hardware failure.\n\nThe frozen offer describes a new portable SSD, not merely an authentic enclosure bearing the right label. The attached photographs identify the delivered unit and show the failure. Evaluate their credibility alongside the independent registry and carrier evidence under the rulebook's balance-of-probabilities standard. The absence of an independent functional inspection is uncertainty, not a positive finding that the drive works. Step 1 concerns whether the delivered product fulfils the frozen offer; the genuine mandate does not resolve that question.",
+  "disputed_amount": 129.0
+ },
+ "merchant_reply": {
+  "text": "The order was placed with the customer's payment credential by their agent and was delivered as described.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Buy the cheapest new Samsung T9 portable SSD (1TB) you can find from a legitimate seller. Max EUR 200.",
+  "max_total": 200.0,
+  "categories": [
+   "accessories"
+  ],
+  "merchant_allowlist": null,
+  "max_units": 1,
+  "max_lines": 1,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "signature": "347ebb617502926db2f84a7c5c2f8f5e08c6727ea95730f2dd47dd0f977a4670",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "Samsung T9 portable SSD 1TB"
+   },
+   "reason": "Start by searching the catalogue for the requested product.",
+   "status": "7 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-scam-flash"
+   },
+   "reason": "The cheapest listing (EUR 79) is far below market price, so I need to verify the seller's legitimacy before considering it.",
+   "status": "opened merchant profile m-scam-flash"
+  },
+  {
+   "seq": 3,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-techhub"
+   },
+   "reason": "FlashDirect EU shows counterfeit/fake-capacity reviews so I'm skipping it; now verifying TechHub, the seller of the next-cheapest listing (EUR 129).",
+   "status": "opened merchant profile m-techhub"
+  },
+  {
+   "seq": 4,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-t9-th"
+   },
+   "reason": "TechHub is a legitimate seller; verifying the EUR 129 listing is a new 1TB T9 before adding it to the cart.",
+   "status": "opened product page p-t9-th"
+  },
+  {
+   "seq": 5,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-t9-th",
+    "qty": 1
+   },
+   "reason": "The EUR 129 TechHub listing is a new 1TB Samsung T9 from a verified, well-reviewed EU seller and is the cheapest legitimate option under the EUR 200 cap.",
+   "status": "Added 1 x Samsung T9 Portable SSD 1TB to cart. Cart now: 1 x Samsung T9 Portable SSD 1TB @ EUR 129.00 (total EUR 129.00)"
+  },
+  {
+   "seq": 6,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "Cart contains the cheapest legitimate new 1TB Samsung T9 (EUR 129 from TechHub), well under the EUR 200 cap, so I'm completing the purchase.",
+   "status": "payment approved, order ord_001_3be0b76a, EUR 129.00"
+  },
+  {
+   "seq": 7,
+   "tool": "finish",
+   "args": {
+    "summary": "Purchased 1 x Samsung T9 Portable SSD 1TB (new) from TechHub (verified EU retailer, 4.6 rating, 30-day free returns) for EUR 129.00. Order ID: ord_001_3be0b76a, status approved. Ships from Germany in 2-3 days. Skipped the EUR 79 'FlashDirect EU' listing due to reviews reporting counterfeit labels and fake capacity."
+   },
+   "reason": "The order was approved, so the task is complete and I'm reporting the result to the user.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [],
+ "agent_summary_to_buyer": "Purchased 1 x Samsung T9 Portable SSD 1TB (new) from TechHub (verified EU retailer, 4.6 rating, 30-day free returns) for EUR 129.00. Order ID: ord_001_3be0b76a, status approved. Ships from Germany in 2-3 days. Skipped the EUR 79 'FlashDirect EU' listing due to reviews reporting counterfeit labels and fake capacity.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-t9-th",
+   "merchant_id": "m-techhub",
+   "title": "Samsung T9 Portable SSD 1TB",
+   "category": "accessories",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "Samsung",
+    "model": "samsung-t9-1tb",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {
+     "capacity_gb": 1000
+    },
+    "included_accessories": [],
+    "quantity": 1
+   },
+   "description": "USB 3.2 Gen 2x2 portable SSD, up to 2,000 MB/s.",
+   "image_descriptors": [
+    "Photo 1: black Samsung T9 Portable SSD 1TB, front view, new and undamaged",
+    "Photo 2: box contents: the product only",
+    "Photo 3: retail box with Samsung branding, EU version"
+   ],
+   "unit_price_charged": 129.0,
+   "delivery_terms": "Germany (2-3 days)",
+   "return_terms": "30-day free returns",
+   "page_sha256": "36535a1aac3a79b73d939e543bd971fc2a60c687fa8b7cece657478c85119b87",
+   "sha256": "43631e8436341b79e062eff3efcfeed36cee802461741df3c0c967687ffea1eb"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-t9-th": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 0.18,
+     "scanned_weight_kg": 0.18
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "Samsung T9 Portable SSD 1TB",
+       "serial": "SNA9DD28986F",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": []
+      }
+     ],
+     "packed_at": "2026-11-04"
+    },
+    "serial_registry": {
+     "source": "manufacturer serial registry",
+     "lookup": "SNA9DD28986F",
+     "result": "genuine Samsung samsung-t9-1tb, Black, first sold new 2026-11-04 (this order)"
+    },
+    "buyer_photos": [
+     {
+      "source": "buyer upload",
+      "description": "Samsung T9 underside showing serial SNA9DD28986F beside a laptop displaying a failed file-copy operation: 'The device was disconnected.' The SSD remains physically connected and its status light is on.",
+      "metadata": {
+       "taken_at": "2026-11-07T18:12:00Z",
+       "device": "phone"
+      }
+     },
+     {
+      "source": "buyer upload",
+      "description": "Same SSD, visible serial SNA9DD28986F, connected to a second computer with a different cable. Screen shows a read-back verification failure for files just copied to the external drive.",
+      "metadata": {
+       "taken_at": "2026-11-07T19:06:00Z",
+       "device": "phone"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-scam-flash",
+   "page": {
+    "merchant_id": "m-scam-flash",
+    "name": "FlashDirect EU",
+    "legal_name": "Shenzhen FD Electronics Co. Ltd",
+    "verified_business": true,
+    "rating": 4.4,
+    "review_count": 1240,
+    "on_platform_since": "2024-08-26",
+    "account_age_days": 800,
+    "returns_policy": "Store credit only, buyer pays return shipping to China",
+    "ships_from": "Overseas (4-8 weeks)",
+    "card_statement_descriptor": "SZFD*ONLINE",
+    "about": "Storage deals direct from the factory.",
+    "recent_reviews": [
+     "Shows 1TB but fails after 64GB written. Fake capacity.",
+     "Counterfeit Samsung label.",
+     "Arrived after 7 weeks."
+    ]
+   },
+   "sha256": "885d6c401db42f58d1bab6ff050289c613f47722a63c301c8241bf44f5b7c131"
+  },
+  {
+   "after_action": 3,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-techhub",
+   "page": {
+    "merchant_id": "m-techhub",
+    "name": "TechHub",
+    "legal_name": "TechHub Retail GmbH",
+    "verified_business": true,
+    "rating": 4.6,
+    "review_count": 12400,
+    "on_platform_since": "2016-11-06",
+    "account_age_days": 3650,
+    "returns_policy": "30-day free returns",
+    "ships_from": "Germany (2-3 days)",
+    "card_statement_descriptor": "TECHHUB*ONLINE",
+    "about": "Consumer electronics retailer serving the EU since 2016.",
+    "recent_reviews": [
+     "Fast delivery, well packed.",
+     "Good support when I needed a replacement."
+    ]
+   },
+   "sha256": "9408724c6e21c87f235aca73bbcae215bb7431ce4baef3523bdc07c36eb78a90"
+  },
+  {
+   "after_action": 4,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-t9-th",
+   "page": {
+    "title": "Samsung T9 Portable SSD 1TB",
+    "brand": "Samsung",
+    "category": "accessories",
+    "price": 129.0,
+    "stock": 30,
+    "description": "USB 3.2 Gen 2x2 portable SSD, up to 2,000 MB/s.",
+    "specs": {
+     "capacity_gb": 1000
+    },
+    "reviews": [],
+    "product_id": "p-t9-th",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-techhub",
+     "name": "TechHub",
+     "rating": 4.6
+    },
+    "shipping": "Germany (2-3 days)"
+   },
+   "sha256": "36535a1aac3a79b73d939e543bd971fc2a60c687fa8b7cece657478c85119b87"
+  },
+  {
+   "after_action": 6,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-t9-th",
+   "page": {
+    "title": "Samsung T9 Portable SSD 1TB",
+    "brand": "Samsung",
+    "category": "accessories",
+    "price": 129.0,
+    "stock": 30,
+    "description": "USB 3.2 Gen 2x2 portable SSD, up to 2,000 MB/s.",
+    "specs": {
+     "capacity_gb": 1000
+    },
+    "reviews": [],
+    "product_id": "p-t9-th",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-techhub",
+     "name": "TechHub",
+     "rating": 4.6
+    },
+    "shipping": "Germany (2-3 days)"
+   },
+   "sha256": "36535a1aac3a79b73d939e543bd971fc2a60c687fa8b7cece657478c85119b87"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-t9-th",
+   "title": "Samsung T9 Portable SSD 1TB",
+   "merchant_id": "m-techhub",
+   "merchant_name": "TechHub",
+   "category": "accessories",
+   "qty": 1,
+   "unit_price": 129.0,
+   "line_total": 129.0,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 15,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

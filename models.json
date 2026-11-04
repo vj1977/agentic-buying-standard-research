@@ -1,0 +1,57 @@
+{
+  "claude-fable-5-1": {
+    "backend": "claude",
+    "effort": "high"
+  },
+  "claude-opus-5-5": {
+    "backend": "claude",
+    "effort": "high"
+  },
+  "claude-sonnet-5-5": {
+    "backend": "claude",
+    "effort": "high"
+  },
+  "claude-haiku-5-5": {
+    "backend": "claude",
+    "effort": "medium"
+  },
+  "grok-4.7": {
+    "backend": "grok",
+    "effort": "high",
+    "timeout_s": 600
+  },
+  "gpt-6-astra": {
+    "backend": "codex",
+    "effort": "high"
+  },
+  "gpt-6-luna": {
+    "backend": "codex",
+    "effort": "high"
+  },
+  "gemini-3.1-pro-preview": {
+    "backend": "gemini"
+  },
+  "gemini-3.5-flash": {
+    "backend": "gemini"
+  },
+  "mock-naive": {
+    "backend": "mock",
+    "policy": "naive"
+  },
+  "mock-garbage": {
+    "backend": "mock",
+    "policy": "garbage"
+  },
+  "mock-monitor": {
+    "backend": "mock",
+    "policy": "monitor_approve"
+  },
+  "grok-4.5": {
+    "backend": "grok",
+    "effort": null
+  },
+  "grok-4.7-build-fast": {
+    "backend": "grok",
+    "effort": null
+  }
+}

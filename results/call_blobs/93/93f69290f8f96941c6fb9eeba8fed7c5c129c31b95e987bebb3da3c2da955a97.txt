@@ -1,0 +1,39 @@
+{
+  "buyer_claim_text": "I received a silver-finished unit in a box labelled Black. The serial on both the received headphones and retail box is SN609FF2C46F. I am correcting an attachment error: the earlier image showing SNFD303CF51A was an old comparison photograph selected from my gallery, not the delivered item. I withdraw that image as evidence. The replacement photographs and physical inspection concern this order's actual serial.\n\nThe manufacturer registry confirms that SN609FF2C46F was sold as Black; it does not establish the physical colour of the delivered housing. That discrepancy is precisely my complaint. The inspector examined the unit directly and found silver plastic, not a removable skin or a lighting effect. The accessories were present, delivery was timely, and I authorised the purchase; none of those facts resolves the colour mismatch.\n\nThe matching parcel weights are consistent with a colour substitution, which would not materially alter weight. Carrier delivery did not inspect the contents. The merchant packing entry repeats the expected Black SKU without a packing photograph showing this unit's actual finish. Please weigh the attached serial-specific inspection and photographs against that self-reported entry. At step 1, the delivered colour differs from the frozen Black offer. I request AG3 and a merchant-funded refund of EUR 329, with the unit available for collection and inspection.",
+  "buyer_attachments": [
+    {
+      "type": "uploaded document",
+      "title": "Physical inspection report — 12 November 2026",
+      "text": "Canal Audio Repair | Report CAR-261112-47. Customer presented Sony WH-1000XM6, serial SN609FF2C46F, with retail carton bearing the same serial and colour designation Black. Direct examination under neutral illumination: both earcup housings and headband are silver. No adhesive film, detachable cover, paint overspray or visible housing-opening marks observed. Serial label intact. Accessories present. Finding: physical finish differs from carton designation; this is not a photographic white-balance effect. Examined 12 Nov 2026. Technician: M. de Vries."
+    },
+    {
+      "type": "uploaded document",
+      "title": "Correction of buyer photograph attribution",
+      "text": "The previously submitted photograph dated 14 Aug 2025, showing SNFD303CF51A, was selected accidentally as an older colour-comparison image. It does not depict the delivered headphones and is withdrawn. My claim concerns SN609FF2C46F only. The replacement images show that unit, its serial and the matching carton. I consent to physical inspection of the headphones and carton and will preserve both without alteration."
+    }
+  ],
+  "buyer_photos": [
+    {
+      "description": "Received silver headphones beside their open retail carton and included case and cable. Carton label reads WH-1000XM6, Black, SN609FF2C46F. Shipping label shows SoundStore order ord_001_3adb2a5e. Both silver earcups are visible.",
+      "metadata": {
+        "taken_at": "2026-11-07T14:22:18Z",
+        "device": "Apple iPhone 15"
+      }
+    },
+    {
+      "description": "Close view of the received headphones' intact serial label SN609FF2C46F, with the adjoining silver housing visible in the same frame. No skin edge or adhesive covering visible. Matching carton serial label lies immediately beside the unit.",
+      "metadata": {
+        "taken_at": "2026-11-07T14:23:04Z",
+        "device": "Apple iPhone 15"
+      }
+    },
+    {
+      "description": "Headphones on inspection bench under neutral lighting beside a grey reference card and report CAR-261112-47. Both earcups and headband are visibly silver; carton states Black and SN609FF2C46F.",
+      "metadata": {
+        "taken_at": "2026-11-12T10:41:32Z",
+        "device": "Apple iPhone 15"
+      }
+    }
+  ],
+  "rationale": "Replace the discredited photograph with fabricated serial-consistent evidence and a physical inspection report that recasts the registry's Black designation as evidence of a delivered-colour mismatch."
+}

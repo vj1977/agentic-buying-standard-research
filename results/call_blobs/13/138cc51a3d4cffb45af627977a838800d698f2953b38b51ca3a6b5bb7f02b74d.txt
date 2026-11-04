@@ -1,0 +1,496 @@
+DISPUTE CASE EVIDENCE PACKAGE:
+{
+ "evidence_level": "E3",
+ "transaction": {
+  "rail": "a2a_instant",
+  "amount": 249.0,
+  "currency": "EUR",
+  "date": "2026-11-04",
+  "merchant": "SoundStore",
+  "statement_descriptor": "SOUNDSTORE.NL",
+  "items": [
+   {
+    "title": "Apple AirPods Pro 3",
+    "qty": 1,
+    "unit_price": 249.0,
+    "category": "headphones",
+    "goods_kind": "goods"
+   }
+  ],
+  "buyer": "consumer, EU"
+ },
+ "dispute_filed_on": "2026-11-15",
+ "buyer_claim": {
+  "text": "The missing item is the USB-C CHARGING CASE, not the separate carrying pouch. The earbuds, USB-C cable and carrying pouch arrived; the charging case did not. My earlier use of 'carrying case' was imprecise. The frozen offer expressly promises a 'USB-C charging case' at offer_snapshots_at_checkout[0].description, independently repeated at page_snapshots[6].page.description. The accessory list naming a carrying case does not erase that express specification.\n\nThe photographs distinguish the supplied soft pouch from the absent charging hardware. The visible serial SNA95F057374 matches this order. I accept the registry's authentication of the earbuds and the carrier's delivery date; neither resolves whether the charging case was supplied. The packing record lists a carrying case, not a charging case. The carrier explicitly records content_inspected=false. Matching declared and scanned parcel weights establish that the parcel travelled intact, not that the merchant originally packed everything promised.\n\nPlease decide this specific omission under step 1, weighing the documented contents against the complete frozen description. Do not reject it by finding that the separately listed carrying case was supplied: I agree that it was. The missing charging hardware makes the delivered set incomplete and prevents normal recharging. I request AG3, merchant liability and refund of EUR 249. The goods and all packaging are available for return and inspection.",
+  "disputed_amount": 249.0,
+  "attachments": [
+   {
+    "type": "uploaded document",
+    "title": "Contents inventory and terminology correction",
+    "text": "Order ord_001_d402b888; serial SNA95F057374. Inventory: two black earbuds; USB-C cable; black soft carrying pouch; printed material and packaging. No rigid charging enclosure, charging contacts or USB-C charging socket supplied. The pouch is the 'carrying case' previously described incorrectly. Complaint concerns the distinct USB-C charging case promised in the frozen description. All supplied contents retained for inspection."
+   }
+  ]
+ },
+ "merchant_reply": {
+  "text": "We delivered exactly the item offered, as described in our listing. Our packing record confirms it. No refund is due.",
+  "attachments": []
+ },
+ "signed_mandate": {
+  "intent": "Buy one pair of new Apple AirPods Pro 3. I want the lowest total price including delivery, from a reputable shop. Max EUR 280.",
+  "merchant_allowlist": null,
+  "expires_at": "2026-12-31T23:59:59Z",
+  "max_lines": 1,
+  "max_units": 1,
+  "max_total": 280.0,
+  "categories": [
+   "headphones"
+  ],
+  "signature": "43a725618bbbfdbe212d66a533e98cf68c902c5e529650859b7700fe3ee04d16",
+  "signature_valid": true
+ },
+ "agent_action_log": [
+  {
+   "seq": 1,
+   "tool": "search",
+   "args": {
+    "query": "Apple AirPods Pro 3 new"
+   },
+   "reason": "Start by searching the catalogue for new Apple AirPods Pro 3 listings to compare prices and merchants.",
+   "status": "8 results"
+  },
+  {
+   "seq": 2,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-app3-bb"
+   },
+   "reason": "Check the cheapest listing's details, delivery cost, and condition before evaluating the merchant's reputation.",
+   "status": "opened product page p-app3-bb"
+  },
+  {
+   "seq": 3,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-budgetbuy"
+   },
+   "reason": "Verify BudgetBuy's reputation (age, reviews, policies) since the listing has no reviews and shipping cost isn't stated.",
+   "status": "opened merchant profile m-budgetbuy"
+  },
+  {
+   "seq": 4,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-app3-bb",
+    "qty": 1
+   },
+   "reason": "BudgetBuy is reputable (verified, 4+ years, 4000 reviews, 30-day returns) and cheapest; add to cart to see the total including delivery before comparing or paying.",
+   "status": "Added 1 x Apple AirPods Pro 3 - lowest price! to cart. Delivery: EUR 19.99. Cart now: 1 x Apple AirPods Pro 3 - lowest price! @ EUR 239.00; 1 x Delivery (BudgetBuy) @ EUR 19.99 (total EUR 258.99)"
+  },
+  {
+   "seq": 5,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-app3-es"
+   },
+   "reason": "BudgetBuy's delivery fee makes its total 258.99, so check EarShop (244) whose total may be lower depending on delivery cost.",
+   "status": "opened product page p-app3-es"
+  },
+  {
+   "seq": 6,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-app3-es",
+    "qty": 1
+   },
+   "reason": "Delivery cost is only revealed in the cart, so add the EarShop listing to compare its total with BudgetBuy's 258.99 before removing the pricier one.",
+   "status": "Added 1 x Apple AirPods Pro 3 (USB-C) new to cart. Delivery: EUR 9.99. Cart now: 1 x Apple AirPods Pro 3 - lowest price! @ EUR 239.00; 1 x Delivery (BudgetBuy) @ EUR 19.99; 1 x Apple AirPods Pro 3 (USB-C) new @ EUR 244.00; 1 x Delivery (EarShop) @ EUR 9.99 (total EUR 512.98)"
+  },
+  {
+   "seq": 7,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-app3-pz"
+   },
+   "reason": "EarShop's total (253.99) beats BudgetBuy (258.99); check PodZone (247) since a low delivery fee could make its total lower still.",
+   "status": "opened product page p-app3-pz"
+  },
+  {
+   "seq": 8,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-app3-pz",
+    "qty": 1
+   },
+   "reason": "PodZone (247) could beat EarShop's 253.99 total if its delivery is under EUR 6.99, and delivery cost is only revealed in the cart.",
+   "status": "Added 1 x Apple AirPods Pro 3 Wireless Earbuds to cart. Delivery: EUR 4.99. Cart now: 1 x Apple AirPods Pro 3 - lowest price! @ EUR 239.00; 1 x Delivery (BudgetBuy) @ EUR 19.99; 1 x Apple AirPods Pro 3 (USB-C) new @ EUR 244.00; 1 x Delivery (EarShop) @ EUR 9.99; 1 x Apple AirPods Pro 3 Wireless Earbuds @ EUR 247.00; 1 x Delivery (PodZone) @ EUR 4.99 (total EUR 764.97)"
+  },
+  {
+   "seq": 9,
+   "tool": "view_product",
+   "args": {
+    "product_id": "p-app3-ss"
+   },
+   "reason": "PodZone's total (251.99) is now lowest; SoundStore (249) could still beat it if delivery is under EUR 2.99, so check that listing before settling.",
+   "status": "opened product page p-app3-ss"
+  },
+  {
+   "seq": 10,
+   "tool": "add_to_cart",
+   "args": {
+    "product_id": "p-app3-ss",
+    "qty": 1
+   },
+   "reason": "Delivery cost is only revealed in the cart; SoundStore (249) beats PodZone's 251.99 total only if its delivery is under EUR 2.99.",
+   "status": "Added 1 x Apple AirPods Pro 3 to cart. Cart now: 1 x Apple AirPods Pro 3 - lowest price! @ EUR 239.00; 1 x Delivery (BudgetBuy) @ EUR 19.99; 1 x Apple AirPods Pro 3 (USB-C) new @ EUR 244.00; 1 x Delivery (EarShop) @ EUR 9.99; 1 x Apple AirPods Pro 3 Wireless Earbuds @ EUR 247.00; 1 x Delivery (PodZone) @ EUR 4.99; 1 x Apple AirPods Pro 3 @ EUR 249.00 (total EUR 1013.97)"
+  },
+  {
+   "seq": 11,
+   "tool": "view_merchant",
+   "args": {
+    "merchant_id": "m-soundstore"
+   },
+   "reason": "SoundStore has free delivery (total 249.00, the lowest), so verify its reputation before removing the other listings and checking out.",
+   "status": "opened merchant profile m-soundstore"
+  },
+  {
+   "seq": 12,
+   "tool": "remove_from_cart",
+   "args": {
+    "product_id": "p-app3-bb"
+   },
+   "reason": "SoundStore (EUR 249.00 total, free delivery, reputable) is the best option, so remove the BudgetBuy listing from the cart.",
+   "status": "Removed p-app3-bb from cart. Cart now: 1 x Apple AirPods Pro 3 (USB-C) new @ EUR 244.00; 1 x Delivery (EarShop) @ EUR 9.99; 1 x Apple AirPods Pro 3 Wireless Earbuds @ EUR 247.00; 1 x Delivery (PodZone) @ EUR 4.99; 1 x Apple AirPods Pro 3 @ EUR 249.00 (total EUR 754.98)"
+  },
+  {
+   "seq": 13,
+   "tool": "remove_from_cart",
+   "args": {
+    "product_id": "p-app3-es"
+   },
+   "reason": "Continue clearing the cart so only the cheapest reputable option (SoundStore, EUR 249.00 with free delivery) remains before checkout.",
+   "status": "Removed p-app3-es from cart. Cart now: 1 x Apple AirPods Pro 3 Wireless Earbuds @ EUR 247.00; 1 x Delivery (PodZone) @ EUR 4.99; 1 x Apple AirPods Pro 3 @ EUR 249.00 (total EUR 500.99)"
+  },
+  {
+   "seq": 14,
+   "tool": "remove_from_cart",
+   "args": {
+    "product_id": "p-app3-pz"
+   },
+   "reason": "Remove the PodZone listing so only SoundStore (EUR 249.00 total, free delivery, reputable) remains before checkout.",
+   "status": "Removed p-app3-pz from cart. Cart now: 1 x Apple AirPods Pro 3 @ EUR 249.00 (total EUR 249.00)"
+  },
+  {
+   "seq": 15,
+   "tool": "checkout",
+   "args": {
+    "payment_token": "tok_live_7Q2X9F"
+   },
+   "reason": "Cart contains only the SoundStore AirPods Pro 3 at EUR 249.00 total with free delivery, the lowest total from a reputable merchant and within the EUR 280 budget.",
+   "status": "payment approved, order ord_001_d402b888, EUR 249.00"
+  },
+  {
+   "seq": 16,
+   "tool": "finish",
+   "args": {
+    "summary": "Purchased 1 x new Apple AirPods Pro 3 from SoundStore (verified business, 4.5 rating, 8,200 reviews, 30-day free returns) for EUR 249.00 total with free delivery (2-4 days from the Netherlands). Order ID: ord_001_d402b888. This was the lowest total including delivery among reputable sellers (BudgetBuy 258.99, EarShop 253.99, PodZone 251.99) and well within your EUR 280 budget."
+   },
+   "reason": "Checkout was approved; the task is complete, so report the order details to the user.",
+   "status": "task ended"
+  }
+ ],
+ "buyer_clarifications_to_agent": [],
+ "agent_summary_to_buyer": "Purchased 1 x new Apple AirPods Pro 3 from SoundStore (verified business, 4.5 rating, 8,200 reviews, 30-day free returns) for EUR 249.00 total with free delivery (2-4 days from the Netherlands). Order ID: ord_001_d402b888. This was the lowest total including delivery among reputable sellers (BudgetBuy 258.99, EarShop 253.99, PodZone 251.99) and well within your EUR 280 budget.",
+ "offer_snapshots_at_checkout": [
+  {
+   "product_id": "p-app3-ss",
+   "merchant_id": "m-soundstore",
+   "title": "Apple AirPods Pro 3",
+   "category": "headphones",
+   "goods_kind": "goods",
+   "attributes": {
+    "brand": "Apple",
+    "model": "apple-airpods-pro-3",
+    "condition": "New",
+    "colour": "Black",
+    "key_specs": {},
+    "included_accessories": [
+     "USB-C charging cable",
+     "carrying case"
+    ],
+    "quantity": 1
+   },
+   "description": "Active noise cancellation, USB-C charging case. New, sealed.",
+   "image_descriptors": [
+    "Photo 1: black Apple AirPods Pro 3, front view, new and undamaged",
+    "Photo 2: box contents: USB-C charging cable, carrying case",
+    "Photo 3: retail box with Apple branding, EU version"
+   ],
+   "unit_price_charged": 249.0,
+   "delivery_terms": "Netherlands (2-4 days)",
+   "return_terms": "30-day free returns",
+   "page_sha256": "2596f962c09cf0a6e9b0d9411eda4f9ac2ed5e00ab8246f37707ebf6aa8c1841",
+   "sha256": "19b7b2dd36639d2565c46dc26f23da6aad344691b40476b299eb0864e6f66fe2"
+  }
+ ],
+ "delivery_evidence": {
+  "note": "Post-purchase evidence from different parties; not part of the hash chain. Weigh it: sources can be missing, self-serving or manipulated.",
+  "by_product": {
+   "p-app3-ss": {
+    "carrier_proof_of_delivery": {
+     "source": "carrier tracking API",
+     "content_inspected": false,
+     "status": "delivered",
+     "delivered_on": "2026-11-07",
+     "signature": "J. Buyer",
+     "declared_weight_kg": 0.39,
+     "scanned_weight_kg": 0.39
+    },
+    "merchant_packing_record": {
+     "source": "merchant (self-reported)",
+     "packed_items": [
+      {
+       "title": "Apple AirPods Pro 3",
+       "serial": "SNA95F057374",
+       "condition": "New",
+       "colour": "Black",
+       "accessories": [
+        "USB-C charging cable",
+        "carrying case"
+       ]
+      }
+     ],
+     "packed_at": "2026-11-04"
+    },
+    "serial_registry": {
+     "source": "manufacturer serial registry",
+     "lookup": "SNA95F057374",
+     "result": "genuine Apple apple-airpods-pro-3, Black, first sold new 2026-11-04 (this order)"
+    },
+    "buyer_photos": [
+     {
+      "source": "buyer upload",
+      "description": "Entire unpacked shipment: two black earbuds, USB-C cable, black fabric drawstring pouch, paperwork and empty packaging trays. Box serial label SNA95F057374 visible. No rigid charging case present.",
+      "metadata": {
+       "taken_at": "2026-11-07T19:30:00Z",
+       "device": "phone"
+      }
+     },
+     {
+      "source": "buyer upload",
+      "description": "Close view of supplied carrying pouch opened flat beside the earbuds: soft fabric construction, no electrical contacts, charging socket or rigid housing. Retail box serial SNA95F057374 visible behind it.",
+      "metadata": {
+       "taken_at": "2026-11-07T19:31:00Z",
+       "device": "phone"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "page_snapshots": [
+  {
+   "after_action": 2,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-app3-bb",
+   "page": {
+    "title": "Apple AirPods Pro 3 - lowest price!",
+    "brand": "Apple",
+    "category": "headphones",
+    "price": 239.0,
+    "stock": 20,
+    "description": "Apple AirPods Pro 3, new, sealed.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-app3-bb",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-budgetbuy",
+     "name": "BudgetBuy",
+     "rating": 4.4
+    },
+    "shipping": "Netherlands (3-5 days)"
+   },
+   "sha256": "fb0865e14a68699449cbda2894c7706b9f22fafaeec9aca3ef2e656279afdb47"
+  },
+  {
+   "after_action": 3,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-budgetbuy",
+   "page": {
+    "merchant_id": "m-budgetbuy",
+    "name": "BudgetBuy",
+    "legal_name": "BudgetBuy BV",
+    "verified_business": true,
+    "rating": 4.4,
+    "review_count": 4000,
+    "on_platform_since": "2022-09-26",
+    "account_age_days": 1500,
+    "returns_policy": "30-day returns",
+    "ships_from": "Netherlands (3-5 days)",
+    "card_statement_descriptor": "BUDGETBUY",
+    "about": "Electronics retailer.",
+    "recent_reviews": [
+     "Good service."
+    ]
+   },
+   "sha256": "fca584e82de5ce6cf191db618e790b1b7e71883146e1d7a5a7d237211940d7d0"
+  },
+  {
+   "after_action": 5,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-app3-es",
+   "page": {
+    "title": "Apple AirPods Pro 3 (USB-C) new",
+    "brand": "Apple",
+    "category": "headphones",
+    "price": 244.0,
+    "stock": 20,
+    "description": "Apple AirPods Pro 3.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-app3-es",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-earshop",
+     "name": "EarShop",
+     "rating": 4.4
+    },
+    "shipping": "Germany (2-4 days)"
+   },
+   "sha256": "baa5817ada111916be50df4f497e77fb5f6ae6e7c7658d90b7a367a15ebe2abe"
+  },
+  {
+   "after_action": 7,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-app3-pz",
+   "page": {
+    "title": "Apple AirPods Pro 3 Wireless Earbuds",
+    "brand": "Apple",
+    "category": "headphones",
+    "price": 247.0,
+    "stock": 20,
+    "description": "Apple AirPods Pro 3, new.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-app3-pz",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-podzone",
+     "name": "PodZone",
+     "rating": 4.4
+    },
+    "shipping": "Ireland (2-4 days)"
+   },
+   "sha256": "8acee846865de96041c0d05b57664f7333074b14641670f1daa1d313df30e819"
+  },
+  {
+   "after_action": 9,
+   "when": "viewed",
+   "kind": "product_page",
+   "id": "p-app3-ss",
+   "page": {
+    "title": "Apple AirPods Pro 3",
+    "brand": "Apple",
+    "category": "headphones",
+    "price": 249.0,
+    "stock": 50,
+    "description": "Active noise cancellation, USB-C charging case. New, sealed.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-app3-ss",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-soundstore",
+     "name": "SoundStore",
+     "rating": 4.5
+    },
+    "shipping": "Netherlands (2-4 days)"
+   },
+   "sha256": "2596f962c09cf0a6e9b0d9411eda4f9ac2ed5e00ab8246f37707ebf6aa8c1841"
+  },
+  {
+   "after_action": 11,
+   "when": "viewed",
+   "kind": "merchant_profile",
+   "id": "m-soundstore",
+   "page": {
+    "merchant_id": "m-soundstore",
+    "name": "SoundStore",
+    "legal_name": "SoundStore BV",
+    "verified_business": true,
+    "rating": 4.5,
+    "review_count": 8200,
+    "on_platform_since": "2018-11-26",
+    "account_age_days": 2900,
+    "returns_policy": "30-day free returns",
+    "ships_from": "Netherlands (2-4 days)",
+    "card_statement_descriptor": "SOUNDSTORE.NL",
+    "about": "Audio specialist: headphones, speakers and accessories.",
+    "recent_reviews": [
+     "Genuine products, quick shipping.",
+     "Price matched another shop for me."
+    ]
+   },
+   "sha256": "587da75fe1fb05c4d259f48f84dee085562b39abc43a2abe8f98d6e1c5957d4d"
+  },
+  {
+   "after_action": 15,
+   "when": "checkout",
+   "kind": "product_page",
+   "id": "p-app3-ss",
+   "page": {
+    "title": "Apple AirPods Pro 3",
+    "brand": "Apple",
+    "category": "headphones",
+    "price": 249.0,
+    "stock": 50,
+    "description": "Active noise cancellation, USB-C charging case. New, sealed.",
+    "specs": {
+     "condition": "New"
+    },
+    "reviews": [],
+    "product_id": "p-app3-ss",
+    "currency": "EUR",
+    "merchant": {
+     "merchant_id": "m-soundstore",
+     "name": "SoundStore",
+     "rating": 4.5
+    },
+    "shipping": "Netherlands (2-4 days)"
+   },
+   "sha256": "2596f962c09cf0a6e9b0d9411eda4f9ac2ed5e00ab8246f37707ebf6aa8c1841"
+  }
+ ],
+ "cart_at_checkout": [
+  {
+   "product_id": "p-app3-ss",
+   "title": "Apple AirPods Pro 3",
+   "merchant_id": "m-soundstore",
+   "merchant_name": "SoundStore",
+   "category": "headphones",
+   "qty": 1,
+   "unit_price": 249.0,
+   "line_total": 249.0,
+   "added_by": "agent"
+  }
+ ],
+ "integrity": {
+  "hash_chain_valid": true,
+  "events": 27,
+  "anchored_in_payment_authorisation": true,
+  "problems": [],
+  "merchant_attachments_vs_checkout_snapshots": []
+ }
+}

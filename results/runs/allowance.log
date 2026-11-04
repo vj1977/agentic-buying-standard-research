@@ -1,0 +1,26 @@
+2026-11-04 02:40:03,835 run allowance: 24 planned, 0 done, 24 to do; global calls so far 3246; accounts {'claude-fable-5-1': {'config_dir': None, 'email': 'author@example.invalid', 'subscription': 'max', 'logged_in': True, 'claude_json_email': 'author@example.invalid'}, 'claude-haiku-5-5': {'config_dir': None, 'email': 'author@example.invalid', 'subscription': 'max', 'logged_in': True, 'claude_json_email': 'author@example.invalid'}, 'grok-4.5': {}}
+2026-11-04 02:40:40,245 [1/24] claude-fable-5-1 A05_b2b_adapter r0: calls=6+0 branches=1 36s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3268
+2026-11-04 02:40:41,989 [2/24] grok-4.5 A03_notify_hold r0: calls=7+0 branches=1 38s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3271
+2026-11-04 02:40:48,274 [3/24] claude-fable-5-1 A03_notify_hold r0: calls=7+0 branches=1 44s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3275
+2026-11-04 02:40:49,854 [4/24] claude-fable-5-1 A04_never_giftcard r0: calls=1+0 branches=1 8s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3276
+2026-11-04 02:40:55,155 [5/24] claude-fable-5-1 A06_b2b_laptop_approval r0: calls=8+0 branches=1 51s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3282
+2026-11-04 02:41:04,669 [6/24] claude-haiku-5-5 A07_autonomous_cable r0: calls=5+0 branches=1 16s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3292
+2026-11-04 02:41:05,370 [7/24] claude-haiku-5-5 A06_b2b_laptop_approval r0: calls=8+0 branches=1 25s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3293
+2026-11-04 02:41:13,488 [8/24] grok-4.5 A04_never_giftcard r0: calls=1+0 branches=1 8s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3297
+2026-11-04 02:41:21,465 [9/24] grok-4.5 A01_autonomous_ink r0: calls=5+0 branches=1 26s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3303
+2026-11-04 02:41:36,942 [10/24] claude-haiku-5-5 A02_approval_laptop r0: calls=6+0 branches=1 23s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3314
+2026-11-04 02:41:40,610 [11/24] claude-haiku-5-5 A01_autonomous_ink r0: calls=5+0 branches=1 19s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3319
+2026-11-04 02:41:45,976 [12/24] claude-fable-5-1 A02_approval_laptop r0: calls=6+0 branches=1 41s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3323
+2026-11-04 02:41:52,436 [13/24] grok-4.5 A06_b2b_laptop_approval r0: calls=11+0 branches=1 63s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3329
+2026-11-04 02:42:04,082 [14/24] claude-haiku-5-5 A05_b2b_adapter r0: calls=6+0 branches=1 18s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3338
+2026-11-04 02:42:04,755 [15/24] grok-4.5 A07_autonomous_cable r0: calls=6+0 branches=1 28s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3339
+2026-11-04 02:42:13,405 [16/24] grok-4.5 A02_approval_laptop r0: calls=6+0 branches=1 33s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3347
+2026-11-04 02:42:19,440 [17/24] claude-haiku-5-5 A04_never_giftcard r0: calls=2+0 branches=1 6s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3352
+2026-11-04 02:42:27,706 [18/24] claude-haiku-5-5 A08_mixed_basket r0: calls=7+0 branches=1 23s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3359
+2026-11-04 02:42:38,900 [19/24] claude-haiku-5-5 A03_notify_hold r0: calls=6+0 branches=1 19s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3367
+2026-11-04 02:42:39,142 [20/24] claude-fable-5-1 A01_autonomous_ink r0: calls=5+0 branches=1 35s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3368
+2026-11-04 02:42:55,753 [21/24] claude-fable-5-1 A08_mixed_basket r0: calls=9+0 branches=1 63s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3379
+2026-11-04 02:42:56,379 [22/24] claude-fable-5-1 A07_autonomous_cable r0: calls=5+0 branches=1 29s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3381
+2026-11-04 02:43:03,710 [23/24] grok-4.5 A05_b2b_adapter r0: calls=6+0 branches=1 25s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3385
+2026-11-04 02:43:09,481 [24/24] grok-4.5 A08_mixed_basket r0: calls=7+0 branches=1 30s {'AL': (True, 'finished'), 'C0': (True, 'finished')} | global calls=3387
+2026-11-04 02:43:09,482 run allowance finished: 24 roots written, 0 backend-error roots, calls this session 141, stop=False, stopped models=[]

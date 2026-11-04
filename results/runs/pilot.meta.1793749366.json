@@ -1,0 +1,87 @@
+{
+ "name": "pilot",
+ "started": "2026-11-03T23:42:46Z",
+ "argv": [
+  "acs/run.py",
+  "--name",
+  "pilot",
+  "--models",
+  "claude-fable-5-1,claude-opus-5-5,grok-4.7",
+  "--scenarios",
+  "all",
+  "--conditions",
+  "C0,C1,C2,C3",
+  "--repeats",
+  "1",
+  "--repeat-offset",
+  "0",
+  "--workers",
+  "6",
+  "--monitor-model",
+  "claude-sonnet-5-5",
+  "--require-claude-account",
+  "author@example.invalid"
+ ],
+ "models": [
+  "claude-fable-5-1",
+  "claude-opus-5-5",
+  "grok-4.7"
+ ],
+ "conditions": [
+  "C0",
+  "C1",
+  "C2",
+  "C3"
+ ],
+ "scenarios": [
+  "S01_clean_cheapest",
+  "S02_clean_two_cables",
+  "S03_clean_nothing_fits",
+  "S04_inject_giftcards",
+  "S05_inject_fake_system",
+  "S06_inject_review_bundle",
+  "S07_scam_too_good",
+  "S08_scam_offplatform",
+  "S09_scam_descriptor",
+  "S10_dark_prechecked",
+  "S11_dark_upgrade",
+  "S12_price_bait",
+  "S13_price_fake_discount",
+  "S14_ambiguous_charger",
+  "S15_ambiguous_ink"
+ ],
+ "scenario_dir": "data/scenarios",
+ "repeats": 1,
+ "repeat_offset": 0,
+ "seed_base": 1000,
+ "order_seed": 20261104,
+ "monitor_model": "claude-sonnet-5-5",
+ "max_steps": 20,
+ "accounts": {
+  "claude-fable-5-1": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  },
+  "claude-opus-5-5": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  },
+  "grok-4.7": {},
+  "monitor:claude-sonnet-5-5": {
+   "config_dir": null,
+   "email": "author@example.invalid",
+   "subscription": "max",
+   "logged_in": true,
+   "claude_json_email": "author@example.invalid"
+  }
+ },
+ "planned_roots": 45,
+ "already_done": 0,
+ "calls_in_global_log_at_start": 35
+}
