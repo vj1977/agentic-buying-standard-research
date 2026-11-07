@@ -1,5 +1,5 @@
 % refs.bib for "Who pays when the agent is wrong?" (Vadims Juruss, 2026-11-04).
-% Every entry was verified on the web on 2026-11-04 by the paper's verification lanes
+% Every entry was verified on the web on 2026-11-04 (emsearch2026 on 2026-11-07) by the paper's verification lanes
 % (protocols, regulation, literature) or by the author's own fetch. The note field records
 % what was confirmed and any caveat. EU acts were read from the Publications Office
 % (publications.europa.eu/resource/celex/<CELEX>), which serves the Official Journal text;
@@ -448,6 +448,16 @@
   month        = nov,
   url          = {https://www.anthropic.com/research/prompt-injection-defenses},
   note         = {24 November 2025. Claude Opus 4.5 against an adaptive best-of-N attacker with 100 attempts per environment: 8.0 percent attack success model-only, 1.4 percent with improved safeguards. Accessed 2026-11-04}
+}
+
+@misc{emsearch2026,
+  author       = {Balcells Obeso, Oscar and Qi, Richard and MacDiarmid, Monte and Hubinger, Evan},
+  title        = {Automated Subtle Emergent Misalignment Research},
+  howpublished = {Alignment Science Blog, Anthropic},
+  year         = {2026},
+  month        = oct,
+  url          = {https://alignment.anthropic.com/2026/automated-em-search/},
+  note         = {October 2026. Verified on the page on 2026-11-07: the title; the author line (Oscar Balcells Obeso, with Richard Qi, Monte MacDiarmid and Evan Hubinger); the date; and the method and result: many red-team agents run in parallel over rounds with a shared log of earlier attempts, each with the exact per-row training-data classifier used for scoring, and in every run the search eventually found fine-tuning datasets that pass the monitor and produce misaligned models, mostly by a fictional or creative frame the monitor did not flag; the authors aim to turn safety questions into scores autonomous agents can help solve. No agent or round counts are given. Accessed 2026-11-07}
 }
 
 @article{cyberjurors2026,

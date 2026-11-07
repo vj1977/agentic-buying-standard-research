@@ -683,3 +683,9 @@ calls, all at the frozen revision with the code clean, no deviation; `acs.confir
   characters, so the submission form needs its own shorter abstract, as before.
 - Not edited here: [redacted: private application material], `standard/ABS_ONE_PAGER.md`,
   `standard/ADOPTION_AND_CONFIRMATION.md` and `README.md`.
+
+## Automated EM-search citation (2026-11-07)
+
+| # | Quantity | Old | New | Label | Source |
+|---|---|---|---|---|---|
+| 1 | Gate-aware attacker strength | 0/42 gated reported with C1 and C2 limits only | cited `emsearch2026` (Balcells Obeso, Qi, MacDiarmid and Hubinger, Alignment Science Blog, October 2026; title, author line, date and method verified on the page 2026-11-07); paper Section 2 (one sentence), 9.4 (one agent at up to five attempts per case-side, so 0 of 42 is a lower bound on attack success) and 10 (next step: gate v3 with its mandate-term reader, frozen and attacked by a population search); [redacted: private material] says the same; no number changed; body 8,995 words after cutting the intro's review-paragraph duplicate of 9.5, a 9.2 restatement of Section 7 and 9.5's restatement of the gate v3 tests; [redacted: a count on private material] | limitation (not a result) | `paper/refs.bib`; `paper/build.sh` |
